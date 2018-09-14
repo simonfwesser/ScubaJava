@@ -1,0 +1,57 @@
+h1, h2{
+    text-align: center;
+}
+
+.header {
+    background-color: lightblue;
+}
+
+.header img {
+    width:15%; 
+    height:auto; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.erreur{
+    background-color: lightcoral;
+    padding-right : 40px;
+    padding-left : 40px;
+    padding-bottom : 10px;
+}
+
+.erreur > h2 {
+    text-align : left;
+}
+
+table{
+    width: 40%;
+    border: 1px solid black;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+td {
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+th {
+    border: 1px solid black;
+}
+
+.go_left{
+    margin-left:2%;
+    float:left;
+}
+
+.go_right{
+    margin-right:2%;
+    float : right;
+}
+
+
+
+
