@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 13, 2018 1:59:20 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entite.OrderLines" table="ORDER_LINES" schema="ETEAM7" optimistic-lock="version">
+        <composite-id name="id" class="entite.OrderLinesId">
+            <key-property name="sku" type="big_decimal">
+                <column name="SKU" precision="22" scale="0" />
+            </key-property>
+            <key-property name="orderNumber" type="string">
+                <column name="ORDER_NUMBER" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="product" class="entite.Product" update="false" insert="false" fetch="select">
+            <column name="SKU" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <many-to-one name="orders" class="entite.Orders" update="false" insert="false" fetch="select">
+            <column name="ORDER_NUMBER" length="10" not-null="true" />
+        </many-to-one>
+        <property name="quantity" type="big_decimal">
+            <column name="QUANTITY" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="prix" type="big_decimal">
+            <column name="PRIX" precision="6" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

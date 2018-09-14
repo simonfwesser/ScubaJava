@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 13, 2018 1:59:20 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entite.Product" table="PRODUCT" schema="ETEAM7" optimistic-lock="version">
+        <id name="sku" type="big_decimal">
+            <column name="SKU" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="100" not-null="true" />
+        </property>
+        <property name="brand" type="string">
+            <column name="BRAND" length="50" not-null="true" />
+        </property>
+        <property name="price" type="big_decimal">
+            <column name="PRICE" precision="6" not-null="true" />
+        </property>
+        <property name="warranty" type="big_decimal">
+            <column name="WARRANTY" precision="22" scale="0" />
+        </property>
+        <property name="quantity" type="big_decimal">
+            <column name="QUANTITY" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="image" type="string">
+            <column name="IMAGE" length="100" not-null="true" />
+        </property>
+        <set name="details" table="DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SKU" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="entite.Detail" />
+        </set>
+        <set name="orderLineses" table="ORDER_LINES" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SKU" precision="22" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="entite.OrderLines" />
+        </set>
+    </class>
+</hibernate-mapping>

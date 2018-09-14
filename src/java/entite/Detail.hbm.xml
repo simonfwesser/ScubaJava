@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 13, 2018 1:59:20 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entite.Detail" table="DETAIL" schema="ETEAM7" optimistic-lock="version">
+        <composite-id name="id" class="entite.DetailId">
+            <key-property name="sku" type="big_decimal">
+                <column name="SKU" precision="22" scale="0" />
+            </key-property>
+            <key-property name="languageCode" type="string">
+                <column name="LANGUAGE_CODE" length="3" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="languages" class="entite.Languages" update="false" insert="false" fetch="select">
+            <column name="LANGUAGE_CODE" length="3" not-null="true" />
+        </many-to-one>
+        <many-to-one name="product" class="entite.Product" update="false" insert="false" fetch="select">
+            <column name="SKU" precision="22" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="type" type="string">
+            <column name="TYPE" length="50" not-null="true" />
+        </property>
+        <property name="keyFeatures" type="string">
+            <column name="KEY_FEATURES" length="1000" />
+        </property>
+        <property name="about" type="string">
+            <column name="ABOUT" length="4000" />
+        </property>
+        <property name="features" type="string">
+            <column name="FEATURES" length="4000" />
+        </property>
+    </class>
+</hibernate-mapping>
