@@ -20,6 +20,7 @@ public class Traitement extends HttpServlet {
             throws ServletException, IOException {   
         
         session = request.getSession();
+        
         Service.openDbConnection();
         
         String language = (String)session.getAttribute("language");

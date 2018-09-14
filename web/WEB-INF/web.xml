@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
     <filter>
         <filter-name>LoginFilter</filter-name>
-        <filter-class>controleur.LoginFilter</filter-class>
+        <filter-class>controleur.UsernameFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>PasswordFilter</filter-name>
+        <filter-class>controleur.PasswordFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>LoginFilter</filter-name>
         <servlet-name>Traitement</servlet-name>
     </filter-mapping>
+    <filter-mapping>
+        <filter-name>PasswordFilter</filter-name>
+        <servlet-name>Traitement</servlet-name>
+    </filter-mapping>
+    
+    
     <servlet>
         <servlet-name>MagasinServlet</servlet-name>
         <servlet-class>controleur.MagasinServlet</servlet-class>

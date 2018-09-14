@@ -13,61 +13,42 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import service.Service;
 
-public class LoginFilter implements Filter {
+public class UsernameFilter implements Filter {
 
     public final String ERROR_PAGE = "/error.jsp";
 
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
             throws IOException, ServletException {
-        
+
         Service.openDbConnection();
-        
-        String action = "";
-        String email = "";
-        String password = "";
-        boolean isActionLogin = false;
-        boolean isCustomer = false;
-        boolean isLoginRight = false;
-        HttpSession session = ((HttpServletRequest) request).getSession();
+
+        String action = request.getParameter("action");
+        String email = request.getParameter("email");
         String destination = "";
 
-        
-        action = request.getParameter("action");
-        email = request.getParameter("email");
-        password = request.getParameter("password");
-
-        isActionLogin = "login".equals(action);
+        boolean isActionLogin = "login".equals(action);
         if (!isActionLogin) {
             //session.invalidate();
             chain.doFilter(request, response);
-        }
-        else {
+        } else {
             Customer customer = Service.getOneCostumer(email);
-            isCustomer = (customer != null);
+            System.out.println("*************" +customer.getFirstName());
+            
+            boolean isCustomer = (customer != null);
             if (isCustomer) {
-                isLoginRight = password.equals(customer.getPassword());
-                if (isLoginRight) {
-                    session.setAttribute("customer", customer);
-                    chain.doFilter(request, response);
-                }
-                else {
-                    request.setAttribute("errorMessage", "Mot de passe erronné!");
-                    destination = ERROR_PAGE;
-                    RequestDispatcher rd = request.getRequestDispatcher(destination);
-                    rd.forward(request, response);
-                }
-            }
-            else {
+                request.setAttribute("customer", customer); //Pas encore session
+                chain.doFilter(request, response);
+            } else {
                 request.setAttribute("errorMessage", "Vous n'êtes pas encore client!");
                 destination = ERROR_PAGE;
                 RequestDispatcher rd = request.getRequestDispatcher(destination);
                 rd.forward(request, response);
             }
+
         }
-        
+
         Service.closeCustomerSession();
-        
     }
 
     public void destroy() {
