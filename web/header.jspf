@@ -2,9 +2,8 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
-<link href="style/bootstrap.css" rel="stylesheet" type="text/css"/>
+<link href="style/style.css" rel="stylesheet" type="text/css"/>
 <link href="style/style_1.css" rel="stylesheet" type="text/css"/>
-
 
 <div class="jumbotron-fluid header">
     <div class="container-fluid">
