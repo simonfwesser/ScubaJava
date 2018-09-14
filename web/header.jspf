@@ -18,11 +18,11 @@
             </div>
             <div class="col-sm-2">
                 <c:choose>
-                    <c:when test="${costumer == null}">
+                    <c:when test="${customer == null}">
                         <a href="login.jsp">Login</a>
                     </c:when> 
                     <c:otherwise>
-                        <p>Bienvenue, ${costumer.firstName} ${costumer.lastName}</p>
+                        <p>Bienvenue, ${customer.firstName} ${customer.lastName}</p>
                         <p><a href="LogoutServlet">Logout</a></p>
                     </c:otherwise> 
                 </c:choose>

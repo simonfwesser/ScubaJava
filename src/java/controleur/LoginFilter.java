@@ -1,6 +1,6 @@
 package controleur;
 
-import entite.Costumer;
+import entite.Customer;
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -43,12 +43,12 @@ public class LoginFilter implements Filter {
             chain.doFilter(request, response);
         }
         else {
-            Costumer costumer = Service.getOneCostumer(email);
-            isCustomer = (costumer != null);
+            Customer customer = Service.getOneCostumer(email);
+            isCustomer = (customer != null);
             if (isCustomer) {
-                isLoginRight = password.equals(costumer.getPassword());
+                isLoginRight = password.equals(customer.getPassword());
                 if (isLoginRight) {
-                    session.setAttribute("costumer", costumer);
+                    session.setAttribute("customer", customer);
                     chain.doFilter(request, response);
                 }
                 else {
@@ -66,7 +66,7 @@ public class LoginFilter implements Filter {
             }
         }
         
-        Service.closeCostumerSession();
+        Service.closeCustomerSession();
         
     }
 

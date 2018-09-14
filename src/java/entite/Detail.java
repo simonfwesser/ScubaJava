@@ -1,5 +1,5 @@
 package entite;
-// Generated Sep 13, 2018 1:59:18 AM by Hibernate Tools 4.3.1
+// Generated 2018-09-14 12:07:09 by Hibernate Tools 4.3.1
 
 
 
@@ -10,8 +10,8 @@ public class Detail  implements java.io.Serializable {
 
 
      private DetailId id;
-     private Languages languages;
      private Product product;
+     private Language language;
      private String type;
      private String keyFeatures;
      private String about;
@@ -21,16 +21,16 @@ public class Detail  implements java.io.Serializable {
     }
 
 	
-    public Detail(DetailId id, Languages languages, Product product, String type) {
+    public Detail(DetailId id, Product product, Language language, String type) {
         this.id = id;
-        this.languages = languages;
         this.product = product;
+        this.language = language;
         this.type = type;
     }
-    public Detail(DetailId id, Languages languages, Product product, String type, String keyFeatures, String about, String features) {
+    public Detail(DetailId id, Product product, Language language, String type, String keyFeatures, String about, String features) {
        this.id = id;
-       this.languages = languages;
        this.product = product;
+       this.language = language;
        this.type = type;
        this.keyFeatures = keyFeatures;
        this.about = about;
@@ -44,19 +44,19 @@ public class Detail  implements java.io.Serializable {
     public void setId(DetailId id) {
         this.id = id;
     }
-    public Languages getLanguages() {
-        return this.languages;
-    }
-    
-    public void setLanguages(Languages languages) {
-        this.languages = languages;
-    }
     public Product getProduct() {
         return this.product;
     }
     
     public void setProduct(Product product) {
         this.product = product;
+    }
+    public Language getLanguage() {
+        return this.language;
+    }
+    
+    public void setLanguage(Language language) {
+        this.language = language;
     }
     public String getType() {
         return this.type;

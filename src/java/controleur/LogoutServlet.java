@@ -1,7 +1,7 @@
 
 package controleur;
 
-import entite.Costumer;
+import entite.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -20,7 +20,7 @@ public class LogoutServlet extends HttpServlet {
         
         HttpSession session = request.getSession();
         
-        Costumer costumer = (Costumer)session.getAttribute("costumer");
+        Customer costumer = (Customer)session.getAttribute("customer");
         String goodbyeMessage = "Au revoir, " +costumer.getFirstName() +" " +costumer.getLastName() +" !";
         
         request.setAttribute("goodbyeMessage", goodbyeMessage);

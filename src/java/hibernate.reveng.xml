@@ -41,13 +41,13 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-schema="ETEAM7"/>
-  <table-filter match-name="ADMINISTRATOR"/>
-  <table-filter match-name="ORDERS"/>
-  <table-filter match-name="ORDER_LINES"/>
-  <table-filter match-name="PAYMENT"/>
+  <table-filter match-name="LANGUAGE"/>
   <table-filter match-name="BILL"/>
-  <table-filter match-name="LANGUAGES"/>
+  <table-filter match-name="CUSTOMER"/>
   <table-filter match-name="DETAIL"/>
-  <table-filter match-name="COSTUMER"/>
+  <table-filter match-name="ADMINISTRATOR"/>
+  <table-filter match-name="PLACED_ORDER"/>
+  <table-filter match-name="PAYMENT"/>
+  <table-filter match-name="ORDER_LINE"/>
   <table-filter match-name="PRODUCT"/>
 </hibernate-reverse-engineering>

@@ -1,5 +1,5 @@
 
-import dataAccess.CostumerDAO;
+import dataAccess.CustomerDAO;
 import dataAccess.DAO;
 import dataAccess.DbConnection;
 import entite.Costumer;
@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args){
     
         //DataAccess.getInstance().open();
-        DAO costumerDAO = new CostumerDAO(DbConnection.getInstance().getSessionFactory());
+        DAO costumerDAO = new CustomerDAO(DbConnection.getInstance().getSessionFactory());
         
         List<Costumer> costumers = costumerDAO.getAll();
         

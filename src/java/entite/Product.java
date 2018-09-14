@@ -1,5 +1,5 @@
 package entite;
-// Generated Sep 13, 2018 1:59:18 AM by Hibernate Tools 4.3.1
+// Generated 2018-09-14 12:07:09 by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -20,7 +20,7 @@ public class Product  implements java.io.Serializable {
      private BigDecimal quantity;
      private String image;
      private Set details = new HashSet(0);
-     private Set orderLineses = new HashSet(0);
+     private Set orderLines = new HashSet(0);
 
     public Product() {
     }
@@ -34,7 +34,7 @@ public class Product  implements java.io.Serializable {
         this.quantity = quantity;
         this.image = image;
     }
-    public Product(BigDecimal sku, String name, String brand, BigDecimal price, BigDecimal warranty, BigDecimal quantity, String image, Set details, Set orderLineses) {
+    public Product(BigDecimal sku, String name, String brand, BigDecimal price, BigDecimal warranty, BigDecimal quantity, String image, Set details, Set orderLines) {
        this.sku = sku;
        this.name = name;
        this.brand = brand;
@@ -43,7 +43,7 @@ public class Product  implements java.io.Serializable {
        this.quantity = quantity;
        this.image = image;
        this.details = details;
-       this.orderLineses = orderLineses;
+       this.orderLines = orderLines;
     }
    
     public BigDecimal getSku() {
@@ -102,12 +102,12 @@ public class Product  implements java.io.Serializable {
     public void setDetails(Set details) {
         this.details = details;
     }
-    public Set getOrderLineses() {
-        return this.orderLineses;
+    public Set getOrderLines() {
+        return this.orderLines;
     }
     
-    public void setOrderLineses(Set orderLineses) {
-        this.orderLineses = orderLineses;
+    public void setOrderLines(Set orderLines) {
+        this.orderLines = orderLines;
     }
 
 

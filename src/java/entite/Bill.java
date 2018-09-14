@@ -1,5 +1,5 @@
 package entite;
-// Generated Sep 13, 2018 1:59:18 AM by Hibernate Tools 4.3.1
+// Generated 2018-09-14 12:07:09 by Hibernate Tools 4.3.1
 
 
 import java.math.BigDecimal;
@@ -11,15 +11,15 @@ public class Bill  implements java.io.Serializable {
 
 
      private String billNumber;
-     private Orders orders;
+     private PlacedOrder placedOrder;
      private BigDecimal finalOrderPrice;
 
     public Bill() {
     }
 
-    public Bill(String billNumber, Orders orders, BigDecimal finalOrderPrice) {
+    public Bill(String billNumber, PlacedOrder placedOrder, BigDecimal finalOrderPrice) {
        this.billNumber = billNumber;
-       this.orders = orders;
+       this.placedOrder = placedOrder;
        this.finalOrderPrice = finalOrderPrice;
     }
    
@@ -30,12 +30,12 @@ public class Bill  implements java.io.Serializable {
     public void setBillNumber(String billNumber) {
         this.billNumber = billNumber;
     }
-    public Orders getOrders() {
-        return this.orders;
+    public PlacedOrder getPlacedOrder() {
+        return this.placedOrder;
     }
     
-    public void setOrders(Orders orders) {
-        this.orders = orders;
+    public void setPlacedOrder(PlacedOrder placedOrder) {
+        this.placedOrder = placedOrder;
     }
     public BigDecimal getFinalOrderPrice() {
         return this.finalOrderPrice;

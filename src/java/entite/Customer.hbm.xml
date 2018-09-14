@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Sep 13, 2018 1:59:20 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-14 12:07:11 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Costumer" table="COSTUMER" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.Customer" table="CUSTOMER" schema="ETEAM7" optimistic-lock="version">
         <id name="email" type="string">
             <column name="EMAIL" length="50" />
             <generator class="assigned" />
@@ -20,11 +20,11 @@
         <property name="address" type="string">
             <column name="ADDRESS" length="200" not-null="true" />
         </property>
-        <set name="orderses" table="ORDERS" inverse="true" lazy="true" fetch="select">
+        <set name="placedOrders" table="PLACED_ORDER" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="EMAIL" length="50" not-null="true" />
             </key>
-            <one-to-many class="entite.Orders" />
+            <one-to-many class="entite.PlacedOrder" />
         </set>
     </class>
 </hibernate-mapping>

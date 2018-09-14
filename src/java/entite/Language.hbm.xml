@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Sep 13, 2018 1:59:20 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-14 12:07:11 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Languages" table="LANGUAGES" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.Language" table="LANGUAGE" schema="ETEAM7" optimistic-lock="version">
         <id name="languageCode" type="string">
             <column name="LANGUAGE_CODE" length="3" />
             <generator class="assigned" />

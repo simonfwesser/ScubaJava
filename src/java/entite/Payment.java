@@ -1,5 +1,5 @@
 package entite;
-// Generated Sep 13, 2018 1:59:18 AM by Hibernate Tools 4.3.1
+// Generated 2018-09-14 12:07:09 by Hibernate Tools 4.3.1
 
 
 
@@ -10,14 +10,14 @@ public class Payment  implements java.io.Serializable {
 
 
      private String paymentMode;
-     private Orders orders;
+     private PlacedOrder placedOrder;
 
     public Payment() {
     }
 
-    public Payment(String paymentMode, Orders orders) {
+    public Payment(String paymentMode, PlacedOrder placedOrder) {
        this.paymentMode = paymentMode;
-       this.orders = orders;
+       this.placedOrder = placedOrder;
     }
    
     public String getPaymentMode() {
@@ -27,12 +27,12 @@ public class Payment  implements java.io.Serializable {
     public void setPaymentMode(String paymentMode) {
         this.paymentMode = paymentMode;
     }
-    public Orders getOrders() {
-        return this.orders;
+    public PlacedOrder getPlacedOrder() {
+        return this.placedOrder;
     }
     
-    public void setOrders(Orders orders) {
-        this.orders = orders;
+    public void setPlacedOrder(PlacedOrder placedOrder) {
+        this.placedOrder = placedOrder;
     }
 
 

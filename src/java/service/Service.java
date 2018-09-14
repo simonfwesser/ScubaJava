@@ -1,6 +1,6 @@
 package service;
 
-import dataAccess.CostumerDAO;
+import dataAccess.CustomerDAO;
 import dataAccess.DAO;
 import dataAccess.DbConnection;
 import dataAccess.ProductDAO;
@@ -28,12 +28,12 @@ public class Service {
     
     ////////////////////////////////////////////////////////////
     
-    public static Costumer getOneCostumer(String id){
-        return CostumerService.getOne(id);
+    public static Customer getOneCostumer(String id){
+        return CustomerService.getOne(id);
     }
     
-    public static void closeCostumerSession(){
-        CostumerService.closeSession();
+    public static void closeCustomerSession(){
+        CustomerService.closeSession();
     };
     
     ////////////////////////////////////////////////////////////

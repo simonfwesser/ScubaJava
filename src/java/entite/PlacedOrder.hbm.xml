@@ -1,24 +1,24 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Sep 13, 2018 1:59:20 AM by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-14 12:07:11 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Orders" table="ORDERS" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.PlacedOrder" table="PLACED_ORDER" schema="ETEAM7" optimistic-lock="version">
         <id name="orderNumber" type="string">
             <column name="ORDER_NUMBER" length="10" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="costumer" class="entite.Costumer" fetch="select">
+        <many-to-one name="customer" class="entite.Customer" fetch="select">
             <column name="EMAIL" length="50" not-null="true" />
         </many-to-one>
         <property name="status" type="string">
             <column name="STATUS" length="50" />
         </property>
-        <set name="orderLineses" table="ORDER_LINES" inverse="true" lazy="true" fetch="select">
+        <set name="orderLines" table="ORDER_LINE" inverse="true" lazy="true" fetch="select">
             <key>
                 <column name="ORDER_NUMBER" length="10" not-null="true" />
             </key>
-            <one-to-many class="entite.OrderLines" />
+            <one-to-many class="entite.OrderLine" />
         </set>
         <set name="payments" table="PAYMENT" inverse="true" lazy="true" fetch="select">
             <key>
