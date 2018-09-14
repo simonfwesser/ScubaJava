@@ -7,10 +7,16 @@ import dataAccess.ProductDAO;
 import entite.*;
 import java.util.List;
 
-
 public class Service {
+    
+    private static String _language = "";
 
     public Service() {
+    }
+
+    ////////////////////////////////////////////////////////////
+    public static void setLanguage(String language) {
+        _language = language;
     }
 
     ////////////////////////////////////////////////////////////
@@ -21,32 +27,37 @@ public class Service {
     public static Product getOneProduct(String id) {
         return ProductService.getOne(id);
     }
-    
-    public static void closeProductSession(){
+
+    public static List<String> getAllProductTypes() {
+        return ProductService.getAllTypes(_language);
+    }
+
+    public static void closeProductSession() {
         ProductService.closeSession();
-    };
+    }
+
+    ;
     
     ////////////////////////////////////////////////////////////
     
-    public static Customer getOneCostumer(String id){
+    public static Customer getOneCostumer(String id) {
         return CustomerService.getOne(id);
     }
-    
-    public static void closeCustomerSession(){
+
+    public static void closeCustomerSession() {
         CustomerService.closeSession();
-    };
+    }
+
+    ;
     
     ////////////////////////////////////////////////////////////
     
-    public static void openDbConnection(){
+    public static void openDbConnection() {
         DbConnection.getInstance();
     }
-    
-    
-    public static void closeDbConnection(){
+
+    public static void closeDbConnection() {
         DbConnection.getInstance().close();
     }
-    
-
 
 }

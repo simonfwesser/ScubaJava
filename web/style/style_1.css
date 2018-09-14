@@ -2,7 +2,7 @@ h1, h2{
     text-align: center;
 }
 
-.header {
+/*.header {
     background-color: lightblue;
 }
 
@@ -12,7 +12,7 @@ h1, h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+}*/
 
 .erreur{
     background-color: lightcoral;

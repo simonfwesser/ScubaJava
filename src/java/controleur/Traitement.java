@@ -22,12 +22,19 @@ public class Traitement extends HttpServlet {
         session = request.getSession();
         Service.openDbConnection();
         
+        String language = (String)session.getAttribute("language");
+        language = "en";  //Valeur qui viendra du filtre si null?
+        
+        Service.setLanguage(language);
+        
+        session.setAttribute("listProductTypes", Service.getAllProductTypes());
+
 //        if(!session.isNew()){
 //            session.invalidate();
 //            session = request.getSession();   
 //        }
 //        
-        session.setAttribute("listProducts", Service.getAllProducts());
+//        session.setAttribute("listProducts", Service.getAllProducts());
 //        //session.setAttribute("listDetails", gestion.getListDetail());
 //        //session.setAttribute("listLanguages", gestion.getListLanguages());
         

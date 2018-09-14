@@ -14,8 +14,7 @@
 
 
     <body>
-        <h2>Accédez au site en tant que</h2>
-
+        <br>
         <form action="Traitement">
             <table border="1">
                 <tbody>
