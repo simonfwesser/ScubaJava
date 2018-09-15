@@ -28,7 +28,7 @@ public class Traitement extends HttpServlet {
         
         Service.setLanguage(language);
         
-        session.setAttribute("listProductTypes", Service.getAllProductTypes());
+        session.setAttribute("listCategories", Service.getAllCategories());
 
 //        if(!session.isNew()){
 //            session.invalidate();

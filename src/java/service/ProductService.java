@@ -1,8 +1,8 @@
 package service;
 
 import dataAccess.*;
-import entite.Detail;
 import entite.Product;
+import entite.ProductDetail;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -27,20 +27,6 @@ public class ProductService {
         return product;
     }
 
-    public static List<String> getAllTypes(String language) {
-        List<Product> products = ProductService.getAll();
-        Set<String> types = new HashSet();
-        
-        for(Product product : products){
-            List<Detail> details = new ArrayList(product.getDetails()); 
-            for(Detail detail : details){
-                if(language.toLowerCase().equals(detail.getLanguage().getLanguageCode().toLowerCase())){
-                    types.add(detail.getType());
-                }   
-            }
-        }
-        return new ArrayList(types);
-    }
 
     public static void closeSession() {
         DAO productDAO = new ProductDAO();

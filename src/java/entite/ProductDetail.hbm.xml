@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 12:07:11 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Detail" table="DETAIL" schema="ETEAM7" optimistic-lock="version">
-        <composite-id name="id" class="entite.DetailId">
+    <class name="entite.ProductDetail" table="PRODUCT_DETAIL" schema="ETEAM7" optimistic-lock="version">
+        <composite-id name="id" class="entite.ProductDetailId">
             <key-property name="sku" type="big_decimal">
                 <column name="SKU" precision="22" scale="0" />
             </key-property>
@@ -12,15 +12,12 @@
                 <column name="LANGUAGE_CODE" length="3" />
             </key-property>
         </composite-id>
+        <many-to-one name="languages" class="entite.Languages" update="false" insert="false" fetch="select">
+            <column name="LANGUAGE_CODE" length="3" not-null="true" />
+        </many-to-one>
         <many-to-one name="product" class="entite.Product" update="false" insert="false" fetch="select">
             <column name="SKU" precision="22" scale="0" not-null="true" />
         </many-to-one>
-        <many-to-one name="language" class="entite.Language" update="false" insert="false" fetch="select">
-            <column name="LANGUAGE_CODE" length="3" not-null="true" />
-        </many-to-one>
-        <property name="type" type="string">
-            <column name="TYPE" length="50" not-null="true" />
-        </property>
         <property name="keyFeatures" type="string">
             <column name="KEY_FEATURES" length="1000" />
         </property>

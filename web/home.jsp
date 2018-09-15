@@ -26,10 +26,10 @@
 
         <div class="container">
             <div class="row">
-                <c:forEach var="type" items="${listProductTypes}" varStatus="loop" >
+                <c:forEach var="category" items="${listCategories}" varStatus="loop" >
                     <div class="col-sm-4">
                         <div class="card" style="width: 18rem; margin : 10px;">
-                            <img class="card-img-top" src="images/type_${type}.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="${category.categoryImage}" alt="${category.categoryImage}">
                             <div class="card-body">
                                 <h5 class="card-title">${type}</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>

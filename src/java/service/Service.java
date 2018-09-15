@@ -8,7 +8,7 @@ import entite.*;
 import java.util.List;
 
 public class Service {
-    
+
     private static String _language = "";
 
     public Service() {
@@ -28,18 +28,11 @@ public class Service {
         return ProductService.getOne(id);
     }
 
-    public static List<String> getAllProductTypes() {
-        return ProductService.getAllTypes(_language);
-    }
-
     public static void closeProductSession() {
         ProductService.closeSession();
     }
 
-    ;
-    
     ////////////////////////////////////////////////////////////
-    
     public static Customer getOneCostumer(String id) {
         return CustomerService.getOne(id);
     }
@@ -48,10 +41,12 @@ public class Service {
         CustomerService.closeSession();
     }
 
-    ;
-    
     ////////////////////////////////////////////////////////////
-    
+    public static List<String> getAllCategories() {
+        return CategoryService.getAllCategories(_language);
+    }
+
+    ////////////////////////////////////////////////////////////
     public static void openDbConnection() {
         DbConnection.getInstance();
     }

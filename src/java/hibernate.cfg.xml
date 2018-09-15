@@ -46,14 +46,16 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:oracle:thin:@144.217.163.57:1521:XE</property>
     <property name="hibernate.connection.username">eteam7</property>
     <property name="hibernate.connection.password">zaier</property>
-    <mapping resource="entite/Detail.hbm.xml"/>
+    <mapping resource="entite/CategoryDetail.hbm.xml"/>
+    <mapping resource="entite/Languages.hbm.xml"/>
+    <mapping resource="entite/Product.hbm.xml"/>
+    <mapping resource="entite/ProductDetail.hbm.xml"/>
+    <mapping resource="entite/Customer.hbm.xml"/>
+    <mapping resource="entite/Category.hbm.xml"/>
+    <mapping resource="entite/PlacedOrder.hbm.xml"/>
+    <mapping resource="entite/Bill.hbm.xml"/>
     <mapping resource="entite/Payment.hbm.xml"/>
     <mapping resource="entite/OrderLine.hbm.xml"/>
-    <mapping resource="entite/Product.hbm.xml"/>
-    <mapping resource="entite/Language.hbm.xml"/>
-    <mapping resource="entite/Customer.hbm.xml"/>
-    <mapping resource="entite/PlacedOrder.hbm.xml"/>
     <mapping resource="entite/Administrator.hbm.xml"/>
-    <mapping resource="entite/Bill.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>
