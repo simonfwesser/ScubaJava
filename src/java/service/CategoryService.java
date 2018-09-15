@@ -1,31 +1,38 @@
-
 package service;
 
+import dataAccess.CategoryDAO;
+import entite.Category;
+import entite.CategoryDetail;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
 public class CategoryService {
-    
-    
-    
-    
-//    public static List<String> getAllCategories(String language){
-//    
-//    }
-    
-    
-    /*
-    
-    public static List<String> getAllTypes(String language) {
-        List<Product> products = ProductService.getAll();
-        Set<String> types = new HashSet();
-        
-        for(Product product : products){
-            List<ProductDetail> details = new ArrayList(product.getProductDetails()); 
-            for(ProductDetail detail : details){
-                if(language.toLowerCase().equals(detail.getLanguages().getLanguageCode().toLowerCase())){
-                    types.add(detail. ..getType());
-                }   
-            }
-        }
-        return new ArrayList(types);
+
+    static List<Category> getAll() {
+        //List<String> categoryNames = new ArrayList();
+        CategoryDAO categoryDAO = new CategoryDAO();
+        categoryDAO.openSession();
+        List<Category> list = categoryDAO.getAll();
+        //productDAO.closeSession();
+        return list;
+
+//        List<Category> categories = categoryDAO.getAll();
+//        Set<CategoryDetail> details = null;
+//        for (Category category : categories) {
+//            details = category.getCategoryDetails();
+//            for (CategoryDetail detail : details){
+//                if ((language.toUpperCase()).equals(detail.getLanguages().getLanguageCode().toUpperCase())){
+//                    categoryNames.add(detail.getCategoryName());
+//                }
+//            }
+//        }
+//
+//        return categoryNames;
     }
-    */
+
+    public static void closeSession() {
+        CategoryDAO categoryDAO = new CategoryDAO();
+        categoryDAO.closeSession();
+    }
 }

@@ -1,4 +1,3 @@
-
 package controleur;
 
 import entite.Customer;
@@ -12,20 +11,21 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class LogoutServlet extends HttpServlet {
-    
+
     private final String LOGOUT_PAGE = "/logout.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         HttpSession session = request.getSession();
-        
-        Customer costumer = (Customer)session.getAttribute("customer");
-        String goodbyeMessage = "Au revoir, " +costumer.getFirstName() +" " +costumer.getLastName() +" !";
-        
+
+        Customer costumer = (Customer) session.getAttribute("customer");
+        String goodbyeMessage = "Au revoir, " + costumer.getFirstName() + " " + costumer.getLastName() + " !";
+
         request.setAttribute("goodbyeMessage", goodbyeMessage);
+
         session.invalidate();
-        
+
         RequestDispatcher disp = request.getRequestDispatcher(LOGOUT_PAGE);
         disp.forward(request, response);
 

@@ -9,14 +9,18 @@ import java.util.List;
 
 public class Service {
 
-    private static String _language = "";
+    private static Languages _language = null;
 
     public Service() {
     }
 
     ////////////////////////////////////////////////////////////
-    public static void setLanguage(String language) {
-        _language = language;
+    public static void setLanguage(String languageCode) {
+        _language = LanguageService.getOne(languageCode);
+    }
+
+    public static Languages getLanguage() {
+        return _language;
     }
 
     ////////////////////////////////////////////////////////////
@@ -42,8 +46,13 @@ public class Service {
     }
 
     ////////////////////////////////////////////////////////////
-    public static List<String> getAllCategories() {
-        return null ;//CategoryService.getAllCategories(_language);
+    public static List<Category> getAllCategories() {
+//        return CategoryService.getAllCategories(_language);
+        return CategoryService.getAll();
+    }
+
+    public static void closeCategorySession() {
+        CategoryService.closeSession();
     }
 
     ////////////////////////////////////////////////////////////

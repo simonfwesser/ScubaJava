@@ -21,23 +21,24 @@ public class UsernameFilter implements Filter {
             FilterChain chain)
             throws IOException, ServletException {
 
+
+
         Service.openDbConnection();
 
         String action = request.getParameter("action");
         String email = request.getParameter("email");
         String destination = "";
+        
+        
 
         boolean isActionLogin = "login".equals(action);
         if (!isActionLogin) {
-            //session.invalidate();
             chain.doFilter(request, response);
         } else {
             Customer customer = Service.getOneCostumer(email);
-            System.out.println("*************" +customer.getFirstName());
-            
             boolean isCustomer = (customer != null);
             if (isCustomer) {
-                request.setAttribute("customer", customer); //Pas encore session
+                request.setAttribute("customer", customer); //Pas encore dans la session
                 chain.doFilter(request, response);
             } else {
                 request.setAttribute("errorMessage", "Vous n'êtes pas encore client!");

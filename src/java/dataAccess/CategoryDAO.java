@@ -5,35 +5,41 @@ import entite.Category;
 import java.util.List;
 
 public class CategoryDAO extends DAO<Category, String>  {
+    
+    public CategoryDAO(){
+        super();
+    }
 
     @Override
     public void persist(Category entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        _session.save(entity);
     }
 
     @Override
     public void update(Category entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        _session.update(entity);
     }
 
     @Override
     public Category getOne(String primaryKey) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (Category) _session.get(Category.class, primaryKey);
     }
 
     @Override
     public List<Category> getAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return (List<Category>) _session.createQuery("from Category").list();
     }
 
     @Override
     public void deleteOne(Category entity) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        _session.delete(entity);
     }
 
     @Override
     public void deleteAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (Category entity : getAll()) {
+            deleteOne(entity);
+        }
     }
     
 }

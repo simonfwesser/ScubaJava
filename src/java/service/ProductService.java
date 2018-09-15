@@ -29,7 +29,7 @@ public class ProductService {
 
 
     public static void closeSession() {
-        DAO productDAO = new ProductDAO();
+        ProductDAO productDAO = new ProductDAO();
         productDAO.closeSession();
     }
 

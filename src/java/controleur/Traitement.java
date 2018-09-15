@@ -23,10 +23,13 @@ public class Traitement extends HttpServlet {
         
         Service.openDbConnection();
         
-        String language = (String)session.getAttribute("language");
-        language = "en";  //Valeur qui viendra du filtre si null?
+        //TODO :Changer pour languageCode
+        String languageCode = (String)session.getAttribute("languageCode");
+        languageCode = "EN";  //Valeur qui viendra du filtre si null?
         
-        Service.setLanguage(language);
+        Service.setLanguage(languageCode);
+        
+        session.setAttribute("language", Service.getLanguage());
         
         session.setAttribute("listCategories", Service.getAllCategories());
 
@@ -45,6 +48,7 @@ public class Traitement extends HttpServlet {
         
         // ??? Bon de faire ca ici?
         Service.closeProductSession();
+        Service.closeCategorySession();
         
         //TODO fermer le sessionFactory à la destruction de l'application,
         //lorsque plus aucun client n'est sur le site.

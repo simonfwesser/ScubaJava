@@ -30,12 +30,10 @@ public class PasswordFilter implements Filter {
 
         boolean isActionLogin = "login".equals(action);
         if (!isActionLogin) {
-            //session.invalidate();
             chain.doFilter(request, response);
         } else {
-            Customer customer = (Customer) request.getAttribute("customer"); //Vient du UsernameFilter
+            Customer customer = (Customer) request.getAttribute("customer"); //Vient de UsernameFilter
             String password = request.getParameter("password");
-
             boolean isLoginRight = password.equals(customer.getPassword());
             if (isLoginRight) {
                 session.setAttribute("customer", customer); //On passe le client de requête à session
@@ -43,7 +41,7 @@ public class PasswordFilter implements Filter {
             } else {
                 request.setAttribute("errorMessage", "Mot de passe erronné !");
                 request.setAttribute("customer", null); //Par sécurité
-                session.setAttribute("customer", null); //Par sécurité
+                //session.setAttribute("customer", null); //Par sécurité
                 destination = ERROR_PAGE;
                 RequestDispatcher rd = request.getRequestDispatcher(destination);
                 rd.forward(request, response);
