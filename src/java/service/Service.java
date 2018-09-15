@@ -43,7 +43,7 @@ public class Service {
 
     ////////////////////////////////////////////////////////////
     public static List<String> getAllCategories() {
-        return CategoryService.getAllCategories(_language);
+        return null ;//CategoryService.getAllCategories(_language);
     }
 
     ////////////////////////////////////////////////////////////

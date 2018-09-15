@@ -6,9 +6,9 @@ public class CategoryService {
     
     
     
-    public static List<String> getAllCategories(String language){
-    
-    }
+//    public static List<String> getAllCategories(String language){
+//    
+//    }
     
     
     /*
