@@ -1,36 +1,14 @@
 
-
-
-/*#homepanel {
-    height : 10px;
-}*/
-
-
-
-
-
-
-/* Général ------------------------------------------------------------------------------------- */
-/* Général ------------------------------------------------------------------------------------- *//* Général ------------------------------------------------------------------------------------- */
-/* Général ------------------------------------------------------------------------------------- */
-/* Général ------------------------------------------------------------------------------------- */
-/* Général ------------------------------------------------------------------------------------- */
-/* Général ------------------------------------------------------------------------------------- */
-/* Général ------------------------------------------------------------------------------------- */
-
-
-/* Général ------------------------------------------------------------------------------------- */
-
 body,  legend, label, input {
     font: normal 12pt verdana, helvetica, sans-serif;
 }
 
-/* Forms --------------------------------------------------------------------------------------- */
-/*fieldset {
+
+fieldset {
     padding: 10px;
     border: 1px #0568CD solid;
     margin: 10px;
-}*/
+}
 
 legend {
     font-weight: bold;
@@ -73,8 +51,7 @@ form input.sansLabel {
     font-style: italic;
     color: #E8A22B;
 }
-
-.no-indent-none {
+.indent-none {
     display: block;
     list-style-type: none;
     margin-top: 0;
@@ -83,9 +60,20 @@ form input.sansLabel {
     margin-right: 0;
     padding-left: 0px;
 }
-.no-indent-disc {
+
+.indent-disc {
     display: block;
     list-style-type: disc;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 14px;
+}
+
+ul.checkmark {
+    display: block;
+    list-style-type:none;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -93,6 +81,12 @@ form input.sansLabel {
     padding-left: 0px;
 }
 
-.italic{
-    font-style: italic;
+ul.checkmark li:before {
+    content:"\2713\0020";
+}
+
+figure {
+    padding: 10px;
+    margin: 0px 20px 50px 0px !important;
+    display: inline;
 }
