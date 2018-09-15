@@ -123,6 +123,21 @@ CREATE TABLE category_detail (
 		REFERENCES languages (language_code)
 );
 
+INSERT INTO category_detail VALUES ('Fins', '', 'FNS', 'EN');
+INSERT INTO category_detail VALUES ('Palmes', '', 'FNS', 'FR');
+INSERT INTO category_detail VALUES ('Masks', '', 'MSK', 'EN');
+INSERT INTO category_detail VALUES ('Masques', '', 'MSK', 'FR');
+INSERT INTO category_detail VALUES ('Snorkels', '', 'SNK', 'EN');
+INSERT INTO category_detail VALUES ('Tubas', '', 'SNK', 'FR');
+INSERT INTO category_detail VALUES ('Computers', '', 'CMP', 'EN');
+INSERT INTO category_detail VALUES ('Ordinateur', '', 'CMP', 'FR');
+INSERT INTO category_detail VALUES ('Buoyancy Compensators', '', 'BYC', 'EN');
+INSERT INTO category_detail VALUES ('Gilets de plongée', '', 'BYC', 'FR');
+INSERT INTO category_detail VALUES ('Wetsuits', '', 'WET', 'EN');
+INSERT INTO category_detail VALUES ('Combinaison', '', 'WET', 'FR');
+INSERT INTO category_detail VALUES ('Tanks & Valves', '', 'TNK', 'EN');
+INSERT INTO category_detail VALUES ('Bouteilles et détendeurs', '', 'TNK', 'FR');
+
 --(7)#####################################################################################
 
 CREATE TABLE product_detail
