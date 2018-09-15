@@ -1,8 +1,7 @@
-
+/* general -------------------------------------------------------------------------- */
 body,  legend, label, input {
     font: normal 12pt verdana, helvetica, sans-serif;
 }
-
 
 fieldset {
     padding: 10px;
@@ -51,6 +50,8 @@ form input.sansLabel {
     font-style: italic;
     color: #E8A22B;
 }
+
+/* database css  -------------------------------------------------------------------------- */
 .indent-none {
     display: block;
     list-style-type: none;
@@ -84,7 +85,7 @@ ul.checkmark {
 ul.checkmark li:before {
     content:"\2713\0020";
 }
-
+/* product figure -------------------------------------------------------------------------- */
 figure {
     padding: 10px;
     margin: 0px 20px 50px 0px !important;
