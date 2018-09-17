@@ -20,7 +20,7 @@
             <br>
             <br>
             <div class="row">
-                <c:forEach var="product" items="${listProducts}" varStatus="loop" >
+                <c:forEach var="product" items="${listCategoryProducts}" varStatus="loop" >
                     <div class="col-2">
                         <figure class=" border figure rounded">
                             <img class=" figure-img img-fluid" src="${product.image}" alt="${product.name}" height="160" width="240">
