@@ -95,3 +95,8 @@ figure {
 .card-img-top{
     padding : 20%;
 }
+
+.languageImage{
+    height: 10%;
+    width: 20%;
+}

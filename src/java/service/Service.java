@@ -22,6 +22,10 @@ public class Service {
         return _language;
     }
 
+    public static Object getAllLanguages() {
+        return LanguageService.getAll();
+    }
+
     ////////////////////////////////////////////////////////////
     public static List<Product> getAllProducts() {
         return ProductService.getAll();
@@ -50,33 +54,28 @@ public class Service {
 //        return CategoryService.getAllCategories(_language);
         return CategoryService.getAll();
     }
-    
-    public static List<CategoryDetail> getAllCategoryDetails(){
+
+    public static List<CategoryDetail> getAllCategoryDetails() {
         List<Category> categories = getAllCategories();
         List<CategoryDetail> categoryDetails = new ArrayList();
 
-        for(Category category : categories){
-            for(CategoryDetail cd : (Set<CategoryDetail>)category.getCategoryDetails() ){
-                if ((_language.getLanguageCode()).equals( (cd.getLanguages().getLanguageCode()))){
+        for (Category category : categories) {
+            for (CategoryDetail cd : (Set<CategoryDetail>) category.getCategoryDetails()) {
+                if ((_language.getLanguageCode()).equals((cd.getLanguages().getLanguageCode()))) {
                     categoryDetails.add(cd);
                 }
-            }    
+            }
         }
         return categoryDetails;
     }
-    
-    
+
     public static List<Product> getAllCategoryProducts(String categoryCode) {
         List<Product> categoryProducts = null;
         categoryProducts = CategoryService.getAllProducts(categoryCode);
         return categoryProducts;
     }
-    
-    
-    /////////////////////////////////////////////////////////////
-    
-    
 
+    /////////////////////////////////////////////////////////////
     public static void closeCategorySession() {
         CategoryService.closeSession();
     }
