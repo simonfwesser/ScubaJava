@@ -35,11 +35,13 @@
                             <div class="card-body">
                                 <h5 class="card-title">${categoryDetails['categoryName']}</h5>
                                 <p class="card-text">${categoryDetails['about']}</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <form method="POST" action="CategoryServlet">
+                                    <input type="submit" class="btn btn-link" value="Go somewhere" > 
+                                    <input type="hidden" name="category" value="${categoryDetails['category'].categoryCode}">
+                                </form>
                             </div>
                         </div>
                     </div>   
-
                 </c:forEach>
             </div>
         </div>

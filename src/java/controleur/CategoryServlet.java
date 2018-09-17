@@ -1,31 +1,22 @@
-
 package controleur;
 
-import entite.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import service.Service;
 
-public class ProductServlet extends HttpServlet {
-    
-    private final String ITEM_DETAILS_PAGE = "/item_details.jsp";
+public class CategoryServlet extends HttpServlet {
 
+    private final String CATEGORY_ITEMS_PAGE = "/category_items.jsp";
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String sku = request.getParameter("sku");
-
-        request.setAttribute("product", Service.getOneProduct(sku));
-
-        RequestDispatcher disp = request.getRequestDispatcher(ITEM_DETAILS_PAGE);
+        String category = request.getParameter("category");
+        request.setAttribute("listCategoryProducts", Service.getAllCategoryProducts());
+        RequestDispatcher disp = request.getRequestDispatcher(CATEGORY_ITEMS_PAGE);
         disp.forward(request, response);
-
     }
 
     @Override
