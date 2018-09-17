@@ -23,15 +23,10 @@ public class Traitement extends HttpServlet {
         
         Service.openDbConnection();
         
-        //TODO :Changer pour languageCode
         String languageCode = (String)session.getAttribute("languageCode");
-        languageCode = "EN";  //Valeur qui viendra du filtre si null?
-        
-        Service.setLanguage(languageCode);
-        
+        Service.setLanguage(languageCode);   
         session.setAttribute("language", Service.getLanguage());
-        
-        session.setAttribute("listCategories", Service.getAllCategories());
+        session.setAttribute("listCategoriesWithDetails", Service.getAllCategoriesWithDetails());
 
 //        if(!session.isNew()){
 //            session.invalidate();
