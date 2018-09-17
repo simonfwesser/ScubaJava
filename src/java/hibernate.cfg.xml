@@ -42,7 +42,8 @@ Contributor(s):
 <hibernate-configuration>
   <session-factory>
     <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
-    <property name="hibernate.connection.url">jdbc:sqlite:E:\Toolkit\Mirror\BdeB\01-cours\03_etape\a11_web\projet_session\00_projects\gitRepository\testAlex\src\java\dataAccess\web_database.db</property>
+    <property name="hibernate.connection.url">jdbc:sqlite::resource:dataAccess\web_database.db</property>
+    <!--DriverManager.getConnection("jdbc:sqlite::resource:package/test.sqlite");-->
     <property name="hibernate.enable_lazy_load_no_trans">true</property>
     <property name="dialect">dialect.SQLiteDialect</property>
     <mapping resource="entite/PlacedOrder.hbm.xml"/>
