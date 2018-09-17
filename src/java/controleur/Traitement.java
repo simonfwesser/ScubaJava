@@ -26,7 +26,7 @@ public class Traitement extends HttpServlet {
         String languageCode = (String)session.getAttribute("languageCode");
         Service.setLanguage(languageCode);   
         session.setAttribute("language", Service.getLanguage());
-        session.setAttribute("listCategoriesWithDetails", Service.getAllCategoriesWithDetails());
+        session.setAttribute("listCategoryDetails", Service.getAllCategoryDetails());
 
 //        if(!session.isNew()){
 //            session.invalidate();

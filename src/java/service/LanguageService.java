@@ -7,6 +7,7 @@ import java.util.List;
 public class LanguageService {
 
     private static final String DEFAULT_LANGUAGE_CODE = "EN";
+//    private static final String DEFAULT_LANGUAGE_CODE = "FR";
 
     public static List<Languages> getAll() {
         LanguageDAO languageDAO = new LanguageDAO();

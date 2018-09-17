@@ -91,3 +91,7 @@ figure {
     margin: 0px 20px 50px 0px !important;
     display: inline;
 }
+
+.card-img-top{
+    padding : 20%;
+}

@@ -5,8 +5,10 @@ import dataAccess.DAO;
 import dataAccess.DbConnection;
 import dataAccess.ProductDAO;
 import entite.*;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 public class Service {
 
@@ -52,15 +54,18 @@ public class Service {
         return CategoryService.getAll();
     }
     
-    public static HashMap<Category, CategoryDetail> getAllCategoriesWithDetails(){
-        HashMap<Category, CategoryDetail> hashMap = new HashMap();
+    public static List<CategoryDetail> getAllCategoryDetails(){
         List<Category> categories = getAllCategories();
-        //List<CategoryDetail> details = getAllCategoryDetails();
+        List<CategoryDetail> categoryDetails = new ArrayList();
+
         for(Category category : categories){
-            hashMap.put(new Category(), new CategoryDetail());
+            for(CategoryDetail cd : (Set<CategoryDetail>)category.getCategoryDetails() ){
+                if ((_language.getLanguageCode()).equals( (cd.getLanguages().getLanguageCode()))){
+                    categoryDetails.add(cd);
+                }
+            }    
         }
-        
-        return null;
+        return categoryDetails;
     }
     
     
