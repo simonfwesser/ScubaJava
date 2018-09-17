@@ -109,6 +109,32 @@ INSERT INTO product VALUES(18, 'SV2', 'Atomic Aquatics', 'SNK', 67.95, 50, 'imag
 INSERT INTO product VALUES(19, 'Free Diving', 'Blue Reef', 'SNK', 17.95, 50, 'images/SNBRFD.jpg');
 INSERT INTO product VALUES(20, 'Spectra Dry', 'Scuba Pro', 'SNK', 60.00 , 50, 'images/SNSPSP.jpg');
 
+--COMPUTER
+INSERT INTO product VALUES(21, 'Puck Pro', 'Mares', 'CMP', 194.95, 50, 'images/CMMAPP.jpg');
+INSERT INTO product VALUES(22, 'Leonardo', 'Cressi', 'CMP', 249.95, 50, 'images/CMCRLE.jpg');
+INSERT INTO product VALUES(23, 'Zoop Novo', 'Suunto', 'CMP', 329.95, 50, 'images/CMSUZN.jpg');
+INSERT INTO product VALUES(24, 'i300', 'Aqua Lung', 'CMP', 299.00, 50, 'images/CMALI300.jpg');
+INSERT INTO product VALUES(25, 'Pro-Plus 3', 'Oceanic', 'CMP', 729.95, 50, 'images/CMOSPP3.jpg');
+INSERT INTO product VALUES(26, 'ReSource Pro', 'Genesis', 'CMP', 472.50, 50, 'images/CMGERP.jpg');
+
+--BYC
+INSERT INTO product VALUES(27, 'Avid CQR 3', 'Sherwood', 'BYC', 588.00, 50, 'images/BCSHAC3.jpg');
+INSERT INTO product VALUES(28, 'Pure SLS', 'Mares', 'BYC', 460.00, 50, 'images/BCMAPS.jpg');
+INSERT INTO product VALUES(29, 'Covert', 'Zeagle', 'BYC', 349.95, 50, 'images/BCZECO.jpg');
+
+
+--WETSUIT
+INSERT INTO product VALUES(30, 'Steamer', 'Scubapro', 'WET', 174.95, 50, 'images/WSSPPS.jpg');
+INSERT INTO product VALUES(31, 'Thermoprene Pro', 'Henderson', 'WET', 493.95, 50, 'images/WSHETP.jpg');
+INSERT INTO product VALUES(32, 'Ultra Velocity', 'Bare', 'WET', 539.95, 50, 'images/WSBAUV.jpg');
+INSERT INTO product VALUES(33, 'Reactor II', 'O''Neill', 'WET', 104.95, 50, 'images/WSONR2.jpg');
+
+--TANK
+INSERT INTO product VALUES(34, '80 Cubic Foot', 'Catalina', 'TNK', 219.95, 50, 'images/TVCA80CF.jpg');
+INSERT INTO product VALUES(35, ' High Pressure', 'XS Scuba', 'TNK', 314.95, 50, 'images/TVSFHP.jpg');
+INSERT INTO product VALUES(36, 'Aluminum Pony', 'Luxfer', 'TNK', 124.95, 50, 'images/TVLUPT.jpg');
+INSERT INTO product VALUES(37, '3000 3.0 Kit', 'Spare-Air', 'TNK', 330.00, 50, 'images/TVSA3000.jpg');
+
 --(6)#####################################################################################
 
 CREATE TABLE category_detail (
@@ -1224,6 +1250,1173 @@ INSERT INTO product_detail VALUES(
 	<li>Tube flexible en silicone de haute qualité</li></ul>'
 );
 
+INSERT INTO product_detail VALUES(
+	21,
+	'EN',
+	'<ul class="checkmark"><li>Full featured RGBM NITROX compute</li>
+	<li>Air, nitrox and BT function modes</li>
+	<li>36 hours memory capacity</li>
+	<li>Smart, easy, and intuitive to use</li>
+	<li>Two different gas mixtures during single dive</li></ul>',
+	'<p class="text-justify">When Mares introduced the Puck Dive Computer on the market in 2008, it sent a shockwave rippling through the Industry: A super intuitive, easy to use, and full featured RGBM Nitrox computer at an extremely competitive price. Now Mares is doing it again. Though improving on the original concept was not easy, they did so by implementing a larger display in a slimmer design, then added upgradeable firmware and multi-gas capability. With all the bells and whistles, with no unnecessary frills, the Puck Pro Wrist Computer is what you''re looking for. The Puck Pro is the computer that can accompany you through years and years of diving adventures.</p>
+	<p class="text-justify">The Puck Pro Wrist Computer uses Mares-Wienke RGBM (Reduced Gradient Bubbles Model) Algorithm. The RGBM considers the phenomenon of micro-bubbles to prevent their formation. In over 10,000 real dives monitored by Dr. Bruce Wienke in the Los Alamos laboratories, the formation of micro-bubbles has been studied and evaluated to better understand the mechanism behind how micro-bubbles are formed during a dive. Today it is the most evolved algorithm for reducing the formation of micro-bubbles without compromising dive times.</p>
+	<p class="text-justify">The easy excess push button allows the diver to operate the computer in all conditions, even when wearing thick gloves. Navigating through the computer programs is extremely simple and very intuitive. There are three special function modes of air, nitrox and bottom time. The Puck Pro Computer has a maximum depth display of 492'' (150 meter), a memory capacity of 36-hours, runs on a user-replaceable 3-volt CR2450 lithium-ion battery, power indicator, and back lighting for low light conditions. Computer also has a plan mode display, can be used in both imperial or metric units, fresh or seawater settings, residual nitrogen reset, option to exclude audible alarms and uncontrolled ascents", has an ascent rate indicator and is fully altitude adjustable to The Puck Pro also has a watch, stopwatch, date and temperature functions, and the quartz clock Movement can be set in a 12 or 24-hour format. The Puck has an optional USB interface for logging dives on your PC, (see SKU: MRSPCDL2) PC interface, and logbook function that includes dive profile graphs at 5-second sampling rate.</p>
+	<p class="text-justify">The Puck Pro knows that not all of us who dive are young and in peak condition, it address this with precautionary program settings that allow individual adjustment to more conservative dive profiles if needed. When you do multi-level, multiple dives during a single day or multiple dives over several days you can choose different setting levels to adjust your computer to a more conservative dive profile.</p>
+	<p class="text-justify">The Puck Pro has superior display readability. To offer an easy-to-read display Mares produced a wide computer mineral glass display, with intense backlighting and high contrast. The computer featuring illuminated, oversized digits with special attention paid to maximize the viewing angle, to eliminate angular distortion and to always grant the best readability. The Puck Pro Computer comes with a durable rubber wrist strap and a comprehensive owner''s manual.</p>',
+	'<ul class="indent-disc"><li>Super Intuitive, Easy-to-Use, and Full-Featured Computer</li>
+	<li>Improving on Original Concept</li>
+	<li>Larger-Display in Slimmer-Design</li>
+	<li>Upgradeable Firmware and Multi-Gas Capability</li>
+	<li>All-the-Bells-and-Whistles</li>
+	<li>Precision Stopwatch</li>
+	<li>Mares-Wienke RGBM (Reduced Gradient Bubbles Model) Algorithm</li>
+	<li>Special Function Modes Air, Nitrox and Bottom Time</li>
+	<li>Precautionary Programs Setting</li>
+	<li>Plan Mode</li>
+	<li>Backlighting</li>
+	<li>Log Book</li>
+	<li>Fresh Water/Sea Water Setting</li>
+	<li>Residual Nitrogen Memory Reset</li>
+	<li>User-Replaceable CR 2450 Lithium-Ion Battery</li>
+	<li>Altitude Adjustable to 12,100'' (3,700 meters).</li>
+	<li>Memory Capacity 36 Hours</li>
+	<li>Superior Display Readability, Mineral Glass Crystal</li>
+	<li>492'' (150 meters) Depth Rating</li>
+	<li>Power Indicators</li>
+	<li>Audible Alarms</li>
+	<li>Watch, Date and Temperature Displays</li>
+	<li>12/24 Hour Formats</li>
+	<li>Two-Different Gas Mixtures During Single Dive</li>
+	<li>Metric or Imperial Units of Measure</li>
+	<li>Ascent Rate Indicator and Ascent Rate Digital Indicator</li>
+	<li>Quartz Clock Movement</li>
+	<li>Durable Rubber Wrist Strap</li>
+	<li>Comprehensive Owner''s Manual</li>
+	<li>Optional USB Interface for Logging Dives on PC</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	21,
+	'FR',
+	'<ul class="checkmark"><li>Calcul NITROX RGBM complet</li>
+	<li>Modes de fonctionnement air, nitrox et BT</li>
+	<li>36 heures de capacité de mémoire</li>
+	<li>Utilisation intelligente, simple et intuitive</li>
+	<li>Deux mélanges de gaz différents lors d''une plongée simple</li></ul>',
+	'<p class="text-justify">Lorsque Mares a lancé l''ordinateur de plongée Puck sur le marché en 2008, il a provoqué une onde de choc dans l''industrie: un ordinateur Nitrox RGBM super intuitif, facile à utiliser prix. Maintenant, Mares le fait encore. Bien que l''amélioration du concept d''origine n''ait pas été facile, ils l''ont fait en mettant en place un écran plus grand dans un design plus mince, puis en ajoutant un micrologiciel évolutif et une capacité multi-gaz. Avec toutes les fonctions, sans fioritures inutiles, l''ordinateur de poignet Puck Pro est ce que vous recherchez. Le Puck Pro est l''ordinateur qui peut vous accompagner pendant des années et des années d''aventures de plongée.</P>
+	<p class="text-justify">Le poignet Puck Pro utilise l''algorithme Mares-Wienke RGBM (modèle à bulles à gradient réduit). Le RGBM considère le phénomène des micro-bulles pour empêcher leur formation. Dans plus de 10 000 plongées réelles suivies par le Dr Bruce Wienke dans les laboratoires de Los Alamos, la formation de micro-bulles a été étudiée et évaluée afin de mieux comprendre le mécanisme de formation des microbulles lors d''une plongée. Aujourd''hui, c''est l''algorithme le plus évolué pour réduire la formation de micro-bulles sans compromettre les temps de plongée.</P>
+	<p class="text-justify">Le bouton poussoir facile à utiliser permet au plongeur de faire fonctionner l''ordinateur dans toutes les conditions, même avec des gants épais. La navigation dans les programmes informatiques est extrêmement simple et très intuitive. Il existe trois modes de fonction spéciaux d''air, de nitrox et de temps bas. L''ordinateur Puck Pro dispose d''un affichage de profondeur maximale de 150 mètres (492 ''), d''une capacité de mémoire de 36 heures, fonctionne sur une batterie lithium-ion CR2450 de 3 volts remplaçable par l''utilisateur, d''un indicateur d''alimentation et d''un éclairage arrière . L''ordinateur dispose également d''un affichage en mode plan, peut être utilisé en unités impériales ou métriques, paramètres d''eau douce ou d''eau de mer, réinitialisation de l''azote résiduel, option pour exclure les alarmes sonores et ascensions incontrôlées. Pro possède également une montre, un chronomètre, des fonctions de date et de température, et le mouvement de l''horloge à quartz peut être réglé sur un format 12 ou 24. Le Puck dispose d''une interface USB en option pour enregistrer les plongées sur votre PC Interface PC et fonction de journal de bord comprenant des graphiques de profil de plongée à un taux d''échantillonnage de 5 secondes.</P>
+	<p class="text-justify">Le Puck Pro sait que nous ne sommes pas tous jeunes et en pleine forme, cela répond à des paramètres de précaution qui permettent, si nécessaire, d''adapter individuellement des profils de plongée plus conservateurs. Lorsque vous effectuez plusieurs plongées à plusieurs niveaux pendant une seule journée ou plusieurs plongées sur plusieurs jours, vous pouvez choisir différents niveaux de réglage pour ajuster votre ordinateur à un profil de plongée plus conservateur.</P>
+	<p class="text-justify">La lisibilité du Puck Pro est supérieure. Pour offrir un affichage facile à lire, Mares a produit un grand écran en verre minéral, avec un contre-jour intense et un contraste élevé. L''ordinateur est doté de chiffres surdimensionnés et éclairés, avec une attention particulière pour maximiser l''angle de vue, éliminer la distorsion angulaire et garantir une lisibilité optimale. L''ordinateur Puck Pro est livré avec un bracelet en caoutchouc durable et un manuel d''utilisation complet.</P>',
+	'<ul class="indent-disc"><li>Ordinateur super intuitif, facile à utiliser et complet</li>
+	<li>Améliorer le concept d''origine</li>
+	<li>Plus grand écran dans Slimmer-Design</li>
+	<li>Mise à niveau du micrologiciel et capacité multi-gaz</li>
+	<li>Tous les cloches et sifflets</li>
+	<li>Chronomètre de précision</li>
+	<li>Algorithme Mares-Wienke RGBM (modèle à bulles à gradient réduit)</li>
+	<li>Modes de fonction spéciaux Air, Nitrox et heure de fin</li>
+	<li>Paramétrage des programmes de précaution</li>
+	<li>Mode Plan</li>
+	<li>Rétroéclairage</li>
+	<li>Journal de bord</li>
+	<li>Réglage de l''eau douce /de l''eau de mer</li>
+	<li>Réinitialiser la mémoire d''azote résiduel</li>
+	<li>Batterie au lithium-ion CR 2450 remplaçable par l''utilisateur</li>
+	<li>Altitude ajustable à 12 100 ''(3 700 mètres).</li>
+	<li>Capacité de mémoire 36 heures</li>
+	<li>Lisibilité d''affichage supérieure, cristal de verre minéral</li>
+	<li>150 mètres (492 pi) de profondeur</li>
+	<li>Indicateurs de puissance</li>
+	<li>Alarmes sonores</li>
+	<li>Affichage de la montre, de la date et de la température</li>
+	<li>Formats 12/24 heures</li>
+	<li>Mélanges de gaz à deux niveaux pendant une seule plongée</li>
+	<li>Unités de mesure métriques ou impériales</li>
+	<li>Indicateur de vitesse de remontée et indicateur numérique de vitesse de remontée</li>
+	<li>Mouvement d''horloge à quartz</li>
+	<li>Dragonne en caoutchouc durable</li>
+	<li>Manuel du propriétaire complet</li>
+	<li>Interface USB en option pour la journalisation des plongées sur PC</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	22,
+	'EN',
+	'<ul class="checkmark"><li>Air, nitrox and gauge modes</li>
+	<li>Edge to edge, high definition LCD screen</li>
+	<li>RGBM algorithm, Bruce Wienke/Haldane model</li>
+	<li>Versatile dive memory logbook</li>
+	<li>Multiple dive safe decompression calculations</li></ul>',
+	'<p class="text-justify">The Cressi Leonardo Wrist Computer is an Elegant Expression of a Simple and Functional Design, the Leonardo is a Must-Have for Divers entering the sport and those who just want to dive. " A Single Button Interface makes it Effortless to Program Air, Nitrox and Gauge Modes. Leonardo has a Large Edge-to-Edge, High-Definition LCD Screen that gives Large Numerical Displays in a Computer that is still compact and Travel-Friendly. The Leonardo''s Easy-to-See Battery Life Icon Indicator and its Distinct Audible Alarms Deliver Critical Information as well as Peace-of-Mind during the Dive.</p>
+	<p class="text-justify">The Leonardo features a new Cressi RGBM Algorithm, created in conjunction with the expertise of Bruce Wienke and based on the Haldane model, integrated with RGBM factors. This Algorithm allows for Safe Decompression Calculations for Multiple Dives spread out over Multiple Days. The Leonardo computer by Cressi is a Multifunctional Instrument for Sport Diving. It will supply any wanted information on Depth, Dive Times, Decompression Status, Ascent Rate and Surface Interval Times between dives. Nitrogen Absorption and Release is Continuously Processed by its Sophisticated Software, taking into account the Quantity of Inert Gases in the different Mixtures which can be used. Such information is Displayed on the Instrument''s Large Display, thanks to the PCD (Priority Compartment Digit Display) System, allowing an Easy and Direct Dialogue" between the Diver and the Computer, ensuring a clear understanding of all the Data needed at any given time and a perfect readability in any situation. The computer is provided with Clock and Calendar, a versatile Dive Memory (logbook), as well as a Dive Simulator. The Mathematical Model of Leonardo can make Saturation and De-Saturation Computations of dives carried out both with air and with Nitrox, whose parameters can all be set: from the maximum allowed PO2 value between 17.4 and 23.2 psi (1.2 bar and 1.6 bar), to the mixture''s oxygen percentage (FO2) between 21% and 50% of O2. Additionally, the Instrument may be set by the user for either Imperial (feet) or Metric (meters) System. The Leonardo can also be fully re-set after each use, making it an excellent choice for rental departments.</p>
+	<p class="text-justify">The Cressi Leonardo Dive Computer has an Operational Depth from 0'' to 393'' (0 to 120 meters), is Powered by a User Replaceable CR2430 3-Volt Battery, and is equipped with a 60 Dive (70 hour) Logbook Memory function. The Clock Function can be set in a 12/24 Hour Formats. The Computer is also Altitude Adjustable up to 12,139'' (3,700 meters) and has a Back Light Feature for Low Light Conditions. The Computer comes with a Comprehensive Owner''s Manual.</p>',
+	'<ul class="indent-disc"><li>Elegant Expression of a Simple and Functional Design</li>
+	<li>For Divers Who "Just-Want-to-Dive"</li>
+	<li>Single Button Interface for Effortless Programming</li>
+	<li>Modes: Air, Nitrox and Gauge</li>
+	<li>Large Edge-to-Edge, High-Definition LCD Screen</li>
+	<li>Large Numerical Displays</li>
+	<li>Compact and Travel-Friendly</li>
+	<li>Easy-to-See Battery Life Icon Indicator</li>
+	<li>Distinct Audible Alarms</li>
+	<li>Algorithm: RGBM Algorithm, Bruce Wienke/Haldane Model</li>
+	<li>Safe Decompression Calculations for Multiple Dives Over Multiple Days</li>
+	<li>Multifunctional Instrument for Sport Diving</li>
+	<li>Depth, Dive Times, Decompression Status</li>
+	<li>Ascent Rate and Surface Interval Times</li>
+	<li>Nitrogen Absorption and Release is Continuously Processed</li>
+	<li>PCD (Priority Compartment Digit Display) System</li>
+	<li>Easy and Direct Dialogue" Between Diver and Computer</li>
+	<li>Perfect Readability in Any Situation</li>
+	<li>Clock, Calendar and Temperature</li>
+	<li>12/24 Hour Formats</li>
+	<li>Versatile Dive Memory (logbook): 60 Dives or 70 Hours On-Board Log</li>
+	<li>Dive Simulator Function</li>
+	<li>PO2 Value between 17.4 and 23.2 psi (1.2 bar and 1.6 bar)</li>
+	<li>(FO2) between 21% and 50% of O2</li>
+	<li>Imperial (feet) or Metric (meters) System Selectable</li>
+	<li>Reset Function for Multiple Users</li>
+	<li>Operational Depth: 0'' to 393'' (0 to 120 meters)</li>
+	<li>User Replaceable CR2430 3-Volt Battery</li>
+	<li>Altitude Adjustable Up to 12,139'' (3,700 meters)</li>
+	<li>Back Light Feature for Low Light Conditions</li>
+	<li>Comprehensive Owner''s Manual</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	22,
+	'FR',
+	'<ul class="checkmark"><li>Modes air, nitrox et jauge</li>
+	<li>Écran LCD haute définition bord à bord</li>
+	<li>Algorithme RGBM, modèle Bruce Wienke /Haldane</li>
+	<li>Journal de plongée polyvalent</li>
+	<li>Calculs de décompression sécurisés pour plusieurs plongées</li></ul>',
+	'<p class="text-justify">L''ordinateur de poignet Cressi Leonardo est une expression élégante d''un design simple et fonctionnel, le Leonardo est un outil indispensable pour les plongeurs qui entrent dans le sport et ceux qui veulent simplement plonger. "Une interface à bouton unique permet de programmer les modes Air, Nitrox et Gauge. Leonardo possède un grand écran LCD haute définition bord à bord qui offre de grands affichages numériques sur un ordinateur encore compact et convivial. L''indicateur de durée de vie de la batterie facile à voir de Leonardo et ses alarmes sonores distinctes fournissent des informations critiques ainsi que la tranquillité d''esprit pendant la plongée.</P>
+	<p class="text-justify">Le Leonardo propose un nouvel algorithme Cressi RGBM, créé en collaboration avec l''expertise de Bruce Wienke et basé sur le modèle Haldane, intégré aux facteurs RGBM. Cet algorithme permet des calculs de décompression sécurisés pour plusieurs plongées réparties sur plusieurs jours. L''ordinateur Leonardo de Cressi est un instrument multifonctionnel pour la plongée sportive. Il fournira toutes les informations voulues sur la profondeur, les temps de plongée, l''état de décompression, la vitesse de remontée et les intervalles de surface entre les plongées. L''absorption et la libération d''azote sont traitées en continu par son logiciel sophistiqué, en tenant compte de la quantité de gaz inertes dans les différents mélanges pouvant être utilisés. Ces informations sont affichées sur le grand écran de l''instrument, grâce au système PCD (Priorité compartimentage numérique), permettant un dialogue facile et direct entre le plongeur et l''ordinateur, garantissant une compréhension claire de toutes les données nécessaires à un moment donné. une parfaite lisibilité dans toutes les situations L''ordinateur est fourni avec une horloge et un calendrier, une mémoire de plongée polyvalente (logbook), ainsi qu''un simulateur de plongée.Le modèle mathématique de Leonardo peut effectuer des calculs de saturation et de dé-saturation des plongées avec air et avec Nitrox, dont tous les paramètres peuvent être réglés: de la valeur maximale autorisée de PO2 comprise entre 17,4 et 23,2 psi (1,2 bar et 1,6 bar), au pourcentage d''oxygène du mélange (FO2) compris entre 21% et 50% d''O2. L''instrument peut être réglé par l''utilisateur pour un système impérial (pieds) ou métrique (mètres). Le Leonardo peut également être entièrement remis à zéro après chaque utilisation, ce qui en fait un excellent choix pour les services de location.</p>
+	<p class="text-justify">L''ordinateur de plongée Cressi Leonardo a une profondeur opérationnelle de 0 à 120 mètres (0 à 393 pieds), est alimenté par une batterie 3 volts CR2430 remplaçable par l''utilisateur et est équipé Fonction plongée (70 heures) Journal. La fonction d''horloge peut être définie dans un format 12/24 heures. L''ordinateur est également réglable en altitude jusqu''à 3 139 mètres et dispose d''une fonction de rétroéclairage pour les conditions de faible luminosité. L''ordinateur est livré avec un manuel d''utilisation complet.</P>',
+	'<ul class="indent-disc"><li>Expression élégante d''un design simple et fonctionnel</li>
+	<li>Pour les plongeurs qui "veulent juste plonger"</li>
+	<li>Interface à bouton unique pour une programmation sans effort</li>
+	<li>Modes: Air, Nitrox et Jauge</li>
+	<li>Grand écran LCD haute définition bord à bord</li>
+	<li>Grands affichages numériques</li>
+	<li>Compact et convivial pour les voyages</li>
+	<li>Indicateur d''icône de durée de vie de la batterie facile à voir</li>
+	<li>Alarmes sonores distinctes</li>
+	<li>Algorithme: algorithme RGBM, Bruce Wienke /Modèle Haldane</li>
+	<li>Calculs de décompression sécurisée pour plusieurs plongées sur plusieurs jours</li>
+	<li>Instrument multifonctionnel pour la plongée sportive</li>
+	<li>Profondeur, temps de plongée, état de décompression</li>
+	<li>Taux d''ascension et intervalles de surface</li>
+	<li>L''absorption et la libération de l''azote sont traitées en continu</li>
+	<li>Système PCD (affichage de numéro de compartiment prioritaire)</li>
+	<li>Dialogue facile et direct "entre plongeur et ordinateur</li>
+	<li>Une lisibilité parfaite dans toutes les situations</li>
+	<li>Horloge, calendrier et température</li>
+	<li>Formats 12/24 heures</li>
+	<li>Mémoire de plongée polyvalente (journal de bord): 60 plongées ou 70 heures de journal intégré</li>
+	<li>Fonction du simulateur de plongée</li>
+	<li>Valeur de PO2 entre 17,4 et 23,2 psi (1,2 bar et 1,6 bar)</li>
+	<li>(FO2) entre 21% et 50% de O2</li>
+	<li>Système impérial (pieds) ou métrique (mètres) sélectionnable</li>
+	<li>Fonction de réinitialisation pour plusieurs utilisateurs</li>
+	<li>Profondeur opérationnelle: 0 à 393 pieds (0 à 120 mètres)</li>
+	<li>Batterie 3 volts remplaçable par l''utilisateur CR2430</li>
+	<li>Altitude réglable jusqu''à 3 139 mètres</li>
+	<li>Fonction de rétro-éclairage pour des conditions de faible luminosité</li>
+	<li>Manuel du propriétaire complet</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	23,
+	'EN',
+	'<ul class="checkmark"><li>Wrist mounted computer</li>
+	<li>Operating modes: Air and Nitrox</li>
+	<li>Programmable for 21% to 50% oxygen mixtures</li>
+	<li>User replaceable Li-ion batteries</li>
+	<li>Easy to read backlight display</li></ul>',
+	'<p class="text-justify">The ZOOP Novo dive computer from Suunto is a wrist-mounted computer that will not only enhance your time under water; it will also help you be a safer diver without breaking the bank. Its ability to operate in two modes (Air and Nitrox), safety features (decompression stop data, audible alarms, and easy-to-read display), and simple menus mean the ZOOP Novo will provide critical dive data when it is needed quickly and accurately. It employs the reduced gradient bubble model (RGBM), which is an algorithm developed to calculate decompression stops; this algorithm is a model used to determine how much gas is accumulated during a dive and how much time is required at your safety stop(s) to safely surface.</p>
+	<p class="text-justify">Suunto''s ZOOP Novo is PC-compatible, so you can easily store your dive data (up to 50 hours) and logs on a PC. It is activated by water, so you don''t have to worry about forgetting to start your computer and losing a single dive''s valuable data. Because this computer is wrist mounted, there''s never a need to search for your gauge console when you want to check on your depth, maximum bottom time, dive time, and no deco time. All of that information is available at a moment''s notice, right on your wrist In addition, the ZOOP Novo''s has a new back lite display which makes seeing your dive data easy during night and day dives.</p>
+	<p class="text-justify">The ZOOP Novo provides a depth display to 330'' (100 meters), its clock can be set with a 12 or 24 hour format, provides temperature reading above and below the surface to 1.5° (1°C) accuracy and is altitude adjustable up to 10,000'' (3,000 meters). The computer can be programed for Nitrox mixtures from 21% to 50% oxygen and displays oxygen partial pressures from 17.4 psi to 23.2 psi (1.2 to 1.6 bars). The ZOOP Novo is powered by a user replaceable 3 volt CR2450 lithium ion battery. The ZOOP Novo can be set for imperial (feet) or metric (meter) measurements. The ZOOP Novo has an enlarged segment matrix screen, excellent contrast and information with bigger and clearer digits for depth, no-decompression etc., and a new 4 button interface for easier more intuitive diver use. Computer comes with a quick guide.</p>',
+	'<ul class="indent-disc"><li>Wrist Mounted Computer</li>
+	<li>Algorithm: Bruce R. Wienke, BS, MS and PhD, Reduced Gradient Bubble Model (RGBM)</li>
+	<li>Operating Modes: Air, nitrox, gauge and freedive modes</li>
+	<li>Programmable for 21% to 50% Oxygen Mixtures</li>
+	<li>Displays Oxygen Partial Pressures from 17.4 psi to 23.2 psi (1.2 to 1.6 bars)</li>
+	<li>Altitude Adjustable Up to 10,000'' (3,000 meters)</li>
+	<li>Maximum Depth Display: 330'' (100 meters)</li>
+	<li>12 or 24 Hour Clock Format</li>
+	<li>Temperature Gauge to 1.5° (1°C) Accuracy</li>
+	<li>Imperial/Metric Programmable</li>
+	<li>Decompression Stop Data</li>
+	<li>Audible Alarms</li>
+	<li>50 Hour Profile and Logbook Memory</li>
+	<li>User-Replaceable 3 Volt CR2450 Lithium-Ion Battery</li>
+	<li>Back Lite Display, Easy to Read in Low Light & Night Conditions</li>
+	<li>Enlarged Segment Matrix Screen</li>
+	<li>Excellent Contrast & Information w/Bigger/Clearer Digits</li>
+	<li>New 4 Button Interface</li>
+	<li>Easier More Intuitive Diver Use</li>
+	<li>PC Compatible</li>
+	<li>Quick Guide</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	23,
+	'FR',
+	'<ul class="checkmark"><li>Ordinateur monté sur le poignet</li>
+	<li>Modes de fonctionnement: Air et Nitrox</li>
+	<li>Programmable pour des mélanges d''oxygène de 21% à 50%</li>
+	<li>Batteries Li-ion remplaçables par l''utilisateur</li>
+	<li>Affichage du rétroéclairage facile à lire</li></ul>',
+	'<p class="text-justify">L''ordinateur de plongée ZOOP Novo de Suunto est un ordinateur monté sur le poignet qui améliorera non seulement votre temps sous l''eau; cela vous aidera également à être un plongeur plus sûr sans vous ruiner. Sa capacité à fonctionner selon deux modes (Air et Nitrox), ses caractéristiques de sécurité (données de palier de décompression, alarmes sonores et affichage facile à lire) et ses menus simples signifient que ZOOP Novo fournira des données de plongée critiques rapidement et rapidement. avec précision. Il utilise le modèle à bulles à gradient réduit (RGBM), qui est un algorithme développé pour calculer les paliers de décompression; Cet algorithme est un modèle utilisé pour déterminer la quantité de gaz accumulée durant une plongée et le temps nécessaire à votre (vos) arrêt (s) de sécurité pour effectuer une surface sûre.</p>
+	<p class="text-justify">Le ZOOP Novo de Suunto est compatible PC, ce qui vous permet de stocker facilement vos données de plongée (jusqu''à 50 heures) et de vous connecter à un PC. Il est activé par l''eau, vous n''avez donc pas à vous soucier d''oublier de démarrer votre ordinateur et de perdre les précieuses données d''une seule plongée. Étant donné que cet ordinateur est monté sur le poignet, il n''est jamais nécessaire de rechercher la console de votre jauge lorsque vous souhaitez vérifier la profondeur, le temps maximum, le temps de plongée et le temps de décompression. Toutes ces informations sont disponibles à tout moment, directement sur votre poignet. De plus, le ZOOP Novo dispose d''un nouvel écran rétro-éclairé qui facilite la visualisation de vos données de plongée pendant les plongées de nuit et de jour.</P>
+	<p class="text-justify">Le ZOOP Novo fournit un affichage de profondeur à 100 mètres (330 ''), son horloge peut être réglée au format 12 ou 24 heures, fournissant une lecture de température au-dessus et au-dessous de la surface à 1,5 ° ( 1 ° C) précision et l''altitude réglable jusqu''à 10 000 pieds (3 000 mètres). L''ordinateur peut être programmé pour des mélanges de Nitrox de 21% à 50% d''oxygène et affiche des pressions partielles d''oxygène de 17,4 psi à 23,2 psi (1,2 à 1,6 bar). Le ZOOP Novo est alimenté par une batterie lithium-ion CR2450 de 3 volts remplaçable par l''utilisateur. Le ZOOP Novo peut être réglé pour des mesures impériales (pieds) ou métriques (mètres). Le ZOOP Novo dispose d''un écran matriciel élargi, d''un excellent contraste et d''informations avec des chiffres plus grands et plus clairs pour la profondeur, sans décompression, etc., et une nouvelle interface à 4 boutons pour une utilisation plus intuitive. L''ordinateur est livré avec un guide rapide.</P>',
+	'<ul class="indent-disc"><li>Ordinateur monté sur le poignet</li>
+	<li>Algorithme: Bruce R. Wienke, BS, MS et PhD, Modèle à bulles à gradient réduit (RGBM)</li>
+	<li>Modes de fonctionnement: modes aérien, nitrox, jauge et libre</li>
+	<li>Programmable pour 21% à 50% de mélanges d''oxygène</li>
+	<li>Affiche les pressions partielles de l''oxygène de 17,4 psi à 23,2 psi (1,2 à 1,6 bar)</li>
+	<li>Altitude ajustable Jusqu''à 10 000 ''(3 000 mètres)</li>
+	<li>Affichage de la profondeur maximale: 100 mètres (330 '')</li>
+	<li>Format d''horloge de 12 ou 24 heures</li>
+	<li>Précision de la température à 1,5 ° (1 ° C) Précision</li>
+	<li>Imperial /Metric Programmable</li>
+	<li>Données d''arrêt de décompression</li>
+	<li>Alarmes sonores</li>
+	<li>Profil de 50 heures et mémoire de journal</li>
+	<li>Batterie au lithium-ion CR2450 de 3 volts remplaçable par l''utilisateur</li>
+	<li>Affichage rétro-éclairé, facile à lire en conditions de faible luminosité et de nuit</li>
+	<li>Écran de matrice de segment agrandi</li>
+	<li>Excellent contraste et information avec des chiffres plus grands /plus clairs</li>
+	<li>Nouvelle interface à 4 boutons</li>
+	<li>Utilisation plus intuitive et plus intuitive de la plongée</li>
+	<li>Compatible PC</li>
+	<li>Guide rapide</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	24,
+	'EN',
+	'<ul class="checkmark"><li>Air, Nitrox, free dive, and gauge modes</li>
+	<li>Nitrox mix up to 50% O2</li>
+	<li>Salt or fresh water dive selection</li>
+	<li>Water activated on switch</li>
+	<li>Automatic altitude adjustment</li></ul>',
+	'<p class="text-justify">Its effortless approach and versatility give you the ability to dive right in. It exceeds expectations with many features such as its easy-to-use interface, flexible operating modes, built-in backlight and user-changeable battery with data retention. The i300 carries all these features with a ruggedness that you can count on. And with effortless design, such as a water-activated on switch, it gets you right in the water and descending to your next adventure. 4 operating modes: Air, Nitrox, Gauge (with run timer), and Free Dive (tracks calculations to allow unrestricted switching between Dive and Free on same day). User-changeable standard battery and data retention. Maintains settings and calculations between battery changes. Backlighting for easy reading in low light. Audible alarms and additional high-visibility LED warning light for additional safety. User-updatable software gives access to the latest features and upgrade (must purchase optional download cable). Pre-Dive planning feature allows a preview of your next dive. Water-activated on switch, to give a no-worries start to the dive. Single button access to last dive display (max depth and bottom time). History Mode includes total number of dives, max depth, total dive hours, and lowest temperature. Computer has a depth readout to 330'' (100 m). Nitrox mix to 50% O2. Optional deep stop with countdown timer. Salt or fresh water dive selection. Automatic altitude adjustment ensures an accurate profile. Simple to use with DiverLog software on the Mac or PC platforms, which allows control of all your dive computer settings, view Log and Profile data, add location, notes and other details, as well as store and share photos & videos. DiverLog must be purchased separately at ediverlog.com. Included with the computer are a digital instruction manual, safety reference information, DiveLog brochure, quick reference card, lens protector and battery compartment opening tool.</p>',
+	'<ul class="indent-disc"><li>Effortless Approach and Versatility</li>
+	<li><b>Exceeds Expectations:</b><br>Easy-to-Use Interface<br>Flexible Operating Modes</li>
+	<li>Built-In Backlight<br>User-Changeable Battery with Data Retention</li>
+	<li>Ruggedness that You-Can-Count-On</li>
+	<li>Water-Activated On-Switch: No-Worries Start to Dive</li>
+	<li><b>4 Operating Modes:</b><br>Air, Nitrox, Gauge (with run timer)<br>Free Dive (tracks calculations to allow unrestricted switching between Dive and Free)</li>
+	<li>Backlighting for Easy Reading in Low Light</li>
+	<li>Audible Alarms & Additional High-Visibility LED Warning Light for Additional Safety</li>
+	<li>User-Updatable Software</li>
+	<li>Optional Download Cable: Access to Latest Features and Upgrade (see SKU: UDRPCI550)</li>
+	<li>Pre-Dive Planning Feature Allows Preview of Next Dive</li>
+	<li>Single Button Access to Last Dive Display (max depth and bottom time)</li>
+	<li>History Mode: Total Number of Dives, Max Depth, Total Hours, & Lowest Temperature</li>
+	<li>Depth Readout: 330'' (100 meters)</li>
+	<li>Nitrox Mix to 50% O2</li>
+	<li>Optional Deep Stop w/Countdown Timer</li>
+	<li>Salt or Fresh Water Dive Selection</li>
+	<li>Automatic Altitude Adjustment</li>
+	<li>Simple to Use w/DiverLog Software on Mac or PC Platforms</li>
+	<li><b>Control of All Dive Computer Settings:</b><br>View Log and Profile Data<br>Add Location, Notes and Other Details<br>Store and Share Photos & Videos</li>
+	<li><b>Note:</b>DiverLog Must be Purchased Separately at ediverlog.com</li>
+	<li><b>Includes:</b><br>Digital Instruction Manual<br>Safety Reference Info<br>DiverLog Brochure<br>Quick Reference Card<br>Lens Protector<br>Battery Compartment Opening Tool</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	24,
+	'FR',
+	'<ul class="checkmark"><li>Modes air, nitrox, plongée libre et jauge</li>
+	<li>Nitrox mélange jusqu''à 50% d''O2</li>
+	<li>Sélection de plongée au sel ou à l''eau douce</li>
+	<li>L''eau activée sur le commutateur</li>
+	<li>Réglage automatique de l''altitude</li></ul>',
+	'<p class="text-justify">Son approche sans effort et sa polyvalence vous permettent de plonger directement. Il dépasse les attentes grâce à de nombreuses fonctionnalités telles que son interface conviviale, ses modes de fonctionnement flexibles, son rétro-éclairage intégré et son utilisateur. batterie interchangeable avec conservation des données. Le i300 présente toutes ces caractéristiques avec une robustesse sur laquelle vous pouvez compter. Et avec un design sans effort, comme un interrupteur à eau activé, cela vous permet d''aller directement dans l''eau et de descendre à votre prochaine aventure. 4 modes de fonctionnement: Air, Nitrox, Gauge (avec minuterie) et Free Dive (suit les calculs pour permettre une commutation sans restriction entre Dive et Free le même jour). Batterie standard et mémoire de données modifiables par l''utilisateur. Conserve les paramètres et les calculs entre les changements de batterie. Rétro-éclairage pour une lecture facile en basse lumière. Des alarmes sonores et un témoin lumineux LED haute visibilité supplémentaire pour plus de sécurité. Un logiciel pouvant être mis à jour par l''utilisateur donne accès aux dernières fonctionnalités et à la mise à niveau (doit acheter un câble de téléchargement en option). La fonction de planification pré-plongée permet de visualiser votre prochaine plongée. Activé à l''eau sur l''interrupteur, pour donner un départ sans soucis à la plongée. Accès à un bouton unique pour le dernier affichage de plongée (profondeur maximale et temps inférieur). Le mode Historique comprend le nombre total de plongées, la profondeur maximale, le nombre total d''heures de plongée et la température la plus basse. L''ordinateur a une lecture en profondeur jusqu''à 100 m (330 ''). Mélange Nitrox à 50% d''O2. Arrêt en option avec compte à rebours. Sélection de plongée au sel ou à l''eau douce. Le réglage automatique de l''altitude garantit un profil précis. Simple à utiliser avec le logiciel DiverLog sur les plates-formes Mac ou PC, qui permet de contrôler tous les paramètres de votre ordinateur de plongée, d''afficher les données de journal et de profil, d''ajouter un emplacement, des notes et d''autres détails, et de stocker et partager des photos et des vidéos. DiverLog doit être acheté séparément sur ediverlog.com. Un manuel d''instructions numérique, des informations de référence sur la sécurité, une brochure DiveLog, une carte de référence rapide, un protecteur d''objectif et un outil d''ouverture du compartiment à batterie sont inclus avec l''ordinateur.</P>',
+	'<ul class="indent-disc"><li>Approche sans effort et polyvalence</li>
+	<li><b>Dépasse les attentes:</b>Interface facile à utiliser et modes de fonctionnement flexibles</li>
+	<li>Rétro-éclairage intégré - Batterie interchangeable avec conservation des données</li>
+	<li>Robustesse sur laquelle vous pouvez compter</li>
+	<li>On-Switch activé par l''eau: les inquiétudes commencent à plonger</li>
+	<li><b>4 modes de fonctionnement:</b><br>Air, Nitrox, Gauge (avec minuterie d''exécution)<br>Free Dive (suit les calculs pour permettre une commutation sans restriction entre Dive et Free)</li>
+	<li>Rétroéclairage pour une lecture facile en faible éclairage</li>
+	<li>Alarmes sonores et voyant d''avertissement supplémentaire à haute visibilité pour plus de sécurité</li>
+	<li>Logiciel pouvant être mis à jour par l''utilisateur</li>
+	<li>Câble de téléchargement facultatif: accès aux dernières fonctionnalités et mise à niveau (voir SKU: UDRPCI550)</li>
+	<li>La fonction de planification pré-plongée permet de prévisualiser la prochaine plongée</li>
+	<li>Accès par un seul bouton à l''affichage de la dernière plongée (profondeur maximale et heure inférieure)</li>
+	<li>Mode historique: nombre total de plongées, profondeur maximale, nombre total d''heures et température la plus basse</li>
+	<li>Lecture en profondeur: 100 mètres (330 '')</li>
+	<li>Mélange Nitrox à 50% O2</li>
+	<li>Option Deep Stop avec compte à rebours</li>
+	<li>Sélection de plongée au sel ou à l''eau douce</li>
+	<li>Réglage automatique de l''altitude</li>
+	<li>Simple à utiliser avec les logiciels DiverLog sur les plates-formes Mac ou PC</li>
+	<li><b>Contrôle de tous les paramètres de l''ordinateur de plongée:</b><br>Affichage des données de journal et de profil<br>Ajout de lieu, de notes et d''autres détails<br>Stockage et partage de photos et de vidéos</li>
+	<li><b>Remarque:</b>DiverLog doit être acheté séparément sur ediverlog.com</li>
+	<li><b>Comprend:</b><br>Manuel d''instructions numériques<br>Informations de référence sur la sécurité<br>Brochure DiverLog<br>Carte de référence rapide - Protecteur d''objectif<br>Outil d''ouverture de compartiment de batterie</li ></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	25,
+	'EN',
+	'<ul class="checkmark"><li>Air/nitrox, Air Integrated Computer</li>
+	<li>Air, nitrox or gauge operating modes</li>
+	<li>3 gas Nitrox mixtures from 21% to 100%</li>
+	<li>Modified Haldanean/DSAT dual algorithm</li>
+	<li>Side reading compass for gun-sight accuracy</li></ul>',
+	'<p class="text-justify">No more squinting. Dive Computers are supposed to deliver crucial data quickly and w/o confusion. Oceanic agrees. That''s why the Pro-Plus 3 combines a huge display area, the largest most legible digits on the market and an intuitive user interface w/major feature enhancement. See it for yourself. Take the Oceanic challenge: When shopping for a new dive computer, compare the displays. When it comes to viewing critical information, which would you rather see at 100'' (30 meters)?</p>',
+	'<ul class="indent-disc"><li>Complete Instrumentation Console</li>
+	<li>Includes Precision Navigation</li>
+	<li><b>Pro-Plus 3 Air/Nitrox, Air Integrated Computer:</b></li>
+	<li>Huge Display Area, Largest Most Legible Digits on the Market!</li>
+	<li>Intuitive User Interface</li>
+	<li>Air Time Remaining (ATR)</li>
+	<li>ATR: Calculates Current Depth, Tank Pressure, Breathing Rate, Ascent Time, and Decompression Status</li>
+	<li>Dive Time Remaining (DTR)</li>
+	<li>DTR: Calculation Combines Air Time Remaining, Nitrogen and Oxygen Absorption</li>
+	<li>Push-Button or Automatic Activation</li>
+	<li>Audible Alarms with Flashing LED Warning Light and Acknowledgment</li>
+	<li>User-Customized Audible Alarms</li>
+	<li>Operating Modes: Air, Nitrox or Gauge</li>
+	<li>3 Gas Nitrox Mixtures from 21% to 100%</li>
+	<li>Dual Algorithm: Modified Haldanean / DSAT (Diving Science and Technology) Database / Z+</li>
+	<li>The Ultimate Adjustable Algorithm"</li>
+	<li>Graphic User Interface: Recognizable Logic of Green, Yellow and Red Color-Coding Bar Graphs</li>
+	<li><b>Compass:</b></li>
+	<li>Reliable Underwater Navigation</li>
+	<li>Large, Easy-to-Read Bearing Indicators</li>
+	<li>Great in Limited Visibility</li>
+	<li>Liquid Filled Compass</li>
+	<li>Top and Side Reading Capabilities</li>
+	<li>Side Reading for Gun-Sight Accuracy</li>
+	<li>High Visibility Lubber Line</li>
+	<li>Large Ratcheting Bezel with Direction and Reciprocal Index Points</li>
+	<li>Luminescent Display</li>
+	<li>Precision Jeweled Bearing</li>
+	<li>Strong Magnets for Quick Response and Accuracy</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	25,
+	'FR',
+	'<ul class="checkmark"><li>Air /nitrox, ordinateur Air intégré</li>
+	<li>Modes de fonctionnement air, nitrox ou jauge</li>
+	<li>3 mélanges de Nitrox gazeux de 21% à 100%</li>
+	<li>Algorithme double Haldanean /DSAT modifié</li>
+	<li>Boussole de lecture latérale pour la précision du viseur</li></ul>',
+	'<p class="text-justify">Plus de strabisme. Les ordinateurs de plongée sont censés fournir des données cruciales rapidement et sans confusion. Oceanic est d''accord. C''est pourquoi le Pro-Plus 3 combine une vaste zone d''affichage, les chiffres les plus lisibles du marché et une interface utilisateur intuitive avec une amélioration majeure des fonctionnalités. Voir par vous-même. Relevez le défi océanique: lorsque vous magasinez pour un nouvel ordinateur de plongée, comparez les écrans. En ce qui concerne l''affichage d''informations critiques, que préférez-vous voir à 100 mètres (30 mètres)?</P>',
+	'<ul class="indent-disc"><li>Console d''instrumentation complète</li>
+	<li>Inclut la navigation de précision</li>
+	<li><b>Ordinateur intégré Air /Nitrox Pro-Plus 3:</b></li>
+	<li>Grande surface d''affichage, chiffres les plus lisibles du marché!</li>
+	<li>Interface utilisateur intuitive</li>
+	<li>Temps d''antenne restant (ATR)</li>
+	<li>ATR: calcule la profondeur actuelle, la pression du réservoir, la fréquence respiratoire, la durée d''ascension et l''état de décompression</li>
+	<li>Temps de plongée restant (DTR)</li>
+	<li>DTR: le calcul combine l''absorption du temps d''air, l''absorption de l''azote et de l''oxygène</li>
+	<li>Activation par bouton poussoir ou automatique</li>
+	<li>Alarmes sonores avec voyant lumineux clignotant et accusé de réception</li>
+	<li>Alarmes sonores personnalisées par l''utilisateur</li>
+	<li>Modes de fonctionnement: air, nitrox ou jauge</li>
+	<li>3 mélanges de nitrox gazeux de 21% à 100%</li>
+	<li>Double algorithme: base de données Haldanean /DSAT (science et technologie de la plongée) modifiée /Z +</li>
+	<li>L''algorithme ajustable ultime "</li>
+	<li>Interface utilisateur graphique: Logique reconnaissable des graphiques à barres de codage couleur vert, jaune et rouge</li>
+	<li><b>Compass:</b></li>
+	<li>Navigation sous-marine fiable</li>
+	<li>Indicateurs de portance faciles à lire</li>
+	<li>Excellente visibilité limitée</li>
+	<li>Boussole remplie de liquide</li>
+	<li>Capacités de lecture supérieure et latérale</li>
+	<li>Lecture latérale pour la précision de la visée du canon</li>
+	<li>Ligne de lubrification haute visibilité</li>
+	<li>Grand cadre à cliquet avec direction et points d''index réciproques</li>
+	<li>Affichage luminescent</li>
+	<li>Palier de précision</li>
+	<li>Aimants puissants pour une réponse et une précision rapides</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	26,
+	'EN',
+	'<ul class="checkmark"><li>Complete Instrumentation Console</li>
+	<li>Exceptionally Intuitive Display</li>
+	<li>Air/Nitrox or Gauge Operating Mode</li>
+	<li>Compass fro Navigation</li></ul>',
+	'<p class="text-justify">Genesis ReSource Pro In-Line Computer Console has a pressure gauge that reads pressure up to 5000 psi w/temp, the ReSource Computer and an oil filled compass. Pressure Gauge is 1.75" (44.5 mm) diameter with excellent luminescent color graphics which makes reading your pressure easy at a glance. The compass features top and side reading view, this compass has been designed to give you excellent navigation.</p>
+	<p class="text-justify">The ReSource Pro with Modified Haldanean / DSAT (Diving Science and Technology) Database Algorithm, has an intuitive operation and display, with large easy to read numbers and a clean matter-of-fact screen that gives you what you need to know. Computer can be used for air and nitrox diving and has a gauge mode option. The module measures 1" (25.4 mm) thick by 2.1" (53.34 mm) in diameter.</p>
+	<p class="text-justify">The ReSource Pro can be programmed easily operate in either imperial or metric measurements. The computer is water activated so there is no need to turn it on before you jump in the water. The computer has a common CR2450 consumer replaceable battery, guaranteeing you won''t be on a once in a lifetime tropical vacation with a computer that needs factory battery replacement. Computer can log up to 50 dives in its memory, so not to worry on a day-by-day bases when you''re on vacation having fun, just wait to you get home. Night diving is aided with the HydroGlow back lighting which also comes in handy when on a cave or wreck diving adventure. If altitude diving is your thing the computer automatically adjust up to 14, 000'' (4267.2 meters). Maximum operational depth is 330'' (100 meters), there is an automatic safety stop countdown timer and full decompression stop countdowns as deep as 40'' (12.2 meters) when required. Computer has both digital and bar graph indicators for nitrogen, oxygen limits and ascent rate.</p>',
+	'<ul class="indent-disc"><li>Complete Instrumentation Console</li>
+	<li>Owner''s Manual and Battery Hatch Key</li>
+	<li><b>Computer:Genesis ReSource Pro</b></li>
+	<li>Air/Nitrox or Gauge Operating Mode</li>
+	<li>Algorithm: Modified Haldanean / DSAT (Diving Science and Technology) Database</li>
+	<li>Deep Stop Reminder for Dives-Exceeding 80'' (24.4 meters)</li>
+	<li>Digital and Bar Graph Indicators for Nitrogen, Oxygen Limits & Ascent Rate</li>
+	<li>Log Book Data: Up to 50 Dives</li>
+	<li><b>Dive Mode:</b><br>Dive Time Remaining (NDL)<br>Current Depth<br>Bar Graph Indicating<br>Nitrogen Load<br>Bar Graph Indicating Current Ascent Rate</li>
+	<li><b>Log Mode:</b><br>Log Mode Indicator<br>Maximum Depth<br>Elapsed Dive Time<br>Bar Graph Indicating Nitrogen Load at End of Dive<br>Bar Graph Indicating Maximum Ascent Rate - Last Dive</li>
+	<li><b>Deco Mode:</b><br>Bar Graph Indicating Deepest Stop Depth Required<br>Total Ascent Time Indicated<br>Stop Time and Depth of Stop<br>Current Depth Indicated<br>Up Arrow Indicating Need to Ascend to Stop Depth</li>
+	<li><b>Pressure Gauge:</b></li>
+	<li>360° Rotational Swivel Assembly</li>
+	<li>0-5000 psi Gauge Readout</li>
+	<li>Temperature Gauge</li>
+	<li>High Visibility Graphics</li>
+	<li>Luminescent Dial</li>
+	<li><b>Strategic Color Coded for Added Safety:</b><br>Red Safety Reserve 0 to 500 psi<br>Yellow 500 to 1,000 psi for Extended Reserve Air for Deeper Dives<br>Blue above 1,000 to 5,000 psi</li>
+	<li>Shock Resistant Bourdon Tube Mechanism</li>
+	<li>Gauge Case: Tough Glass-Filled Noryl</li>
+	<li>Gauge Face (Lens): Durable Lexan</li>
+	<li>Bright Red Temperature Gauge Needle for Ease-of-Reading</li>
+	<li>32" (81.3 cm) High Pressure Hose with 7/16" Threads</li>
+	<li><b>Compass:</b></li>
+	<li>Reliable Underwater Navigation</li>
+	<li>Large, Easy-to-Read Bearing Indicators</li>
+	<li>Great in Limited Visibility</li>
+	<li>Liquid Filled Compass</li>
+	<li>Top and Side Reading Capabilities</li>
+	<li>Side Reading for Gun-Sight Accuracy</li>
+	<li>High Visibility Lubber Line</li>
+	<li>Large Ratcheting Bezel with Direction and Reciprocal Index Points</li>
+	<li>Luminescent Display</li>
+	<li>Precision Jeweled Bearing</li>
+	<li>Strong Magnets for Quick Response and Accuracy</li>
+	<li>Compass Headings in 30° Numbered Increments</li>
+	<li>Indicator Marks for Every 10°</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	26,
+	'FR',
+	'<ul class="checkmark"><li>Console d''instrumentation complète</li>
+	<li>Affichage exceptionnellement intuitif</li>
+	<li>Mode de fonctionnement Air /Nitrox ou Gauge</li>
+	<li>Compass pour la navigation</li></ul>',
+	'<p class="text-justify">La console d''ordinateur en ligne ReSource Pro de Genesis est dotée d''un manomètre qui lit la pression jusqu''à 5000 psi w /temp, l''ordinateur ReSource et une boussole remplie d''huile. La jauge de pression a un diamètre de 1,75 "(44,5 mm) avec d''excellentes images couleur luminescentes qui facilitent la lecture de votre pression en un coup d''œil. La boussole est dotée d''une vue de lecture supérieure et latérale,
+	<p class="text-justify">Le logiciel ReSource Pro avec algorithme de base de données Haldanean /DSAT (Diving Science and Technology) a un fonctionnement et un affichage intuitifs, avec de gros chiffres faciles à lire et un écran vous donne ce que vous devez savoir. L''ordinateur peut être utilisé pour la plongée à l''air et au nitrox et dispose d''une option de mode de jauge. Le module mesure 1 "(25,4 mm) d''épaisseur et 2,1" (53,34 mm) de diamètre.</P>
+	<p class="text-justify">ReSource Pro peut être programmé pour fonctionner facilement en mesures impériales ou métriques. L''ordinateur est activé par l''eau, il n''est donc pas nécessaire de l''allumer avant de sauter dans l''eau. L''ordinateur est équipé d''une batterie CR2450 remplaçable par l''utilisateur, ce qui vous garantit de ne pas passer des vacances tropicales exceptionnelles avec un ordinateur qui nécessite le remplacement de la batterie en usine. L''ordinateur peut enregistrer jusqu''à 50 plongées dans sa mémoire, alors ne vous inquiétez pas lorsque vous êtes en vacances lorsque vous êtes en vacances, attendez simplement de rentrer à la maison. La plongée de nuit est facilitée par l''éclairage arrière HydroGlow, qui est également très pratique lors d''une aventure de plongée dans une grotte ou une épave. Si la plongée en altitude est votre truc, l''ordinateur ajuste automatiquement jusqu''à 14 000 ''(4267,2 mètres). La profondeur de fonctionnement maximale est de 100 mètres (330 pieds), il y a un compte à rebours d''arrêt de sécurité automatique et un compte à rebours de décompression complet jusqu''à 12,2 mètres (40 pieds) de profondeur si nécessaire. L''ordinateur possède des indicateurs numériques et graphiques à barres pour l''azote, les limites d''oxygène et la vitesse de remontée.</P>',
+	'<ul class="indent-disc"><li>Console d''instrumentation complète</li>
+	<li>Manuel du propriétaire et clé de verrouillage de la batterie</li>
+	<li><b>Ordinateur: Genesis ReSource Pro</b></li>
+	<li>Mode de fonctionnement Air /Nitrox ou Gauge</li>
+	<li>Algorithme: base de données modifiée Haldanean /DSAT (Diving Science and Technology)</li>
+	<li>Rappel d''arrêt profond pour des plongées dépassant 80 ''(24,4 mètres)</li>
+	<li>Indicateurs numériques et graphiques à barres pour l''azote, les limites d''oxygène et la vitesse de remontée</li>
+	<li>Données du journal: jusqu''à 50 plongées</li>
+	<li><b>Mode Plongée:</b><br>Temps de plongée restant (NDL) - Profondeur actuelle - Graphique à barres indiquant la charge d''azote<br>Graphique à barres indiquant le taux de remontée actuel</li >
+	<li><b>Mode de journalisation:</b><br>Indicateur du mode de journalisation<br>Profondeur maximale du temps de plongée écoulé<br>Graphique à barres indiquant la charge d''azote en fin de plongée<br>Graphique à barres indiquant l''ascension maximale Taux - Dernière plongée</li>
+	<li><b>Mode déco:</b><br>Graphique à barres indiquant la profondeur d''arrêt maximale requise: temps total d''ascension indiqué<br>Temps d''arrêt et profondeur d''arrêt - Profondeur actuelle indiquée - Flèche vers le haut Indication de la nécessité de monter pour arrêter la profondeur</li>
+	<li><b>Jauge de pression:</b></li>
+	<li>Assemblage pivotant à 360 °</li>
+	<li>0-5000 psi Gauge Readout</li>
+	<li>Jauge de température</li>
+	<li>Graphiques haute visibilité</li>
+	<li>Cadran luminescent</li>
+	<li><b>Code couleur stratégique pour plus de sécurité:</b><br>Réserve rouge de sécurité de 0 à 500 psi<br>Jaune 500 à 1 000 psi pour l''air prolongé de réserve pour plongées plus profondes - Bleu supérieur à 1 000 à 5 000 psi</li>
+	<li>Mécanisme de tube de Bourdon résistant aux chocs</li>
+	<li>Étui de jauge: Noryl rempli de verre dur</li>
+	<li>Gauge Face (Lens): Lexan durable</li>
+	<li>Aiguille de jauge de température rouge vif pour une lecture facile</li>
+	<li>Tuyau haute pression de 81,3 cm (32 ") avec filetage 7/16"</li>
+	<li><b>Compass:</b></li>
+	<li>Navigation sous-marine fiable</li>
+	<li>Indicateurs de portance faciles à lire</li>
+	<li>Excellente visibilité limitée</li>
+	<li>Boussole remplie de liquide</li>
+	<li>Capacités de lecture supérieure et latérale</li>
+	<li>Lecture latérale pour la précision de la visée du canon</li>
+	<li>Ligne de lubrification haute visibilité</li>
+	<li>Grand cadre à cliquet avec direction et points d''index réciproques</li>
+	<li>Affichage luminescent</li>
+	<li>Palier de précision</li>
+	<li>Aimants puissants pour une réponse et une précision rapides</li>
+	<li>En-têtes de boussole par incréments numérotés de 30 °</li>
+	<li>Marques indicatrices pour chaque 10 °</li></ul>'
+);
+
+--###################################################################################
+
+INSERT INTO product_detail VALUES(
+	27,
+	'EN',
+	'<ul class="checkmark"><li>Traditional jacket style BCD</li>
+	<li>Adjustable shoulder straps for a custom fit</li>
+	<li>3-D designed air cell for better stability</li>
+	<li>MiniPac cylinder mounting provide dual mounts</li>
+	<li>Power inflator system</li></ul>',
+	'<p class="text-justify">The AVID CQR·3 features an updated weight release system providing more convenience and ease when installing and removing the pockets. The redesigned styling of the traditional jacket-style AVID maintains its respected functionality, comfort and dependability. The AVID CQR·3 is a natural progression in Sherwood''s forward-moving product development.</p>
+	<p class="text-justify">This jacket-style BC wraps air completely around you for easy floating. When fully inflated, the 3-D air cell and the suspension strap system combines to create a stable and secure fit that is designed to eliminate squeeze. BC is equipped with six convenient, stainless steel D-rings to attach your gear and zippered utility side pockets for additional scuba accessories. A convenient utility pocket with hook and loop closure sized to carry the Akona Safety Tube (SKU: AKNST). A removable and adjustable sternum strap for a complete fit and an easy to operate oral and power inflator makes buoyancy control a snap when diving.</p>
+	<p class="text-justify">Three dump valves strategically located at the left and right shoulders with a third on the lower left of the air cell make dumping air a breeze. The right and lower dump/overpressure relief- valves have pull dump handles for quick access. The third valve is integrated to the top of the Sherwood power inflator and is activate by a cable running down the corrugated inflator hose. The AVID CQR 3 BCD is available in multiple sizes with a lift capacity of 20 to 36 lbs. (9 to 16.3 kg). The air cell is manufactured with durable and heavy-duty 1000 Denier that is urethane laminated for air tight integrity.</p>',
+	'<ul class="indent-disc"><li>CQR 3 Weight System</li>
+	<li>Adjustable Shoulder Straps for Better Fit</li>
+	<li>3-D Designed Air Cell that Wraps around the Body for Exceptional Stability</li>
+	<li>Suspension Strap Promotes Air Cell Movement, Preventing Squeeze</li>
+	<li>Utility Zippered Side Pockets for Additional Scuba Accessories</li>
+	<li>Removable and Adjustable Sternum Strap</li>
+	<li>Rear Lower Vent Valve Releases Unwanted Air, while Descending</li>
+	<li>Right Shoulder Vent Valve for Convenient Buoyancy Control</li>
+	<li>Weight Integrated Design: Releasable XS to 3XL 16 lbs. to 26 lbs. (7.26 kg to 11.8kg)</li>
+	<li>Two Non-Releasing Trim Weight Pockets for Enhanced Stability, 10 lbs. (4.5 kg)</li>
+	<li>Custom Pocket for Optional Akona Safety Tube</li>
+	<li>Mini-Pac Cylinder Mounting System Provides Dual Mounts</li>
+	<li>High Lift in All Sizes: XS to 3XL 20 lbs. to 36 lbs. (9 kg to 16.3 kg)</li>
+	<li>Sherwood Power Inflator with Cable Activated Pull Dump</li>
+	<li>3/8" Threaded Low Pressure Hose with Quick-Disconnect Coupling</li>
+	<li>Owner''s Manual</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	27,
+	'FR',
+	'<ul class="checkmark"><li>Style de veste traditionnel BCD</li>
+	<li>Bretelles réglables pour un ajustement personnalisé</li>
+	<li>Cellule à air conçue en 3D pour une meilleure stabilité</li>
+	<li>Le montage du vérin MiniPac fournit des supports doubles</li>
+	<li>Système d''inflateur électrique</li></ul>',
+	'<p class="text-justify">L''AVID CQR · 3 est doté d''un système de libération de poids mis à jour qui offre plus de commodité et de facilité lors de l''installation et du retrait des poches. Le style redessiné de l''AVID traditionnel en forme de veste conserve sa fonctionnalité, son confort et sa fiabilité respectés. L''AVID CQR · 3 est une progression naturelle dans le développement de produits en évolution constante de Sherwood.</P>
+	<p class="text-justify">Ce modèle BC de style veste enveloppe complètement l''air autour de vous pour un flottement facile. Lorsqu''elle est complètement gonflée, la cellule d''air 3-D et le système de sangle de suspension se combinent pour créer un ajustement stable et sécurisé conçu pour éliminer la compression. BC est équipé de six anneaux en D en acier inoxydable pratiques pour attacher votre équipement et des poches latérales utilitaires à glissière pour des accessoires de plongée supplémentaires. Une poche utilitaire pratique avec fermeture auto-agrippante pour transporter le tube de sécurité Akona (SKU: AKNST). Une sangle de poitrine amovible et réglable pour un ajustement complet et un gonfleur oral et électrique facile à utiliser font de la flottabilité un contrôle instantané lors de la plongée.</P>
+	<p class="text-justify">Trois vannes placées stratégiquement à gauche et à droite des épaules, dont une troisième en bas à gauche de la cellule pneumatique, rendent l''évacuation de l''air très facile. Les soupapes de décharge à surpression /surpression à droite et à la baisse ont des poignées de vidage pour un accès rapide. La troisième soupape est intégrée à la partie supérieure du gonfleur Sherwood et est activée par un câble descendant du tuyau de gonflage ondulé. L''AVID CQR 3 BCD est disponible en plusieurs tailles avec une capacité de levage de 20 à 36 livres. (9 à 16,3 kg). La cellule à air est fabriquée avec 1000 deniers durables et résistants à l''uréthane pour une étanchéité à l''air.</P>',
+	'<ul class="indent-disc"><li>Système de pondération CQR 3</li>
+	<li>Bretelles réglables pour un meilleur ajustement</li>
+	<li>Une cellule à air conçue en 3D qui s''enroule autour du corps pour une stabilité exceptionnelle</li>
+	<li>La sangle de suspension favorise le mouvement des cellules de l''air, empêchant la compression</li>
+	<li>Pochettes latérales utilitaires à glissière pour accessoires de plongée supplémentaires</li>
+	<li>Sangle de sternum amovible et ajustable</li>
+	<li>La soupape de ventilation inférieure arrière libère de l''air indésirable pendant la descente</li>
+	<li>Soupape d''évacuation à épaulement droit pour un contrôle de la flottabilité pratique</li>
+	<li>Poids Conception intégrée: XS libérable à 3XL 16 lb. à 26 lbs. (7,26 kg à 11,8 kg)</li>
+	<li>Deux poches de poids non relâchées pour une meilleure stabilité, 10 lb. (4,5 kg)</li>
+	<li>Poche personnalisée pour tube de sécurité optionnel Akona</li>
+	<li>Le système de montage de cylindre Mini-Pac fournit des supports doubles</li>
+	<li>High Lift dans toutes les tailles: XS à 3XL 20 lbs. à 36 lbs. (9 kg à 16,3 kg)</li>
+	<li>Inflateur de puissance Sherwood avec décharge de traction activée par câble</li>
+	<li>Tuyau à basse pression fileté de 3/8 "avec raccord rapide</li>
+	<li>Manuel du propriétaire</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	28,
+	'EN',
+	'<ul class="checkmark"><li>Backmounted design</li>
+	<li>Supports single or double tanks</li>
+	<li>Mono-plate backpack</li>
+	<li>Mares slide and lock system</li>
+	<li>420 Cordura material</li></ul>',
+	'<p class="text-justify">The streamlined Pure BCD offers swivel shoulder buckles, smart trim weight positioning and maximum adjustability. A great BC! Great for travel. The Mares Pure SLS BCD is a giant step in the evolution of back mounted BCDs. The first thing you will notice when donning the Pure SLS BCD is the perfect fit. This new level of comfort is achieved via special shoulder pads which are longer, pre-shaped and reinforced, and which work in perfect unison with the lumbar suspension system. This suspension system is inspired by the design of modern hiking backpacks; the system avoids direct contact between the body and the tank support. Bolt SLS BCD features 7 stainless steel D-rings for complete accessory attachment. Made of very tough 420 Cordura material, it will endure any exposure you submit it to and hold up to the test of time.</p>
+	<p class="text-justify">Air-cell is separated from the harness, resulting in unrestricted freedom of movement. The bladder is equipped with bungee cords that will aid in a low profile when it is inflated and facilitates rapid deflation when dumping air. BCD comes standard with 3 pull-dump/overpressure relief valves, one is incorporated into the top of the Ergo Inflator; another is located on the right shoulder and a third is located on the rear lower right. Activation of the valves are made easy with both the upper and lower right valves coming with pull cords and the valve incorporated into the Ergo Inflator is activated by an internal cable attached to the inflator mechanism. Mares Ergo Inflator the standard inflation and deflation control device used in sanctioned training programs. Intuitive use and secure grip. The Ergo Inflator comes standard with a 3/8" threaded low pressure quick-disconnect hose.</p>',
+	'<ul class="indent-disc"><li>Superbly Comfortable and Streamlined</li>
+	<li>Great for Travel</li>
+	<li>Giant Step in Evolution of Back Mounted BCDs</li>
+	<li>Provides a Perfect Fit</li>
+	<li><b> New Level of Comfort: </b> <br> Achieved via Special Shoulder Pads <br> Longer, Pre-Shaped and Reinforced <br> Work in Perfect Unison w/Lumbar Suspension System <br> Suspension System Inspired by Modern Hiking Backpacks <br> Avoids Direct Contact Between Body and Tank Support</li>
+	<li>7 Stainless Steel D-Rings for Complete Accessory Attachment</li>
+	<li>Tough 420 Cordura Material, Endure Exposure Submitted, Holds-Up to Test of Time</li>
+	<li>Air-Cell Separated from the Harness, Unrestricted Freedom of Movement</li>
+	<li>Bungee Cords: Aid in Low Profile w/Inflated, Facilitates Rapid Deflation</li>
+	<li><b> 3 Pull-Dump/Overpressure Relief Valves: </b> <br> One Incorporated into Top of Ergo Inflator <br> One On Right Shoulder <br> Third Located on Rear Lower Right of Bladder <br> Easy Activation; Pull Cords and Cable Activated Ergo Inflator Valve</li>
+	<li><b> Mares Ergo Inflator: </b> <br> Used in Sanctioned Training Programs <br> Intuitive Use & Secure Grip <br> Comes w/ 3/8" Threaded LP Quick-Disconnect Hose</li>
+	<li><b> Mares Slide & Lock System (SLS): </b> <br> Ultimate Weight-Release System <br> Visual Confirmation of Proper Weight Pouch Insertion <br> No Guessing in Pre-Dive Gear Check <br> Weight Capacities of 9 lbs. and 13 lbs. (4 kg and 6 kg), Size Dependent <br> Sturdy Zipper Closures <br> Rear Smart Trim Weight Non-Releasable Pockets</li>
+	<li>Weight: 8.6 lbs. (3.9 kg), Size Large</li>
+	<li>Owner''s Manual</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	28,
+	'FR',
+	'<ul class="checkmark"><li>Conception montée en arrière</li>
+	<li>Supporte les réservoirs simples ou doubles</li>
+	<li>Sac à dos mono-plaque</li>
+	<li>Système de diapositives et de verrous Mares</li>
+	<li>420 Matériel Cordura</li></ul>',
+	'<p class="text-justify">Le Pure BCD simplifié offre des boucles d''épaule pivotantes, un positionnement intelligent du poids et une capacité de réglage maximale. Un super BC! Idéal pour les voyages. Le Mares Pure SLS BCD est un pas de géant dans l''évolution des gilets stabilisateurs montés à l''arrière. La première chose que vous remarquerez lorsque vous portez le Pure SLS BCD est l''ajustement parfait. Ce nouveau niveau de confort est atteint grâce à des épaulettes spéciales, plus longues, préformées et renforcées, qui travaillent en parfaite harmonie avec le système de suspension lombaire. Ce système de suspension s''inspire du design des sacs à dos de randonnée modernes; le système évite le contact direct entre le corps et le support du réservoir. Le boulon SLS BCD dispose de 7 anneaux en D en acier inoxydable pour un accessoire complet. Fabriqué avec un matériau 420 Cordura très résistant, il supportera toutes les expositions que vous lui soumettez et résiste à l''épreuve du temps.</P>
+	<p class="text-justify">La cellule à air est séparée du harnais, ce qui permet une liberté de mouvement illimitée. La vessie est équipée de cordes élastiques qui facilitent un profil bas lorsqu''elle est gonflée et facilite le dégonflage lors du déversement d''air. Le BCD est livré en standard avec 3 soupapes de surpression et de surpression, l''une étant intégrée dans la partie supérieure du gonfleur Ergo; un autre est situé sur l''épaule droite et un troisième est situé à l''arrière inférieur droit. L''activation des vannes est facilitée par la présence de cordons de traction dans les vannes supérieure et inférieure droite, et la vanne intégrée dans le gonfleur Ergo est activée par un câble interne relié au mécanisme de gonflage. Mares Ergo Inflator est le dispositif de contrôle standard de gonflage et de dégonflage utilisé dans les programmes de formation autorisés. Utilisation intuitive et prise en main sûre. Le gonfleur Ergo est livré en standard avec un tuyau de 3/8 "à raccord rapide à faible pression fileté.</P>',
+	'<ul class="indent-disc"><li>Superbement confortable et rationalisé</li>
+	<li>Idéal pour les voyages</li>
+	<li>Un pas de géant dans l''évolution des BCD montés en arrière</li>
+	<li>Fournit un ajustement parfait</li>
+	<li><b>Un nouveau niveau de confort:</b><br>grâce à des épaulettes spéciales: un système de suspension plus long, préformé et renforcé, parfait pour un système unitaire avec suspension lombaire et système de suspension Inspiré par les sacs à dos de randonnée modernes - Évite le contact direct entre le soutien du corps et du réservoir</li>
+	<li>7 anneaux en D en acier inoxydable pour la fixation complète des accessoires</li>
+	<li>Matériau résistant 420 Cordura, exposition permanente soumise à un test de temps</li>
+	<li>Cellule aérienne séparée du harnais, liberté de mouvement illimitée</li>
+	<li>Bungee Cords: l''aide au profil bas avec gonflage facilite la déflation rapide</li>
+	<li><b>3 soupapes de décharge /de surpression:</b><br>One incorporé dans le haut du gonfleur Ergo - une épaule droite - troisième situé à l''arrière inférieur droit de la vessie<br>Activation facile Tirez sur les cordons et la valve de gonflage Ergo activée par câble</li>
+	<li><b>Gonfleur Mares Ergo:</b><br>Utilisé dans les programmes de formation homologués - Utilisation intuitive et prise en main sécurisée - Livré avec un tuyau de 3/8 "à fermeture rapide LP</li>
+	<li><b>Système de diapositives et de verrous Mares (SLS):</b><br>Système de libération de poids ultime - Confirmation visuelle de l''insertion d''un sac de poids approprié >Capacité de poids de 9 lb et 13 lbs. (4 kg et 6 kg), taille dépendante | Fermetures à glissière robustes | Poches arrière non détachables
+	<li>Poids: 8.6 lbs. (3,9 kg), taille grand</li>
+	<li>Manuel du propriétaire</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	29,
+	'EN',
+	'<ul class="checkmark"><li>Lightweight compact travel BCD</li>
+	<li>Low profile hydrodynamic design</li>
+	<li>Weight integrated</li>
+	<li>Padded spine and lumbar support for comfort</li>
+	<li>Bx power inflator</li></ul>',
+	'<p class="text-justify">The Zeagle Covert is an ultra-light, low profile, weight integrated back inflation BC that has everything you demand in a travel BC without the weight and bulk. Traveling light doesn''t mean you should compromise. The Covert BC is for those divers counting weight by the ounce and looking for uncompromising quality. Part of the popular and well known Ranger BC Lineage, the Covert is for those looking for legendary "Ranger" toughness and durability in a compact travel BC.</p>
+	<p class="text-justify">Divers who travel want to bring as much of their own gear as possible. Having a BCD that is up to 30% lighter and packs up to 50% smaller, helps achieve this. Loaded with innovation, the Covert uses an elastic mesh fabric on the bladder assembly to help streamline-the-profile while allowing for expansion of the bladder to a generous 32 lbs. (14.5 kg) of lift capacity. Using a durable 1000-denier Cordura nylon material and still coming in at 3.9 lbs. (1.77 kg), the Covert is probably the lightest and most-durable BCD on the market today. Its unique design allows it to be packed as small as a newspaper. The result is a tough and durable travel BCD.</p>
+	<p class="text-justify">The Covert BCD has lightly padded shoulder torso adjustable and sternum straps the shoulder straps are equipped with TSR squeeze-style" side release buckles. The shoulders are designed with wider straps for added comfort and has a Delrin D-ring mounting platform built-in. The adjustable waist strap allows for custom fitting the BC over a variety of exposure suits and is easily adjustable with one-hand. Both the sternum and waist straps also have squeeze-style" side release buckles. The BCD is designed to fit close to torso for low drag and the inner bladder can be easily patched in the field. The Covert is weight integrated with a 16 lbs. (7.26 kg) soft or hard weight capacity. The releasable touch fastener weight pockets can be easily load and unload through the top opening and the easy to use touch fastener releases with a quick downward motion of the pull handle. The BCD has a padded spine and lumbar support, dual cylinder bands for added stability and comes equipped with Zeagle''s Bx Power Inflator Mechanism. The Bx Power Inflator makes preventative maintenance easy with its threaded lower mechanism that allows the attachment of a garden hose for fast and easy inner bladder rinsing. The Bx is also connected to a pull dump valve for rapid deflation. Trimming buoyancy in any position is made easy with the additional lower rear over-pressure relief/pull dump valve with pull cord. BCD is available in multiple sizes, comes with a low pressure quick disconnect hose with 3/8" threads.</p>',
+	'<ul class="indent-disc"><li>Lightweight Compact Travel BCD</li>
+	<li>Ultra-Light, Low Profile, 3.9 lbs. (1.77 kg)</li>
+	<li>Weight Integrated Back Inflation BC</li>
+	<li>Travel BC without Weight-and-Bulk</li>
+	<li>Part of Ranger BC Lineage: "Ranger" Toughness and Durability in Compact Travel BC</li>
+	<li>30% Lighter and Packs up to 50% Smaller, Loaded with Innovation</li>
+	<li>Elastic Mesh Fabric Bladder Assembly, Streamline-the-Profile</li>
+	<li>Expansion Bladder: 32 lbs. (14.52 kg) of Lift Capacity</li>
+	<li>Outer Shell: Durable 1000-Denier Cordura Nylon</li>
+	<li>Lightest and Most-Durable BCD</li>
+	<li>Packs Small as Sunday Newspaper</li>
+	<li>Lightly Padded Shoulder Torso Adjustable Straps</li>
+	<li>Adjustable Sternum Strap with Squeeze-Style" Side Release Buckle</li>
+	<li>Adjustable Waist Strap</li>
+	<li>Shoulder and Waist Straps Equipped with TSR Squeeze-Style" Side Release Buckles</li>
+	<li>Shoulders: Wide Strap Design for Added Comfort</li>
+	<li>Custom Fitting Over Variety of Exposure Suits and Easily-Adjustable with One-Hand</li>
+	<li>Delrin D-Ring Mounting Platform Built-In</li>
+	<li>Fits Close to Torso for Low Drag</li>
+	<li>Weight Integrated: 16 lbs. (7.26 kg) Soft or Hard Weight Capacity</li>
+	<li><b> Releasable Touch Fastener Weight Pockets: </b> Easily Load-and-Unload Top-Opening <br> Easy-to-Use Touch-Fastener Releases</li>
+	<li>Padded Spine and Lumbar Support</li>
+	<li>Dual Cylinder Bands for Added Stability</li>
+	<li><b> Zeagle Bx Power Inflator: </b> <br> Cable Activated Pull Dump Valve for Rapid Deflation <br> Low Pressure Quick-Disconnect Hose with 3/8" Threads <br> Threaded Lower Mechanism Allows Attachment of Garden Hose <br> Fast and Easy Inner Bladder Rinsing</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	29,
+	'FR',
+	'<ul class="checkmark"><li>BCD léger de voyage compact</li>
+	<li>Conception hydrodynamique à profil bas</li>
+	<li>Poids intégré</li>
+	<li>Soutien lombaire et colonne vertébrale rembourrés pour plus de confort</li>
+	<li>Inflateur Bx</li></ul>',
+	'<p class="text-justify">Le Zeagle Covert est un système d''inflation dorsale ultra léger, discret et intégré au poids, qui possède tout ce dont vous avez besoin dans un voyage en Colombie-Britannique sans poids ni volume. Voyager léger ne signifie pas que vous devriez faire des compromis. Le Covert BC est destiné aux plongeurs comptant le poids par once et recherchant une qualité sans compromis. Faisant partie de la populaire et célèbre Ranger BC Lineage, la Covert est destinée à ceux qui recherchent la robustesse et la durabilité légendaires des "Rangers" dans un voyage compact BC.</P>
+	<p class="text-justify">Les plongeurs qui voyagent veulent apporter le plus de matériel possible. Avoir un BCD jusqu''à 30% plus léger et des packs jusqu''à 50% plus petits aide à atteindre cet objectif. Doté d''innovations, le Covert utilise un tissu en maille élastique sur l''assemblage de la vessie pour aider à affiner le profil tout en permettant l''expansion de la vessie à un poids généreux de 32 lb. (14,5 kg) de capacité de levage. En utilisant un nylon Cordura durable de 1000 deniers et toujours en 3,9 lbs. (1,77 kg), le Covert est probablement le BCD le plus léger et le plus durable du marché. Son design unique lui permet d''être emballé aussi petit qu''un journal. Le résultat est un BCD de voyage robuste et durable.</P>
+	<p class="text-justify">Le BCD Covert est légèrement rembourré et doté de sangles d''épaule ajustables et de sangles sternales. Les bretelles sont équipées de "boucles latérales" de type squeeze TSR. Plate-forme de montage en D-ring Delrin intégrée. La sangle de taille ajustable permet un ajustement personnalisé du BC sur une variété de combinaisons d''exposition et est facilement ajustable avec une seule main. . Le BCD est conçu pour s''adapter au torse pour une faible traînée et la vessie interne peut être facilement réparée sur le terrain. Le Covert est intégré avec un poids de 16 livres. (7.26 kg) capacité de poids doux ou dur. Les poches de poids des attaches tactiles amovibles peuvent être facilement chargées et déchargées par l''ouverture supérieure et les attaches tactiles faciles à utiliser se déplacent rapidement vers le bas de la poignée de traction. Le BCD est doté d''un support dorsal et lombaire rembourré, de deux bandes de cylindre pour plus de stabilité et est équipé du mécanisme de gonflage Bx Power de Zeagle. Le gonfleur Bx Power facilite l''entretien préventif grâce à son mécanisme inférieur fileté qui permet de fixer un tuyau d''arrosage pour un rinçage rapide et facile de la vessie. Le Bx est également connecté à une soupape de décharge pour un dégonflage rapide. La compensation de la flottabilité dans n''importe quelle position est facilitée par la soupape de décharge /de décharge de surpression arrière arrière supplémentaire avec cordon de tirage. Le BCD est disponible en plusieurs tailles, avec un tuyau de raccordement rapide à basse pression avec un filetage de 3/8 ".</P>',
+	'<ul class="indent-disc"><li>BCD léger de voyage compact</li>
+	<li>Ultra léger, profil bas, 3,9 lb (1,77 kg)</li>
+	<li>Inflation dorsale intégrée au poids BC</li>
+	<li>Voyage en Colombie-Britannique sans poids et en vrac</li>
+	<li>Partie de la lignée Ranger BC: "Ranger" Résistance et durabilité dans Compact Travel BC</li>
+	<li>30% plus léger et des packs jusqu''à 50% plus petits, chargés d''innovation</li>
+	<li>Assemblage de vessie en tissu élastique, rationalisez le profil</li>
+	<li>Expansion Bladder: 32 lbs. (14,52 kg) de capacité de levage</li>
+	<li>Enveloppe extérieure: Nylon Cordura 1000 deniers durable</li>
+	<li>BCD le plus léger et le plus durable</li>
+	<li>Packs petit comme journal du dimanche</li>
+	<li>Courroies réglables de torse d''épaule légèrement rembourrées</li>
+	<li>Sangle de poitrine réglable avec boucle de relâchement latérale "Squeeze-Style"</li>
+	<li>Sangle de taille ajustable</li>
+	<li>Courroies d''épaule et de taille équipées de boucles à dégagement latéral TSR Squeeze-Style</li>
+	<li>Épaules: conception large pour plus de confort</li>
+	<li>Ajustement personnalisé sur une variété de combinaisons d''exposition et facilement ajustable avec une seule main</li>
+	<li>Plate-forme de montage Delrin D-Ring intégrée</li>
+	<li>S''adapte au torse pour un glissement réduit</li>
+	<li>Poids intégré: 16 lb (7.26 kg) Capacité de poids molle ou dure</li>
+	<li><b>Poches de poids pour fixations tactiles amovibles:</b>Faciles à charger et à décharger par le haut - Libérations simples d''attaches tactiles</li>
+	<li>Soutien de la colonne vertébrale et du soutien lombaire</li>
+	<li>Bandes à double cylindre pour une stabilité accrue</li>
+	<li><b>Gonfleur Zeagle Bx:</b><br>Valve de vidange à tirage activé par câble pour un dégonflement rapide - Tuyau à déconnexion rapide à basse pression avec filetage 3/8 " Tuyau d''arrosage - Rinçage rapide et facile de la vessie intérieure</li></ul>'
+);
+
+--###################################################################################
+
+INSERT INTO product_detail VALUES(
+	30,
+	'EN',
+	'<ul class="checkmark"><li>Nitrox ready up to 40%</li>
+	<li>Corrosion resistant aluminum alloy cylinder</li>
+	<li>Convertible k valve, Yoke or DIN</li>
+	<li>Multi ported burst plug assembly</li>
+	<li>Meets certifications (DOT) with DOT-3AL</li></ul>',
+	'<p class="text-justify">The Staple cylinder in the diving industry is the 80 Cubic Foot Aluminum Tank. This cylinder is used by more divers dive operators and retail dive stores than any other type of cylinder available. The Pro Valve is one of the highest flow cylinder valves available today and is also a convertible valve. Whether you dive Yoke or DIN regulators this valve will work for both. Valve has easily removed 200 bar DIN insert to convert the valve for use with DIN regulators. Valve has a heavy duty deign with a smooth operating mechanism and multi-ported burst disc plug for added safety.</p>
+	<p class="text-justify">Aluminum cylinders unlike steel cylinders don''t rust, they oxidize. The oxidization of aluminum forms a protective coat that hinders the continuation of corrosion making aluminum cylinders less likely to be condemned due to excessive corrosion. When shipped the tanks valves will be removed and the tank will require re-inspection before being filled. Note: All Catalina cylinders are nitrox ready and meet certificated specifications of the US Department of Transportation (DOT) with DOT-3AL specification and Transport Canada Safety and Security (TC) with TC-3ALM specifications.</p>',
+	'<ul class="indent-disc"><li>Nitrox Ready Up to 40%</li>
+	<li><b> Cylinder: </b> Catalina 80 Cubic Foot</li>
+	<li>Industry Standard Cylinder</li>
+	<li>Thread Size: 0.750-14 NPSM</li>
+	<li>Aluminum Alloy Design</li>
+	<li>Won''t Rust Like Steel Cylinders</li>
+	<li>Working Pressure: 3000 psi (200 bar)</li>
+	<li><b> Note: </b> <br> All Catalina Cylinders Meet Certificated Specifications of the US Department of Transportation (DOT) with DOT-3AL <br> Meet Specification of the  Transport Canada Safety and Security (TC) with TC-3ALM</li>
+	<li><b> Valve: </b> Pro Valve</li>
+	<li>Convertible K-Valve</li>
+	<li>Yoke or DIN</li>
+	<li>Heavy Duty Design</li>
+	<li>Smooth Operating Valve Mechanism</li>
+	<li>Chrome Plated Marine Brass</li>
+	<li>Multi-Ported Burst Plug Assembly</li>
+	<li>High Flow Capacity Valve</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	30,
+	'FR',
+	'<ul class="checkmark"><li>Nitrox prêt à 40%</li>
+	<li>Cylindre en alliage d''aluminium résistant à la corrosion</li>
+	<li>Valve k convertible, joug ou DIN</li>
+	<li>Ensemble de prise de rafale multi-portée</li>
+	<li>Satisfait aux certifications (DOT) avec DOT-3AL</li></ul>',
+	'<p class="text-justify">Le cylindre en aluminium dans l''industrie de la plongée est le cylindre en aluminium de 80 pieds cubes. Ce cylindre est utilisé par plus d''opérateurs de plongée et de magasins de plongée que tout autre type de bouteille disponible. La soupape Pro est l''une des soupapes à cylindre à débit le plus élevé disponibles aujourd''hui et est également une soupape convertible. Que vous plongiez des régulateurs Yoke ou DIN, cette vanne fonctionnera pour les deux. La vanne a facilement enlevé un insert DIN de 200 bars pour convertir la vanne en vue d''une utilisation avec des régulateurs DIN. La vanne est conçue avec un mécanisme de fonctionnement souple et une prise de disque en rafale multi-port pour une sécurité accrue.</P>
+	<p class="text-justify">Contrairement aux cylindres en acier, les cylindres en aluminium ne rouillent pas, ils s''oxydent. L''oxydation de l''aluminium forme une couche protectrice qui empêche la corrosion de continuer à rendre les cylindres en aluminium moins susceptibles d''être condamnés en raison d''une corrosion excessive. Une fois expédiées, les vannes des réservoirs seront retirées et le réservoir nécessitera une nouvelle inspection avant d''être rempli. Remarque: Tous les cylindres Catalina sont prêts pour le nitrox et répondent aux spécifications du Département des transports des États-Unis (DOT) avec les spécifications DOT-3AL et à la sûreté et à la sécurité de Transports Canada (TC-3ALM).</P>',
+	'<ul class="indent-disc"><li>Prêt pour Nitrox Jusqu''à 40%</li>
+	<li><b>Cylindre:</b>Catalina 80 Cubic Foot</li>
+	<li>Cylindre standard de l''industrie</li>
+	<li>Taille du filetage: 0,750-14 NPSM</li>
+	<li>Design en alliage d''aluminium</li>
+	<li>La rouille ne ressemble pas aux cylindres en acier</li>
+	<li>Pression de service: 3000 psi (200 bars)</li>
+	<li><b>Remarque:</b><br>Tous les cylindres Catalina répondent aux spécifications certifiées du Département des transports des États-Unis (DOT) avec la spécification DOT-3AL de Meet and Safety de Transports Canada avec TC-3ALM</li>
+	<li><b>Valve:</b>Pro Valve</li>
+	<li>Valve K convertible</li>
+	<li>joug ou DIN</li>
+	<li>Conception robuste</li>
+	<li>Mécanisme à soupape de commande lisse</li>
+	<li>Laiton Marine Plaqué Chrome</li>
+	<li>Assemblage de prise rafale multi-portés</li>
+	<li>Valve à haut débit</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	31,
+	'EN',
+	'<ul class="checkmark"><li>Nitrox ready up to 40%</li>
+	<li>Round bottom cylinder</li>
+	<li>Physical vapor deposition (PVD) finish</li>
+	<li>Teflon coated valve seat</li>
+	<li>O-ring sealed bonnet</li></ul>',
+	'<p class="text-justify">If you are not using steel cylinders, try to use one and you will soon realize what you have been missing. Faber can offer you the most comprehensive range of cylinders for scuba diving. No other manufacturer in the world can match their capabilities and the breadth of their range. Faber Tanks and XS valves are nitrox ready.</p>
+	<p class="text-justify">Cylinders come equipped with a Pro valve that easily converts back and forth depending on the type of first stage regulator to be used in conjunction with the cylinder increasing the versatility of the tank. The construction allows the diver to remove lead weight from their weight belt or integrated weight system of the BCD, allowing the diver to better distribute weight by moving it to the rear of the BCD a great advantage when wearing a back inflation style (Wing) BCD.</p>',
+	'<ul class="indent-disc"><li>Nitrox Ready Up to 40%</li>
+	<li>Most Widely Sold Cylinder Type</li>
+	<li><b> Great Buoyancy Characteristics: </b> <br> Buoyancy Full: From -2.42 lbs. to -9.41 lbs. (-1.1 kg to 4.3 kg), Size Dependent <br> Buoyancy Empty: From -1.2 lbs. to 2.35 lbs. (-0.54 kg to 1.1 kg) <br> Buoyancy Better for Back Inflation Style BCD''s (Wings) <br> Shed the Lead</li>
+	<li>Weight: From 28.3 lbs. to 42.4 lbs. (13 kg to 19.4 kg)</li>
+	<li>Diameter: From: 7.25" to 8.0" (10 cm to 20.3 cm)</li>
+	<li>Height: From: 20.8" to 26.85" (53 cm to 68 cm)</li>
+	<li><b> Construction: </b> <br> Deep Drawn Chromium Molybdenum Steel <br> Triple Protected Zinc Sprayed <br> Epoxy and Polyurethane Painted <br> Round Bottom Cylinder</li>
+	<li><b> Note: </b> <br> All Faber Cylinders Meet Certificated Specifications of US Department of Transportation (DOT) with Special Permit Number 13488 <br> Meet Specification of the Transport Canada (TC) with Special Permit Number SU7694-237</li>
+	<li>XS Scuba PVD Pro Valve</li>
+	<li>Standard Yoke Outlet with Spin-Out DIN Insert Converts to 230 bar (3,336 psi) DIN Outlet</li>
+	<li>1/4" Hex Key Wrench Removable DIN Insert</li>
+	<li>3/4" - 14 NPSM Standard Inlet Threads</li>
+	<li>1.5 Hand Wheel Rotations from Fully-On to Fully-Off</li>
+	<li>5/32" Hex Key Dip Tube Included</li>
+	<li>Tough Physical Vapor Deposition (PVD) Finish</li>
+	<li>Same Finish Found on High End Watches and Faucets</li>
+	<li>Durable Scratch Resistant Finish gives Valve a "Tech Look"</li>
+	<li>Service Pressure: 3442 psi (240 bars)</li>
+	<li>New Unique Color Coded Safety Hand Wheel</li>
+	<li>Red" Valve is Completely Off</li>
+	<li>Green" Valve is Completely Open and Ready for Diving</li>
+	<li>Chrome Plated Durable Brass Valve Stem</li>
+	<li>Teflon Coated Valve Seat</li>
+	<li>O-Ring Sealed Bonnet</li>
+	<li>Easy Grip Rubber Hand Wheel</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	31,
+	'FR',
+	'<ul class="checkmark"><li>Nitrox prêt à 40%</li>
+	<li>Cylindre à fond rond</li>
+	<li>Finition du dépôt physique en phase vapeur (PVD)</li>
+	<li>Siège de soupape revêtu de téflon</li>
+	<li>Bague d''étanchéité à joint torique</li></ul>',
+	'<p class="text -justify">Si vous n''utilisez pas de cylindres en acier, essayez d''en utiliser un et vous vous rendrez vite compte de ce qui vous manquait. Faber peut vous proposer la gamme de cylindres la plus complète pour la plongée sous-marine. Aucun autre fabricant au monde ne peut égaler ses capacités et la portée de sa gamme. Les réservoirs Faber et les vannes XS sont prêts pour le nitrox.</P>
+	<p class="text-justify">Les cylindres sont équipés d''une vanne Pro qui se convertit facilement en arrière en fonction du type de régulateur de premier étage à utiliser conjointement avec le cylindre, ce qui augmente la polyvalence du réservoir. La construction permet au plongeur de retirer le poids de son poids ou de son système de musculation intégré, ce qui permet au plongeur de mieux répartir le poids en le déplaçant vers l''arrière du BCD.</p>',
+	'<ul class="indent-disc"><li>Prêt pour Nitrox Jusqu''à 40%</li>
+	<li>Type de cylindre le plus vendu</li>
+	<li><b>Caractéristiques de flottabilité:</b><br>Flottabilité complète: de -2,42 lb. à -9,41 lb (-1,1 kg à 4,3 kg), Taille dépendante de la flottabilité Vide: De -1,2 lb à 2.35 lbs. (-0,54 kg à 1,1 kg)<br>Une meilleure flottabilité pour les BCD (ailes) de style d''inflation à l''arrière |
+	<li>Poids: à partir de 28,3 lb à 42,4 livres. (13 kg à 19,4 kg)</li>
+	<li>Diamètre: De: 7,25 "à 8,0" (10 cm à 20,3 cm)</li>
+	<li>Hauteur: De: 20,8 "à 26,85" (53 cm à 68 cm)</li>
+	<li><b>Construction:</b><br>Cylindre à fond rond peint époxy et polyuréthane - Acier au molybdène embouti et au chrome triple</li>
+	<li><b>Note:</b><br>Tous les cylindres Faber respectent les spécifications certifiées du Département des transports des États-Unis (DOT) avec le numéro d''autorisation spécial 13488<br>Spécification du numéro de permis spécial de Transports Canada (TC) SU7694-237</li>
+	<li>Valve XS Scuba PVD Pro</li>
+	<li>Sortie de culasse standard avec embout DIN à emboutir pour une sortie DIN de 230 bars (3,336 psi)</li>
+	<li>Clé hexagonale 1/4 "Insert DIN amovible</li>
+	<li>3/4 "- 14 threads d''entrée standard NPSM</li>
+	<li>1.5 Rotations de la molette du mode entièrement activé au mode inactif</li>
+	<li>Tube de trempage à clé hexagonale de 5/32 po inclus</li>
+	<li>Finition solide du dépôt physique en phase vapeur (PVD)</li>
+	<li>Même finition trouvée sur les montres et les robinets haut de gamme</li>
+	<li>Un fini durable résistant aux rayures donne à la soupape un aspect technique</li>
+	<li>Pression de service: 3442 psi (240 bars)</li>
+	<li>Nouvelle molette de sécurité à code couleur unique</li>
+	<li>Rouge "La vanne est complètement désactivée</li>
+	<li>Vert "La vanne est complètement ouverte et prête pour la plongée</li>
+	<li>Tige de valve en laiton durable plaquée chrome</li>
+	<li>Siège de soupape revêtu de téflon</li>
+	<li>Bonnet à joint torique</li>
+	<li>Roue à main en caoutchouc Easy Grip</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	32,
+	'EN',
+	'<ul class="checkmark"><li>Nitrox Ready Up to 23.5%</li>
+	<li>Aluminum alloy 6061-T6 construction</li>
+	<li>Durable and corrosion resistant</li>
+	<li>Meet specifications of DOT with DOT-3AL</li>
+	<li>Heavy duty valve with high flow capacity</li></ul>',
+	'<p class="text-justify">In 1988, Luxfer introduced scuba tanks manufactured from L6X, a proprietary formula of aluminum alloy 6061-T6 developed by Luxfer metallurgists to provide superior corrosion-resistance and dependable performance in the most demanding underwater environments. The manufacturing of Luxfer scuba cylinders has been relocated to the Graham, North Carolina factory. The original tooling is being used to maintain the same specifications, buoyancy and weight distribution. Proprietary L6X 6061-T6 aluminum alloy which has an unsurpassed record for safety and dependability will continue to be used. Luxfer is the preferred choice by military, commercial and technical divers worldwide.</p>
+	<p class="text-justify">A pony bottle is a smaller tank, which is carried in addition to the main tank. It possesses its own regulator with first and second stage and sometimes a separate pressure gauge. It is mounted either at ones side or in front of the body or fixed to the main tank. A pony bottle scuba tank is the only true redundant breathing mechanism you can completely rely on. Depending on the type of diving you plan on doing will determine what capacity the redundant air supply needs to be. Leisure Pro offers four different size bottles to meet every divers requirements. If used for sport diving there are three choices 6, 13 and 19 cu ft. cylinders. If deep or deep technical diving or wreck penetration or cave diving there is the 30 cu ft. cylinder available.</p>
+	<p class="text-justify">With Pro Valve, the Pro Valve is one of the highest flow cylinder valves available today and is also a convertible valve. Whether you dive Yoke or DIN regulators this valve will work for both. Valve has easily removed 200 bar (3,000 psi) DIN insert to convert the valve for use with DIN regulators. Valve has a heavy duty deign with a smooth operating mechanism and multi-ported burst disc plug for added safety. Valve is made from durable and corrosion resistant chrome plated brass.</p>',
+	'<ul class="indent-disc"><li>Nitrox Ready Up to 23.5%</li>
+	<li>Four Sizes to Choose</li>
+	<li>Most Reliable Redundant Air Source</li>
+	<li>Available in Multiple Colors</li>
+	<li><b> Cylinder: </b>Luxfer Pony Bottles</li>
+	<li>In 1988, Luxfer Introduced Scuba Tanks Manufactured from L6X</li>
+	<li>Proprietary Formula of Aluminum Alloy: 6061-T6</li>
+	<li>Superior Corrosion-Resistance and Dependable Performance</li>
+	<li>Preferred Choice by Military, Commercial and Technical Divers Worldwide</li>
+	<li>Best for Sport Divers: 6, 13 and 19 cu. ft. Cylinders</li>
+	<li>Great for Deep and Deep Technical Diving: 30 cu ft. Cylinder</li>
+	<li>Thread Size: 0.750-14 NPSM</li>
+	<li>Won''t Rust Like Steel Cylinders</li>
+	<li>Working Pressure: 3000 psi (200 bar)</li>
+	<li><b> Note:</b> <br> All Luxfer Cylinders Meet Certificated Specifications of the US Department of Transportation (DOT) with DOT-3AL<br> Meet Specification of the Transport Canada Safety and Security (TC) with TC-3ALM</li>
+	<li><b> Valve:</b> Pro Valve</li>
+	<li>Convertible K-Valve</li>
+	<li>Yoke or DIN</li>
+	<li>Heavy Duty Design</li>
+	<li>Smooth Operating Valve Mechanism</li>
+	<li>Chrome Plated Marine Brass</li>
+	<li>Multi-Ported Burst Plug Assembly</li>
+	<li>High Flow Capacity Valve</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	32,
+	'FR',
+	'<ul class="checkmark"><li>Nitrox Ready Jusqu''à 23,5%</li>
+	<li>Construction en alliage d''aluminium 6061-T6</li>
+	<li>Durable et résistant à la corrosion</li>
+	<li>Répondre aux spécifications de DOT avec DOT-3AL</li>
+	<li>Valve haute capacité à haut débit</li></ul>',
+	'<p class="text-justify">En 1988, Luxfer a introduit des bouteilles de plongée fabriquées à partir de L6X, une formule exclusive d''alliage d''aluminium 6061-T6 développée par les métallurgistes de Luxfer pour offrir une résistance supérieure à la corrosion et des performances fiables dans les environnements sous-marins les plus exigeants. La fabrication des bouteilles de plongée Luxfer a été transférée à l''usine Graham, en Caroline du Nord. L''outillage d''origine est utilisé pour maintenir les mêmes spécifications, la flottabilité et la répartition du poids. L''alliage d''aluminium breveté L6X 6061-T6, qui présente un niveau de sécurité et de fiabilité inégalé, continuera d''être utilisé. Luxfer est le choix préféré des plongeurs militaires, commerciaux et techniques du monde entier.</P>
+	<p class="text-justify">Une bouteille de poney est un réservoir plus petit, qui est transporté en plus du réservoir principal. Il possède son propre régulateur avec un premier et un deuxième étage et parfois un manomètre séparé. Il est monté soit sur le côté, soit devant le corps ou fixé au réservoir principal. Une bouteille de plongée en forme de poney est le seul mécanisme respiratoire redondant sur lequel vous pouvez compter. Selon le type de plongée que vous envisagez de faire, vous déterminerez la capacité de l''air redondant. Leisure Pro propose quatre bouteilles de tailles différentes pour répondre à toutes les exigences des plongeurs. Si on l''utilise pour la plongée sportive, il y a trois choix de cylindres de 6, 13 et 19 pieds cubes. Si la plongée technique profonde ou profonde ou la pénétration sur épave ou la plongée en caverne, le cylindre de 30 pieds cubes est disponible.</P>
+	<p class="text-justify">Avec Pro Valve, la soupape Pro Valve est l''une des soupapes de débit les plus hautes disponibles à ce jour et est également une soupape convertible. Que vous plongiez des régulateurs Yoke ou DIN, cette vanne fonctionnera pour les deux. La vanne a facilement enlevé l''insert DIN de 200 bars (3 000 psi) pour convertir la vanne en vue d''une utilisation avec des régulateurs DIN. La vanne a un design robuste avec un mécanisme de fonctionnement souple et un connecteur de disque de rupture multi-port pour une sécurité accrue. La vanne est fabriquée en laiton chromé durable et résistant à la corrosion.</P>',
+	'<ul class="indent-disc"><li>Nitrox Ready Jusqu''à 23,5%</li>
+	<li>Quatre tailles à choisir</li>
+	<li>Source d''air redondante la plus fiable</li>
+	<li>Disponible en plusieurs couleurs</li>
+	<li><b>Cylindre:</b>Bouteilles de poney Luxfer</li>
+	<li>En 1988, Luxfer a présenté des réservoirs de plongée fabriqués à partir de L6X</li>
+	<li>Formule exclusive d''alliage d''aluminium: 6061-T6</li>
+	<li>Résistance supérieure à la corrosion et performances fiables</li>
+	<li>Choix préféré des plongeurs militaires, commerciaux et techniques du monde entier</li>
+	<li>Best for Sport Divers: 6, 13 et 19 cu. ft. Cylindres</li>
+	<li>Idéal pour la plongée technique profonde et profonde: cylindre de 30 pi³</li>
+	<li>Taille du filetage: 0,750-14 NPSM</li>
+	<li>La rouille ne ressemble pas aux cylindres en acier</li>
+	<li>Pression de service: 3000 psi (200 bars)</li>
+	<li><b>Note:</b><br>Tous les cylindres Luxfer répondent aux spécifications certifiées du Département des transports des États-Unis (DOT) avec DOT-3AL - Spécification de la sécurité et de la sûreté de Transports Canada avec TC TC-3ALM</li>
+	<li><b>Valve:</b>Pro Valve</li>
+	<li>Valve K convertible</li>
+	<li>joug ou DIN</li>
+	<li>Conception robuste</li>
+	<li>Mécanisme à soupape de commande lisse</li>
+	<li>Laiton Marine Plaqué Chrome</li>
+	<li>Assemblage de prise rafale multi-portés</li>
+	<li>Valve à haut débit</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	33,
+	'EN',
+	'<ul class="checkmark"><li>Allows quick and easy refills from scuba tank</li>
+	<li>Redundant alternate air source for safety</li>
+	<li>Helps assist rescue and self rescue</li>
+	<li>Refillable back up system</li>
+	<li>Small and easy to use</li></ul>',
+	'<p class="text-justify">Having a safety back-up air supply has many advantages over a standard alternate air source. The most obvious is that it is a separate air supply and allows self rescue in an emergency out of air situation. We are taught to stay with our buddy so that in case of an emergency they are right there ready to help us. Next time you make a dive count the times your buddy is further then arms length from you. You will be surprised that they are much further away more often then you may think. Spare-Air gives you a major advantage over an alternate air source when an emergency arises. Having something to breathe from while you are swimming to your buddy, and then, getting their attention while they have their head in a hole watching a lobster can take several breaths or more of air.</p>
+	<p class="text-justify">Tested and approved, Spare Air is a totally self-contained 3000 psi (200 bars) 3.0 cu. ft. (85 liter), refillable backup air system that''s small and easy to use. It was designed to get you to the surface in the event of an emergency; yet, it is small enough to not even know you are wearing it! Spare Air is easy to use and maintain, just put it in your mouth and breathe. Kit includes easy refill adapter so you can fill directly off your own Scuba cylinder. So give yourself that extra edge of safety with Spare Air. The cylinder measures (L x Dia.) 13.4" x 2.25" (34 cm x 5.71 cm) and weighs 2.17 lbs. (985 g). Note: All Spare Air cylinders meet certificated specifications of the US Department of Transportation (DOT) with DOT-3AA specification and Transport Canada Safety and Security (TC) with TC-3AAM specifications. Spare Air comes with an owner''s manual, holster, and safety leash.</p>',
+	'<ul class="indent-disc"><li>Perfect Addition to Dive System</li>
+	<li>Quick & Easy Refills from Scuba Tank</li>
+	<li><b> Completely Redundant Alternate Air Source: </b> <br> Safety Back-Up Air Supply <br> Many Advantages Over Standard Alternate Air Source <br> Allows Self Rescue in Emergency Out-of-Air-Situation</li>
+	<li>3000 psi (200 bars) 3.0 cu. ft. (85 liter) of Air</li>
+	<li>Refillable Backup Air System, Small and Easy to Use</li>
+	<li>Designed to Get-You-to-Surface in Event of an Emergency</li>
+	<li>Easy-to-Use and Maintain, Just Put-In-Mouth and Breathe</li>
+	<li>Cylinder Dimensions: (L x Dia.) 13.4" x 2.25" (34cm x 5.71cm)</li>
+	<li>Weight: 2.17 lbs. (985 g)</li>
+	<li>Includes Refill Adapter</li>
+	<li>Holster and Safety Leash</li>
+	<li>Owner''s Manual</li>
+	<li><b> Note: </b> Cylinders Meet Certificated Specifications of the US Department of Transportation (DOT) with DOT-3AA </li>
+	<li>Meet Specification of the Transport Canada Safety and Security (TC) with TC-3AAM</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	33,
+	'FR',
+	'<ul class="checkmark"><li>Permet des recharges rapides et faciles à partir de la bouteille de plongée</li>
+	<li>Source d''air de remplacement redondante pour la sécurité</li>
+	<li>Aide au sauvetage et à l''auto-sauvetage</li>
+	<li>Système de sauvegarde rechargeable</li>
+	<li>Petit et facile à utiliser</li></ul>',
+	'<p class="text-justify">Avoir une alimentation en air de secours de sécurité présente de nombreux avantages par rapport à une source d''air alternative standard. La plus évidente est qu''il s''agit d''une alimentation en air séparée et qu''elle permet de se sauver en cas de situation d''urgence en dehors de l''air. On nous apprend à rester avec notre copain afin qu''en cas d''urgence, ils soient prêts à nous aider. La prochaine fois que vous faites un compte de plongée, le temps est écoulé entre votre copain et vous. Vous serez surpris de constater qu''ils sont beaucoup plus éloignés que vous le pensez. Spare-Air vous offre un avantage majeur par rapport à une autre source d''air en cas d''urgence. Avoir quelque chose à respirer pendant que vous nagez à votre copain, puis, attirant leur attention pendant qu''ils observent un homard dans un trou, peuvent prendre plusieurs respirations ou plus d''air.</P>
+	<p class="text-justify">Testé et approuvé, Spare Air est un appareil totalement autonome de 3 000 psi (200 bars). (85 litres), système d''air de secours rechargeable, compact et facile à utiliser. Il a été conçu pour vous amener à la surface en cas d''urgence; pourtant, il est assez petit pour ne pas savoir que vous le portez! L''air de rechange est facile à utiliser et à entretenir, il suffit de le mettre dans votre bouche et de respirer. Le kit comprend un adaptateur de recharge facile pour vous permettre de remplir directement votre propre bouteille de plongée. Alors, offrez-vous un avantage supplémentaire en matière de sécurité avec Spare Air. Le cylindre mesure (L x Dia.) 13,4 "x 2,25" (34 cm x 5,71 cm) et pèse 2,17 lb. (985 g). Remarque: Toutes les bouteilles d''air de secours sont conformes aux spécifications du Département des transports des États-Unis (DOT) avec les spécifications DOT-3AA et à celles de Transports Canada (TC) avec les spécifications TC-3AAM. Spare Air est livré avec un manuel du propriétaire, un étui et une laisse de sécurité.</P>',
+	'<ul class="indent-disc"><li>Ajout parfait au système de plongée</li>
+	<li>Recharges rapides et faciles de Scuba Tank</li>
+	<li><b>Source d''air de remplacement complètement redondante:</b><br>Alimentation en air de secours de sécurité - De nombreux avantages par rapport à la source d''air alternative <br> Autogestion en cas de situation d''urgence hors de l''air</li>
+	<li>3000 psi (200 bars) 3,0 cu. ft. (85 litre) d''air</li>
+	<li>Système d''air de secours rechargeable, petit et facile à utiliser</li>
+	<li>Conçu pour vous rendre à la surface en cas d''urgence</li>
+	<li>Facile à utiliser et à maintenir, juste à mettre dans la bouche et à respirer</li>
+	<li>Dimensions du cylindre: (L x Dia.) 13,4 "x 2,25" (34 cm x 5,71 cm)</li>
+	<li>Poids: 2,17 lb (985 g)</li>
+	<li>Inclut l''adaptateur de recharge</li>
+	<li>Holster et laisse de sécurité</li>
+	<li>Mode d''emploi</li>
+	<li><b>Remarque:</b>Les cylindres répondent aux spécifications certifiées du Département des transports des États-Unis (DOT) avec DOT-3AA</li>
+	<li>Répondre aux spécifications de Transports Canada en matière de sécurité et de sûreté avec TC-3AAM</li></ul>'
+);
+
+--###################################################################################
+
+INSERT INTO product_detail VALUES(
+	34,
+	'EN',
+	'<ul class="checkmark"><li>3/2mm neoprene wetsuit</li>
+	<li>Durable and comfortable seam construction</li>
+	<li>Smooth sliding heavy duty back zipper</li>
+	<li>Durable thermoplastic rubber knee pads</li>
+	<li>Ergonomic design and fit</li></ul>',
+	'<p class="text-justify">These Scubapro neoprene suits will soon be your steady companion for all your diving and snorkeling activities. Elegantly cut and styled, built-in durable and fast drying nylon-2 neoprene overall, profile suits provide maximum comfort at all levels. The Scubapro Profile Steamer has a back zipper for good water sealing and great ergonomic look and fit. The heavy-duty metal zipper slider is sturdy yet easy to operate with a nylon webbing thumb loop at base of back zipper and pull-tab leash for easy donning and doffing.</p>
+	<p class="text-justify">The Scubapro Profile Steamer is a 3mm suit with double blind stitched outer seams and single blind stitched inner seams for durability and comfort. The main body of the suit is in 3mm for warmth and the strategic 2mm panels provide better fit and mobility. Suit is equipped with Tatex knee pads a thermoplastic rubber (TPR) applied without using glue or stitching; provide abrasion resistance and maximum freedom of movement. Smooth cut collar neck line provides unprecedented comfort compared to traditional roll edged collars. Suit is available in multiple size sand is black and Yellow in color.</p>',
+	'<ul class="indent-disc"><li>Discontinued 2015 Model</li>
+	<li>Elegantly Cut-and-Styled</li>
+	<li>Built-In Durable and Fast-Drying</li>
+	<li>Nylon 2 Neoprene Overall</li>
+	<li>Maximum Comfort at All Levels</li>
+	<li>Back Zipper for Good-Water Sealing</li>
+	<li>Great Ergonomic Look-and-Fit</li>
+	<li>Heavy-Duty Metal Zipper Slider</li>
+	<li>Nylon Webbing Thumb Loop at Base of Back-Zipper and Leash for Easy Donning</li>
+	<li>Main Body 3mm for Warmth</li>
+	<li>Strategic 2mm Panels Provide Better-Fit-and-Mobility</li>
+	<li>Double Blind-Stitched Outer-Seams</li>
+	<li>Single Blind-Stitched Inner Seams</li>
+	<li>Seam Construction: Durability and Comfort</li>
+	<li>Tatex Knee Pads: Thermo Plastic Rubber (TPR)</li>
+	<li>Knee Pads: Abrasion Resistance and Maximum Freedom of Movement</li>
+	<li>Smooth-Cut Collar Neck Line Provides Unprecedented Comfort</li>
+	<li>Available in Multiple-Sizes</li>
+	<li>Color: Black and Yellow</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	34,
+	'FR',
+	'<ul class="checkmark"><li>Combinaison néoprène 3 /2mm</li>
+	<li>Construction de coutures durable et confortable</li>
+	<li>Glissière arrière robuste et coulissante</li>
+	<li>Genouillères en caoutchouc thermoplastique durable</li>
+	<li>Design ergonomique et ajustement</li></ul>',
+	'<p class="text-justify">Ces combinaisons néoprènes Scubapro seront bientôt votre compagnon stable pour toutes vos activités de plongée et de plongée en apnée. Coupe élégante et stylée, néoprène en nylon-2 intégré durable et à séchage rapide, les combinaisons de profil offrent un confort maximal à tous les niveaux. Le Scubapro Profile Steamer est doté d''une fermeture à glissière à l''arrière pour une bonne étanchéité à l''eau et une excellente ergonomie. Le curseur à glissière robuste en métal est robuste mais facile à utiliser avec une boucle de pouce en sangle en nylon à la base de la fermeture à glissière arrière et une laisse à languette pour un enfilage et un retrait faciles.</P>
+	<p class="text-justify">Le Scubapro Profile Steamer est une combinaison de 3 mm avec des coutures extérieures cousues en double aveugle et des coutures intérieures en simple cousu pour plus de durabilité et de confort. Le corps principal de la combinaison est de 3 mm pour la chaleur et les panneaux stratégiques de 2 mm offrent un meilleur ajustement et une meilleure mobilité. La combinaison est équipée de genouillères Tatex en caoutchouc thermoplastique (TPR) appliquées sans colle ni couture; offrent une résistance à l''abrasion et une liberté de mouvement maximale. La ligne de col lisse du col offre un confort sans précédent par rapport aux colliers traditionnels à bords roulés. Le costume est disponible en plusieurs tailles. Le sable est noir et jaune.</P>',
+	'<ul class="indent-disc"><li>Modèle arrêté en 2015</li>
+	<li>Élégamment coupé et stylisé</li>
+	<li>Durable et séchage rapide intégrés</li>
+	<li>Nylon 2 Neoprene Overall</li>
+	<li>Un maximum de confort à tous les niveaux</li>
+	<li>Fermeture à glissière arrière pour une bonne étanchéité</li>
+	<li>Excellente apparence ergonomique</li>
+	<li>Curseur à glissière robuste en métal</li>
+	<li>Boucle de pouce en sangle en nylon à la base de la fermeture à glissière et de la laisse pour un dégagement facile</li>
+	<li>Corps principal 3 mm pour la chaleur</li>
+	<li>Des panneaux stratégiques de 2 mm améliorent l''adaptation et la mobilité</li>
+	<li>Coutures extérieures à double couture aveugle</li>
+	<li>Coutures intérieures simples avec points invisibles</li>
+	<li>Construction de couture: durabilité et confort</li>
+	<li>Genouillères Tatex: caoutchouc thermoplastique (TPR)</li>
+	<li>Genouillères: Résistance à l''abrasion et liberté de mouvement maximale</li>
+	<li>La ligne à col lisse permet un confort sans précédent</li>
+	<li>Disponible en plusieurs tailles</li>
+	<li>Couleur: noir et jaune</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	35,
+	'EN',
+	'<ul class="checkmark"><li>8mm body/7mm hood</li>
+	<li>250% more stretch neoprene</li>
+	<li>Aqua Silk interior for comfort</li>
+	<li>Aqualock flow vent hood purge valve</li>
+	<li>Shoulder to shoulder front zipper entry</li></ul>',
+	'<p class="text-justify">Significant improvements in comfort and flexibility will be one of the most noticeable enhancements found in the new Thermoprene Pro line. Now boasting a full 250% stretch; a significant improvement over the 180% stretch of the original Thermoprene material. The new materials melts" in your hands and contours every curve of your body. Thermoprene Pro wetsuits feature new patterns which have been developed using fitting data from Henderson''s pattern library which contains over five decades of USA grading and patterning knowledge.</p>
+	<p class="text-justify">As the name implies, Thermoprene Pro wetsuits are a professional level wetsuits that are designed to provide maximum warmth and comfort. These suits keep you warmer longer, as the number of seams in each suit have been minimized and each seam is double glued and blind stitched. Attention-grabbing new colors, contemporary graphics and classic styling will be certain to make you look great in and out of the water. Finishing touches like soft and comfortable aqua silk lining, ergonomic Duratex knee pads and the proven self-sealing zipper closures all combine to complete the new Thermoprene Pro lineup.</p>
+	<p class="text-justify">The Henderson Thermoprene Pro Hooded Semi-Dry Jumpsuit has a full shoulder to shoulder front zip entry. The zipper is a PK S-Lock design which is dependable, durable and provides proven performance. This nylon-2 neoprene suit has durable Thermoprene Pro non-pill nylon exterior laminate, 8mm body/7mm hood, and Aqua Silk interior for soft and luxurious comfort. The double glued and double sewn seams eliminate cold water entry. Aqualock flow vent purge valve in hood eliminates ballooning due to regulator exhaust or trapped air from entries. Suit is equipped with double locking, self-sealing wrist and ankle seals, which not only keep out water and reduce water exchange, but make donning and doffing easier. Enlarged Duratex kneepads for the toughest conditions and added protection. Suit is all black and available in multiple sizes.</p>',
+	'<ul class="indent-disc"><li>High Quality Nylon 2 Neoprene</li>
+	<li>250% Stretch Neoprene Significant Improvement Over 180% Stretch of Original</li>
+	<li>More-Stretch than Standard Wetsuit Material</li>
+	<li>Seams: Double Glued and Sewn Inside & Out</li>
+	<li>Number of Seams  Minimized for Greater Warmth and Comfort</li>
+	<li>Contoured Fit: Helps Keep Water Exchange to Minimum</li>
+	<li>Strong & Flexible Duratex Knee Pads</li>
+	<li>Non-Pill Nylon Exterior Laminate</li>
+	<li>Aqua Silk Interior for Soft and Luxurious Comfort</li>
+	<li>8mm Body/7mm Hood</li>
+	<li>Aqualock Flow Vent Purge Valve in Hood Eliminates Ballooning</li>
+	<li>PK S-Lock Shoulder-to-Shoulder Front Zipper Entry</li>
+	<li>Zipper: Dependable, Durable and Provides Proven Performance</li>
+	<li>Double Locking, Self-Sealing Wrist and Ankle Seals</li>
+	<li>Enlarged Duratex Kneepads for Toughest Conditions</li>
+	<li>Available in Multiple Sizes</li>
+	<li>Color: Black</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	35,
+	'FR',
+	'<ul class="checkmark"><li>Corps de 8 mm /capot de 7 mm</li>
+	<li>250% de néoprène extensible</li>
+	<li>Intérieur Aqua Silk pour plus de confort</li>
+	<li>Vanne de purge de la hotte de ventilation Aqualock</li>
+	<li>Épaule à l''épaule entrée de la fermeture éclair</li></ul>',
+	'<p class="text-justify">Des améliorations significatives du confort et de la flexibilité seront l''une des améliorations les plus notables de la nouvelle gamme Thermoprene Pro. Maintenant une étendue complète de 250%; une amélioration significative par rapport à l''étirement de 180% de la matière Thermoprène d''origine. Les nouveaux matériaux fond "dans vos mains et dessinent toutes les courbes de votre corps. Les combinaisons de Thermoprene Pro présentent de nouveaux modèles qui ont été développés à partir des données de la bibliothèque de modèles de Henderson.
+	<p class="text-justify">Comme leur nom l''indique, les combinaisons isothermiques Thermoprene Pro sont des combinaisons de niveau professionnel conçues pour offrir un maximum de chaleur et de confort. Ces combinaisons vous gardent au chaud plus longtemps, car le nombre de coutures dans chaque combinaison a été réduit au minimum et chaque couture est à double collage et cousue à l''aveugle. De nouvelles couleurs qui attirent l''attention, des graphismes contemporains et un style classique vous donneront l''assentiment de l''eau. Des finitions comme une doublure en soie douce et confortable, des genouillères Duratex ergonomiques et des fermetures à glissière auto-obturantes éprouvées se combinent pour compléter la nouvelle gamme Thermoprene Pro.</P>
+	<p class="text-justify">La combinaison semi-sèche à capuchon Henderson Thermoprene Pro a une fermeture à glissière pleine longueur à l''épaule. La fermeture à glissière est une conception PK S-Lock qui est fiable, durable et offre des performances éprouvées. Cette combinaison de néoprène en nylon-2 est dotée d''un stratifié extérieur en nylon sans pilule Thermoprene Pro durable, d''un capot de 7 mm et d''un intérieur Aqua Silk pour un confort doux et luxueux. Les doubles coutures et les coutures doubles permettent d''éliminer les entrées d''eau froide. La soupape de purge de ventilation Aqualock dans la hotte élimine le gonflement dû à l''échappement du régulateur ou à l''air emprisonné dans les entrées. La combinaison est munie de joints d''étanchéité auto-étanches à poignet et à la cheville à double verrouillage, qui non seulement empêchent l''eau de pénétrer et réduisent les échanges d''eau, mais facilitent également la mise en place et le retrait. Genouillères Duratex agrandies pour les conditions les plus difficiles et une protection accrue. Le costume est tout noir et disponible en plusieurs tailles.</P>',
+	'<ul class="indent-disc"><li>Néoprène Nylon 2 haute qualité</li>
+	<li>Amélioration significative du néoprène extensible à 250% sur un étirement de 180% de l''original</li>
+	<li>Matériau de combinaison plus extensible que standard</li>
+	<li>Coutures: Double collage et cousu à l''intérieur et à l''extérieur</li>
+	<li>Nombre de coutures minimisées pour plus de chaleur et de confort</li>
+	<li>Coupe ajustée: permet de maintenir l''échange d''eau au minimum</li>
+	<li>Genouillères Duratex robustes et flexibles</li>
+	<li>Stratifié extérieur en nylon sans pilule</li>
+	<li>Aqua Silk Interior pour un confort doux et luxueux</li>
+	<li>Corps de 8mm /Capot de 7mm</li>
+	<li>La soupape de purge Aqualock Flow Vent dans la hotte élimine le gonflement</li>
+	<li>Entrée à glissière frontale épaule sur épaule PK S-Lock</li>
+	<li>Fermeture à glissière: fiable, durable et offrant des performances éprouvées</li>
+	<li>Joints de poignet et de cheville auto-obturants à double verrouillage</li>
+	<li>Genouillères Duratex agrandies pour les conditions les plus difficiles</li>
+	<li>Disponible en plusieurs tailles</li>
+	<li>Couleur: noir</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	36,
+	'EN',
+	'<ul class="checkmark"><li>Progressive stretch neoprene</li>
+	<li>Lumbare X-Tender panels on lower back</li>
+	<li>Skin to skin internal sealing flap</li>
+	<li>Neoprene internal pullover bib</li>
+	<li>10mm spine and kidney pad</li></ul>',
+	'<p class="text-justify">Don''t want to invest in a dry-suit but want to keep warmer on your dives this Velocity Semi-Dry Hooded Suit can be right for you. Suit drastically reduces the water exchange that occurs with a standard wet suit and keeps you warmer for longer periods of time. This means increased comfort, decreased air consumption and longer bottom times. Just look at this suits features! The Velocity Ultra is a performance driven wetsuit that features the Progressive Full-Stretch (PFS) construction of the popular Velocity, with the advancement of UltraWarmth Celliant¦ Infrared Technology. Bare''s greatest innovations in design and development together for longer, more comfortable dives.</p>
+	<p class="text-justify">Proprietary combination of three different full-stretch material types PFS, makes this one of the highest performing mid-priced suits available. We start with Bare-Fit, the foundation of every Bare suit, which uses ergonomic design and intricate shaping patterns with articulated arms and legs. Then we highlight areas of the suit where flexibility and abrasion resistance are essential and incorporate special full-stretch fabrics to maximize performance in these key areas. PFS gives the Velocity Ultra Series a fit and feel unlike any other. What makes the Velocity Ultra Series truly special, is that it''s the only mid-priced dive suit to feature the thermal-activated performance of Celliant¦ Infrared Technology. Using minerals woven into the fabric of the suit, Celliant¦ turns wasted body heat into infrared energy, reflecting it back to your body. This results in increased warmth, faster recovery times, and greater stamina for longer, more comfortable dives.</p>',
+	'<ul class="indent-disc"><li>Progressive Full-Stretch Technology</li>
+	<li>Full-Stretch Nylon-2 Neoprene</li>
+	<li>Varying-Degrees of Full-Stretch Panels into Specific Performance Zones</li>
+	<li>Suit Improving Fit, Feel, Comfort and Overall Performance</li>
+	<li>Progressive Stretch: Concept Only Available in Velocity Series</li>
+	<li>Bare-Fit: Ergonomic Suit Design, Complex Shaped Patterns with Articulated Arms and Legs</li>
+	<li><b>Celliant Fabric Liner:</b><br>Highest Degree of Warmth<br>Enhanced with 13 Thermo-Reactive Minerals Woven into Fabric<br>React to Body Heat Converting it to Infrared Energy<br>Reflects it Back to Body, Increasing Circulation and Body Warmth</li>
+	<li>Attached Hood Features Celliant Lining for Additional Warmth</li>
+	<li>2mm Neoprene Internal Pullover Bib for Additional Warmth and Comfort</li>
+	<li>Front-Entry Cross-Chest Heavy-Duty Plastic Dry Zipper</li>
+	<li>10mm Spine and Kidney Pad to Provide Extra Comfort for Tank Placement</li>
+	<li>Seamless Underarms for Superior Comfort when Worn On-Its-Own</li>
+	<li>Additional Wet Layer or w/BCD</li>
+	<li>Skin-to-Skin Double 3mm Glideskin Wrist and Ankle Seals</li>
+	<li>Embossed Back Knee Flex Panels, Reduce Bulk Behind Knees when Kicking & Crouching</li>
+	<li>PROTEKT Knee Protection Provides Next Generation of Abrasion/Wear Resistance</li>
+	<li>Anatomically Correct Pattern for 3-Dimensional Fit</li>
+	<li>Superior Fit, Comfort and Mobility</li>
+	<li>Heavy-Duty Ankle Zippers for Easy Donning and Doffing</li>
+	<li>Double Glued w/SECURE-LOCK Construction Eliminates Water Entry Thru-Seams</li>
+	<li>Color: Black</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	36,
+	'FR',
+	'<ul class="checkmark"><li>Néoprène extensible progressif</li>
+	<li>Panneaux Lumbare X-Tender dans le bas du dos</li>
+	<li>Volet d''étanchéité interne peau à peau</li>
+	<li>Bavoir interne en néoprène</li>
+	<li>épine dorsale et coussinet de 10 mm</li></ul>',
+	'<p class="text-justify">Ne voulez pas investir dans une combinaison étanche, mais souhaitez garder la température sur vos plongées cette combinaison semi-sèche à capuche Velocity peut vous convenir. Suit réduit considérablement les échanges d''eau avec une combinaison standard et vous permet de rester au chaud pendant de longues périodes. Cela signifie un confort accru, une consommation d''air réduite et des temps de fond plus longs. Il suffit de regarder cela convient à des fonctionnalités! La Velocity Ultra est une combinaison de plongée axée sur la performance qui intègre la construction PFS (Progressive Full-Stretch) de la populaire Velocity, avec les progrès de la technologie infrarouge UltraWarmth Celliant®. Les plus grandes innovations de Bare dans la conception et le développement pour des plongées plus longues et plus confortables.</P>
+	<p class="text-justify">Combinaison exclusive de trois types de matériaux PBS extensibles, ce qui en fait l''un des modèles les plus performants disponibles à prix moyen. Nous commençons avec Bare-Fit, la base de chaque costume Bare, qui utilise un design ergonomique et des motifs complexes avec des bras et des jambes articulés. Ensuite, nous mettons en évidence les zones de la combinaison où la flexibilité et la résistance à l''abrasion sont essentielles et incorporent des tissus extensibles spéciaux pour maximiser les performances dans ces domaines clés. La PFS confère à la série Velocity Ultra un ajustement et une sensation incomparables. Ce qui rend la série Velocity Ultra vraiment spéciale, c''est qu''elle est la seule combinaison de plongée à prix moyen à présenter la performance à activation thermique de la technologie infrarouge Celliant®. En utilisant des minéraux tissés dans le tissu de la combinaison, Celliant¦ transforme la chaleur corporelle perdue en énergie infrarouge, la renvoyant dans votre corps. Cela se traduit par une chaleur accrue, des temps de récupération plus rapides et une plus grande endurance pour des plongées plus longues et plus confortables.</P>',
+	'<ul class="indent-disc"><li>Technologie progressive complète</li>
+	<li>Néoprène Nylon-2 entièrement extensible</li>
+	<li>Différences de degrés de panneaux extensibles dans des zones de performances spécifiques</li>
+	<li>Combinaison améliorant l''ajustement, la sensation, le confort et la performance globale</li>
+	<li>Stretch progressif: Concept uniquement disponible dans la série Velocity</li>
+	<li>Bare-Fit: conception ergonomique du costume, motifs complexes avec bras et jambes articulés</li>
+	<li><b>Doublure pour tissus Celliant:</b><br>Plus haut degré de chaleur - Amélioré avec 13 minéraux thermo-réactifs tissés pour réagir à la chaleur du corps it back to body, circulation croissante et chaleur corporelle</li>
+	<li>Capot attaché avec doublure Celliant pour plus de chaleur</li>
+	<li>Bavoir interne en néoprène de 2 mm pour plus de chaleur et de confort</li>
+	<li>Fermeture à glissière en plastique résistante à usage intensif sur la poitrine à entrée frontale</li>
+	<li>épine dorsale et coussinet de 10 mm pour plus de confort lors du placement dans le réservoir</li>
+	<li>Des aisselles sans coutures pour un confort supérieur lorsque porté sur soi-même</li>
+	<li>Couche humide supplémentaire ou w /BCD</li>
+	<li>Joints pour poignet et cheville en peau de peau double 3mm Glideskin</li>
+	<li>Panneaux de genoux flexibles en relief, réduisent la masse derrière les genoux lors de coups de pied et de accroupissements</li>
+	<li>La protection des genoux PROTEKT offre une nouvelle génération de résistance à l''abrasion /à l''usure</li>
+	<li>Modèle anatomiquement correct pour un ajustement tridimensionnel</li>
+	<li>Ajustement, confort et mobilité supérieurs</li>
+	<li>Fermetures à glissière très résistantes pour un soulagement et un retrait faciles</li>
+	<li>Double collage w /SECURE-LOCK Construction élimine les traversées d''eau</li>
+	<li>Couleur: noir</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	37,
+	'EN',
+	'<ul class="checkmark"><li>Full suit design</li>
+	<li>Non chafing flat lock overlapping seams</li>
+	<li>Fully adjustable neck seal</li>
+	<li>Paddle zones for unrestricted motion</li>
+	<li>3/2mm Fluid Flex neoprene construction</li></ul>',
+	'<p class="text-justify">The newly upgraded Reactor II is engineered for performance in a value driven package. A perfect combination of stretch and durability. Fresh colors and graphics with style that''s built to last. The Reactor II 3/2mm Full Suit comes equipped with a back-zipper entry system that provides easy entry and exit with a water-resistant closure. Ultra-stretch, super soft and premium nylon 2 neoprene for superior feel, flexibility and high performance. Seamless paddle zones are flexible design utilizing minimal seam placement for comfort. 100% ultra-stretch super gooey for superior feel and flexibility.</p>
+	<p class="text-justify">All seams are sewn with flat-lock stitch and are breathable in design. The suit comes with Kyrpto knee pads for protection of this high wear area. A double super seal neck adds comfort and reduces water exchange. When you''re sitting on your board or boat between sets or on a surface interval, the wind-resistant smooth-skin chest and back panels will keep you warmer. The rear zipper comes equipped with a pull tab leash to help in easy self-donning and doffing. Suit is available in multiple sizes.</p>',
+	'<ul class="indent-disc"><li>Get a Full Dose of Performance Technology</li>
+	<li>Fluid-Flex Foam Neoprene</li>
+	<li>Exclusive Fluid-Flex Material in Shoulders and Sleeves</li>
+	<li><b>Seams:</b><br>Flat-Lock Stitched<br>Breathable<br>Overlapping Seam<br>Non-Chafing & Super Durable for Warmer Conditions</li>
+	<li>Nylon 1 and 2 Neoprene Rubber</li>
+	<li>Fully Adjustable Super Seal Neck</li>
+	<li>Paddle Zones: Unrestricted Motion and Eliminates Rash</li>
+	<li>Seamless Under-Sleeve Panel Paddle Zones</li>
+	<li>Krypto Padz: Ergonomic Knee Protection</li>
+	<li>Easy-Entry Back YKK-Zipper with Pull Tab Leash</li>
+	<li>Available in Multiple Sizes and Colors</li></ul>'
+);
+
+INSERT INTO product_detail VALUES(
+	37,
+	'FR',
+	'<ul class="checkmark"><li>Conception de la combinaison complète</li>
+	<li>Coutures plates sans frottement</li>
+	<li>Joint de cou entièrement réglable</li>
+	<li>Zones de palette pour un mouvement illimité</li>
+	<li>Construction néoprène Fluid Flex 3 /2mm</li></ul>',
+	'<p class="text-justify">Le Reactor II, récemment mis à niveau, est conçu pour être performant dans un package axé sur la valeur. Une combinaison parfaite d''étirement et de durabilité. Des couleurs et des graphiques frais avec un style conçu pour durer. La combinaison complète Reactor II 3 /2mm est équipée d''un système d''entrée à fermeture éclair qui permet une entrée et une sortie faciles grâce à une fermeture étanche. Nylon néoprène 2 ultra-extensible, super doux et haut de gamme pour une sensation, une flexibilité et une performance supérieures. Les zones de pagaie sans couture sont de conception flexible utilisant un placement de couture minimal pour le confort. 100% ultra-stretch ultra-gluant pour une sensation et une souplesse supérieures.</P>
+	<p class="text-justify">Toutes les coutures sont cousues avec des points plats et respirantes. La combinaison est équipée de genouillères Kyrpto pour la protection de cette zone d''usure élevée. Un double col super joint ajoute du confort et réduit les échanges d''eau. Lorsque vous êtes assis sur votre planche ou sur un bateau entre deux sets ou sur un intervalle de surface, la poitrine et le dos en peau lisse résistante au vent vous garderont au chaud. La fermeture à glissière arrière est équipée d''une lanière de tirette pour faciliter la mise en place et le retrait. Suit est disponible en plusieurs tailles.</P>',
+	'<ul class="indent-disc"><li>Obtenez une technologie complète de performance</li>
+	<li>Néoprène en mousse Fluid-Flex</li>
+	<li>Matériau exclusif Fluid-Flex dans les épaules et les manches</li>
+	<li><b>Coutures:</b><br>Couture à recouvrement plat et à coutures plates - Respirable - Sans frottement et très durable pour des conditions plus chaudes</li>
+	<li>Caoutchouc néoprène Nylon 1 et 2</li>
+	<li>Cou Super Seal entièrement ajustable</li>
+	<li>Zones de palette: mouvement illimité et élimination des éruptions cutanées</li>
+	<li>Zones de pagaie sans couture sous panneau</li>
+	<li>Krypto Padz: Protection ergonomique du genou</li>
+	<li>Fermeture à glissière YKK à ouverture facile avec languette à tirette</li>
+	<li>Disponible en plusieurs tailles et couleurs</li></ul>'
+);
 --(8)#####################################################################################
 
 CREATE TABLE placed_order
