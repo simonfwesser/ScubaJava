@@ -11,12 +11,15 @@ import service.Service;
 public class CategoryServlet extends HttpServlet {
 
     private final String CATEGORY_ITEMS_PAGE = "/category_items.jsp";
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String category = request.getParameter("category");
-        request.setAttribute("listCategoryProducts", Service.getAllCategoryProducts());
+        String categoryCode = request.getParameter("categoryCode");
+        request.setAttribute("listCategoryProducts", Service.getAllCategoryProducts(categoryCode));
         RequestDispatcher disp = request.getRequestDispatcher(CATEGORY_ITEMS_PAGE);
         disp.forward(request, response);
+        
+        Service.closeCategorySession();
     }
 
     @Override

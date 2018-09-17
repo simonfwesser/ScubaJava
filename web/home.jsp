@@ -37,7 +37,7 @@
                                 <p class="card-text">${categoryDetails['about']}</p>
                                 <form method="POST" action="CategoryServlet">
                                     <input type="submit" class="btn btn-link" value="Go somewhere" > 
-                                    <input type="hidden" name="category" value="${categoryDetails['category'].categoryCode}">
+                                    <input type="hidden" name="categoryCode" value="${categoryDetails['category'].categoryCode}">
                                 </form>
                             </div>
                         </div>

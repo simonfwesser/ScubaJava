@@ -3,6 +3,7 @@ package service;
 import dataAccess.CategoryDAO;
 import entite.Category;
 import entite.CategoryDetail;
+import entite.Product;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -31,8 +32,16 @@ public class CategoryService {
 //        return categoryNames;
     }
 
+    static List<Product> getAllProducts(String categoryCode) {
+        CategoryDAO categoryDAO = new CategoryDAO();
+        categoryDAO.openSession();
+        Category category = categoryDAO.getOne(categoryCode);
+        return new ArrayList<Product>(category.getProducts());
+    }
+
     public static void closeSession() {
         CategoryDAO categoryDAO = new CategoryDAO();
         categoryDAO.closeSession();
     }
+
 }

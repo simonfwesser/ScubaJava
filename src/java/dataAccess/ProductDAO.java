@@ -4,7 +4,7 @@ import entite.Product;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class ProductDAO extends DAO<Product, BigDecimal> {
+public class ProductDAO extends DAO<Product, Integer> {
 
     public ProductDAO() {
         super();
@@ -21,7 +21,7 @@ public class ProductDAO extends DAO<Product, BigDecimal> {
     }
 
     @Override
-    public Product getOne(BigDecimal primaryKey) {
+    public Product getOne(Integer primaryKey) {
         return (Product) _session.get(Product.class, primaryKey);
     }
 

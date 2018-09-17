@@ -22,7 +22,7 @@ public class ProductService {
     public static Product getOne(String id) {
         ProductDAO productDAO = new ProductDAO();
         productDAO.openSession();
-        Product product = productDAO.getOne(new BigDecimal(Integer.parseInt(id)));
+        Product product = productDAO.getOne(Integer.valueOf(id));
         //productDAO.closeSession();
         return product;
     }

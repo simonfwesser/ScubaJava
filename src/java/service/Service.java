@@ -1,22 +1,14 @@
 package service;
 
-import dataAccess.CustomerDAO;
-import dataAccess.DAO;
 import dataAccess.DbConnection;
-import dataAccess.ProductDAO;
 import entite.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
 public class Service {
 
     private static Languages _language = null;
-
-    public static Object getAllCategoryProducts() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     public Service() {
     }
@@ -36,7 +28,8 @@ public class Service {
     }
 
     public static Product getOneProduct(String id) {
-        return ProductService.getOne(id);
+        Product product = ProductService.getOne(id);
+        return product;
     }
 
     public static void closeProductSession() {
@@ -71,6 +64,16 @@ public class Service {
         }
         return categoryDetails;
     }
+    
+    
+    public static List<Product> getAllCategoryProducts(String categoryCode) {
+        List<Product> categoryProducts = null;
+        categoryProducts = CategoryService.getAllProducts(categoryCode);
+        return categoryProducts;
+    }
+    
+    
+    /////////////////////////////////////////////////////////////
     
     
 
