@@ -14,6 +14,10 @@ public class Service {
 
     private static Languages _language = null;
 
+    public static Object getAllCategoryProducts() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public Service() {
     }
 
