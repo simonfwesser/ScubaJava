@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
 <!--
 DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 
@@ -39,22 +39,17 @@ made subject to such option by the copyright holder.
 
 Contributor(s):
 -->
-<hibernate-configuration>
-  <session-factory>
-    <property name="hibernate.connection.driver_class">org.sqlite.JDBC</property>
-    <property name="hibernate.connection.url">jdbc:sqlite:E:\Toolkit\Mirror\BdeB\01-cours\03_etape\a11_web\projet_session\00_projects\gitRepository\testAlex\src\java\dataAccess\web_database.db</property>
-    <property name="hibernate.enable_lazy_load_no_trans">true</property>
-    <property name="dialect">dialect.SQLiteDialect</property>
-    <mapping resource="entite/PlacedOrder.hbm.xml"/>
-    <mapping resource="entite/ProductDetail.hbm.xml"/>
-    <mapping resource="entite/CategoryDetail.hbm.xml"/>
-    <mapping resource="entite/Payment.hbm.xml"/>
-    <mapping resource="entite/Product.hbm.xml"/>
-    <mapping resource="entite/Languages.hbm.xml"/>
-    <mapping resource="entite/Bill.hbm.xml"/>
-    <mapping resource="entite/Category.hbm.xml"/>
-    <mapping resource="entite/Customer.hbm.xml"/>
-    <mapping resource="entite/OrderLine.hbm.xml"/>
-    <mapping resource="entite/Administrator.hbm.xml"/>
-  </session-factory>
-</hibernate-configuration>
+<hibernate-reverse-engineering>
+  <schema-selection match-schema="ETEAM7"/>
+  <table-filter match-name="LANGUAGES"/>
+  <table-filter match-name="PAYMENT"/>
+  <table-filter match-name="CATEGORY"/>
+  <table-filter match-name="BILL"/>
+  <table-filter match-name="ORDER_LINE"/>
+  <table-filter match-name="PRODUCT_DETAIL"/>
+  <table-filter match-name="PLACED_ORDER"/>
+  <table-filter match-name="ADMINISTRATOR"/>
+  <table-filter match-name="CATEGORY_DETAIL"/>
+  <table-filter match-name="PRODUCT"/>
+  <table-filter match-name="CUSTOMER"/>
+</hibernate-reverse-engineering>

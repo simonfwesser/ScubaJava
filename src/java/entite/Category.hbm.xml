@@ -1,25 +1,25 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-17 14:03:05 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Category" table="CATEGORY" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.Category" table="category" optimistic-lock="version">
         <id name="categoryCode" type="string">
-            <column name="CATEGORY_CODE" length="3" />
+            <column name="category_code" length="2000000000" />
             <generator class="assigned" />
         </id>
         <property name="categoryImage" type="string">
-            <column name="CATEGORY_IMAGE" length="100" not-null="true" />
+            <column name="category_image" length="2000000000" not-null="true" />
         </property>
-        <set name="categoryDetails" table="CATEGORY_DETAIL" inverse="true" lazy="true" fetch="select">
+        <set name="categoryDetails" table="category_detail" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="CATEGORY_CODE" length="3" not-null="true" />
+                <column name="category_code" length="2000000000" not-null="true" />
             </key>
             <one-to-many class="entite.CategoryDetail" />
         </set>
-        <set name="products" table="PRODUCT" inverse="true" lazy="true" fetch="select">
+        <set name="products" table="product" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="CATEGORY_CODE" length="3" not-null="true" />
+                <column name="category_code" length="2000000000" not-null="true" />
             </key>
             <one-to-many class="entite.Product" />
         </set>

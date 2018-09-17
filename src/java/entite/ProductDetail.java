@@ -1,5 +1,5 @@
 package entite;
-// Generated 2018-09-14 20:08:41 by Hibernate Tools 4.3.1
+// Generated 2018-09-17 14:03:04 by Hibernate Tools 4.3.1
 
 
 
@@ -20,10 +20,8 @@ public class ProductDetail  implements java.io.Serializable {
     }
 
 	
-    public ProductDetail(ProductDetailId id, Languages languages, Product product) {
+    public ProductDetail(ProductDetailId id) {
         this.id = id;
-        this.languages = languages;
-        this.product = product;
     }
     public ProductDetail(ProductDetailId id, Languages languages, Product product, String keyFeatures, String about, String features) {
        this.id = id;

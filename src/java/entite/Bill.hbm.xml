@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-17 14:03:05 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Bill" table="BILL" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.Bill" table="bill" optimistic-lock="version">
         <id name="billNumber" type="string">
-            <column name="BILL_NUMBER" length="10" />
+            <column name="bill_number" length="2000000000" />
             <generator class="assigned" />
         </id>
         <many-to-one name="placedOrder" class="entite.PlacedOrder" fetch="select">
-            <column name="ORDER_NUMBER" length="10" not-null="true" />
+            <column name="order_number" length="2000000000" not-null="true" />
         </many-to-one>
-        <property name="finalOrderPrice" type="big_decimal">
-            <column name="FINAL_ORDER_PRICE" precision="8" not-null="true" />
+        <property name="finalOrderPrice" type="double">
+            <column name="final_order_price" precision="2000000000" scale="10" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

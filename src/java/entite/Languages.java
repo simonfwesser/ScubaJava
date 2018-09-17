@@ -1,5 +1,5 @@
 package entite;
-// Generated 2018-09-14 20:08:41 by Hibernate Tools 4.3.1
+// Generated 2018-09-17 14:03:04 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -14,8 +14,8 @@ public class Languages  implements java.io.Serializable {
      private String languageCode;
      private String languageName;
      private String languageImage;
-     private Set categoryDetails = new HashSet(0);
      private Set productDetails = new HashSet(0);
+     private Set categoryDetails = new HashSet(0);
 
     public Languages() {
     }
@@ -26,12 +26,12 @@ public class Languages  implements java.io.Serializable {
         this.languageName = languageName;
         this.languageImage = languageImage;
     }
-    public Languages(String languageCode, String languageName, String languageImage, Set categoryDetails, Set productDetails) {
+    public Languages(String languageCode, String languageName, String languageImage, Set productDetails, Set categoryDetails) {
        this.languageCode = languageCode;
        this.languageName = languageName;
        this.languageImage = languageImage;
-       this.categoryDetails = categoryDetails;
        this.productDetails = productDetails;
+       this.categoryDetails = categoryDetails;
     }
    
     public String getLanguageCode() {
@@ -55,19 +55,19 @@ public class Languages  implements java.io.Serializable {
     public void setLanguageImage(String languageImage) {
         this.languageImage = languageImage;
     }
-    public Set getCategoryDetails() {
-        return this.categoryDetails;
-    }
-    
-    public void setCategoryDetails(Set categoryDetails) {
-        this.categoryDetails = categoryDetails;
-    }
     public Set getProductDetails() {
         return this.productDetails;
     }
     
     public void setProductDetails(Set productDetails) {
         this.productDetails = productDetails;
+    }
+    public Set getCategoryDetails() {
+        return this.categoryDetails;
+    }
+    
+    public void setCategoryDetails(Set categoryDetails) {
+        this.categoryDetails = categoryDetails;
     }
 
 

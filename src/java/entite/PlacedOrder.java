@@ -1,5 +1,5 @@
 package entite;
-// Generated 2018-09-14 20:08:41 by Hibernate Tools 4.3.1
+// Generated 2018-09-17 14:03:04 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -14,9 +14,9 @@ public class PlacedOrder  implements java.io.Serializable {
      private String orderNumber;
      private Customer customer;
      private String status;
-     private Set orderLines = new HashSet(0);
      private Set payments = new HashSet(0);
      private Set bills = new HashSet(0);
+     private Set orderLines = new HashSet(0);
 
     public PlacedOrder() {
     }
@@ -26,13 +26,13 @@ public class PlacedOrder  implements java.io.Serializable {
         this.orderNumber = orderNumber;
         this.customer = customer;
     }
-    public PlacedOrder(String orderNumber, Customer customer, String status, Set orderLines, Set payments, Set bills) {
+    public PlacedOrder(String orderNumber, Customer customer, String status, Set payments, Set bills, Set orderLines) {
        this.orderNumber = orderNumber;
        this.customer = customer;
        this.status = status;
-       this.orderLines = orderLines;
        this.payments = payments;
        this.bills = bills;
+       this.orderLines = orderLines;
     }
    
     public String getOrderNumber() {
@@ -56,13 +56,6 @@ public class PlacedOrder  implements java.io.Serializable {
     public void setStatus(String status) {
         this.status = status;
     }
-    public Set getOrderLines() {
-        return this.orderLines;
-    }
-    
-    public void setOrderLines(Set orderLines) {
-        this.orderLines = orderLines;
-    }
     public Set getPayments() {
         return this.payments;
     }
@@ -76,6 +69,13 @@ public class PlacedOrder  implements java.io.Serializable {
     
     public void setBills(Set bills) {
         this.bills = bills;
+    }
+    public Set getOrderLines() {
+        return this.orderLines;
+    }
+    
+    public void setOrderLines(Set orderLines) {
+        this.orderLines = orderLines;
     }
 
 

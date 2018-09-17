@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-17 14:03:05 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Languages" table="LANGUAGES" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.Languages" table="languages" optimistic-lock="version">
         <id name="languageCode" type="string">
-            <column name="LANGUAGE_CODE" length="3" />
+            <column name="language_code" length="2000000000" />
             <generator class="assigned" />
         </id>
         <property name="languageName" type="string">
-            <column name="LANGUAGE_NAME" length="100" not-null="true" />
+            <column name="language_name" length="2000000000" not-null="true" />
         </property>
         <property name="languageImage" type="string">
-            <column name="LANGUAGE_IMAGE" length="100" not-null="true" />
+            <column name="language_image" length="2000000000" not-null="true" />
         </property>
-        <set name="categoryDetails" table="CATEGORY_DETAIL" inverse="true" lazy="true" fetch="select">
+        <set name="productDetails" table="product_detail" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="LANGUAGE_CODE" length="3" not-null="true" />
-            </key>
-            <one-to-many class="entite.CategoryDetail" />
-        </set>
-        <set name="productDetails" table="PRODUCT_DETAIL" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="LANGUAGE_CODE" length="3" not-null="true" />
+                <column name="language_code" length="2000000000" />
             </key>
             <one-to-many class="entite.ProductDetail" />
+        </set>
+        <set name="categoryDetails" table="category_detail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="language_code" length="2000000000" not-null="true" />
+            </key>
+            <one-to-many class="entite.CategoryDetail" />
         </set>
     </class>
 </hibernate-mapping>

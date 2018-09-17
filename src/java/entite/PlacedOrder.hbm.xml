@@ -1,36 +1,36 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-17 14:03:05 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.PlacedOrder" table="PLACED_ORDER" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.PlacedOrder" table="placed_order" optimistic-lock="version">
         <id name="orderNumber" type="string">
-            <column name="ORDER_NUMBER" length="10" />
+            <column name="order_number" length="2000000000" />
             <generator class="assigned" />
         </id>
         <many-to-one name="customer" class="entite.Customer" fetch="select">
-            <column name="EMAIL" length="50" not-null="true" />
+            <column name="email" length="2000000000" not-null="true" />
         </many-to-one>
         <property name="status" type="string">
-            <column name="STATUS" length="50" />
+            <column name="status" length="2000000000" />
         </property>
-        <set name="orderLines" table="ORDER_LINE" inverse="true" lazy="true" fetch="select">
+        <set name="payments" table="payment" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="ORDER_NUMBER" length="10" not-null="true" />
-            </key>
-            <one-to-many class="entite.OrderLine" />
-        </set>
-        <set name="payments" table="PAYMENT" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="ORDER_NUMBER" length="10" not-null="true" />
+                <column name="order_number" length="2000000000" not-null="true" />
             </key>
             <one-to-many class="entite.Payment" />
         </set>
-        <set name="bills" table="BILL" inverse="true" lazy="true" fetch="select">
+        <set name="bills" table="bill" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="ORDER_NUMBER" length="10" not-null="true" />
+                <column name="order_number" length="2000000000" not-null="true" />
             </key>
             <one-to-many class="entite.Bill" />
+        </set>
+        <set name="orderLines" table="order_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="order_number" length="2000000000" />
+            </key>
+            <one-to-many class="entite.OrderLine" />
         </set>
     </class>
 </hibernate-mapping>

@@ -1,42 +1,42 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-17 14:03:05 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Product" table="PRODUCT" schema="ETEAM7" optimistic-lock="version">
-        <id name="sku" type="big_decimal">
-            <column name="SKU" precision="22" scale="0" />
+    <class name="entite.Product" table="product" optimistic-lock="version">
+        <id name="sku" type="java.lang.Integer">
+            <column name="sku" />
             <generator class="assigned" />
         </id>
         <many-to-one name="category" class="entite.Category" fetch="select">
-            <column name="CATEGORY_CODE" length="3" not-null="true" />
+            <column name="category_code" length="2000000000" not-null="true" />
         </many-to-one>
         <property name="name" type="string">
-            <column name="NAME" length="100" not-null="true" />
+            <column name="name" length="2000000000" not-null="true" />
         </property>
         <property name="brand" type="string">
-            <column name="BRAND" length="50" not-null="true" />
+            <column name="brand" length="2000000000" not-null="true" />
         </property>
-        <property name="price" type="big_decimal">
-            <column name="PRICE" precision="6" not-null="true" />
+        <property name="price" type="double">
+            <column name="price" precision="2000000000" scale="10" not-null="true" />
         </property>
-        <property name="quantity" type="big_decimal">
-            <column name="QUANTITY" precision="22" scale="0" not-null="true" />
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
         </property>
         <property name="image" type="string">
-            <column name="IMAGE" length="100" not-null="true" />
+            <column name="image" length="2000000000" not-null="true" />
         </property>
-        <set name="orderLines" table="ORDER_LINE" inverse="true" lazy="true" fetch="select">
+        <set name="productDetails" table="product_detail" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="SKU" precision="22" scale="0" not-null="true" />
-            </key>
-            <one-to-many class="entite.OrderLine" />
-        </set>
-        <set name="productDetails" table="PRODUCT_DETAIL" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="SKU" precision="22" scale="0" not-null="true" />
+                <column name="sku" />
             </key>
             <one-to-many class="entite.ProductDetail" />
+        </set>
+        <set name="orderLines" table="order_line" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="sku" />
+            </key>
+            <one-to-many class="entite.OrderLine" />
         </set>
     </class>
 </hibernate-mapping>

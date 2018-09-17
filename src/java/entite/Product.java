@@ -1,8 +1,7 @@
 package entite;
-// Generated 2018-09-14 20:08:41 by Hibernate Tools 4.3.1
+// Generated 2018-09-17 14:03:04 by Hibernate Tools 4.3.1
 
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,21 +11,21 @@ import java.util.Set;
 public class Product  implements java.io.Serializable {
 
 
-     private BigDecimal sku;
+     private Integer sku;
      private Category category;
      private String name;
      private String brand;
-     private BigDecimal price;
-     private BigDecimal quantity;
+     private double price;
+     private int quantity;
      private String image;
-     private Set orderLines = new HashSet(0);
      private Set productDetails = new HashSet(0);
+     private Set orderLines = new HashSet(0);
 
     public Product() {
     }
 
 	
-    public Product(BigDecimal sku, Category category, String name, String brand, BigDecimal price, BigDecimal quantity, String image) {
+    public Product(Integer sku, Category category, String name, String brand, double price, int quantity, String image) {
         this.sku = sku;
         this.category = category;
         this.name = name;
@@ -35,7 +34,7 @@ public class Product  implements java.io.Serializable {
         this.quantity = quantity;
         this.image = image;
     }
-    public Product(BigDecimal sku, Category category, String name, String brand, BigDecimal price, BigDecimal quantity, String image, Set orderLines, Set productDetails) {
+    public Product(Integer sku, Category category, String name, String brand, double price, int quantity, String image, Set productDetails, Set orderLines) {
        this.sku = sku;
        this.category = category;
        this.name = name;
@@ -43,15 +42,15 @@ public class Product  implements java.io.Serializable {
        this.price = price;
        this.quantity = quantity;
        this.image = image;
-       this.orderLines = orderLines;
        this.productDetails = productDetails;
+       this.orderLines = orderLines;
     }
    
-    public BigDecimal getSku() {
+    public Integer getSku() {
         return this.sku;
     }
     
-    public void setSku(BigDecimal sku) {
+    public void setSku(Integer sku) {
         this.sku = sku;
     }
     public Category getCategory() {
@@ -75,18 +74,18 @@ public class Product  implements java.io.Serializable {
     public void setBrand(String brand) {
         this.brand = brand;
     }
-    public BigDecimal getPrice() {
+    public double getPrice() {
         return this.price;
     }
     
-    public void setPrice(BigDecimal price) {
+    public void setPrice(double price) {
         this.price = price;
     }
-    public BigDecimal getQuantity() {
+    public int getQuantity() {
         return this.quantity;
     }
     
-    public void setQuantity(BigDecimal quantity) {
+    public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
     public String getImage() {
@@ -96,19 +95,19 @@ public class Product  implements java.io.Serializable {
     public void setImage(String image) {
         this.image = image;
     }
-    public Set getOrderLines() {
-        return this.orderLines;
-    }
-    
-    public void setOrderLines(Set orderLines) {
-        this.orderLines = orderLines;
-    }
     public Set getProductDetails() {
         return this.productDetails;
     }
     
     public void setProductDetails(Set productDetails) {
         this.productDetails = productDetails;
+    }
+    public Set getOrderLines() {
+        return this.orderLines;
+    }
+    
+    public void setOrderLines(Set orderLines) {
+        this.orderLines = orderLines;
     }
 
 

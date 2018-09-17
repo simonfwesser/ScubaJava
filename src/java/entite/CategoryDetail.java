@@ -1,5 +1,5 @@
 package entite;
-// Generated 2018-09-14 20:08:41 by Hibernate Tools 4.3.1
+// Generated 2018-09-17 14:03:04 by Hibernate Tools 4.3.1
 
 
 
@@ -10,8 +10,8 @@ public class CategoryDetail  implements java.io.Serializable {
 
 
      private CategoryDetailId id;
-     private Languages languages;
      private Category category;
+     private Languages languages;
      private String categoryName;
      private String about;
 
@@ -19,16 +19,16 @@ public class CategoryDetail  implements java.io.Serializable {
     }
 
 	
-    public CategoryDetail(CategoryDetailId id, Languages languages, Category category, String categoryName) {
+    public CategoryDetail(CategoryDetailId id, Category category, Languages languages, String categoryName) {
         this.id = id;
-        this.languages = languages;
         this.category = category;
+        this.languages = languages;
         this.categoryName = categoryName;
     }
-    public CategoryDetail(CategoryDetailId id, Languages languages, Category category, String categoryName, String about) {
+    public CategoryDetail(CategoryDetailId id, Category category, Languages languages, String categoryName, String about) {
        this.id = id;
-       this.languages = languages;
        this.category = category;
+       this.languages = languages;
        this.categoryName = categoryName;
        this.about = about;
     }
@@ -40,19 +40,19 @@ public class CategoryDetail  implements java.io.Serializable {
     public void setId(CategoryDetailId id) {
         this.id = id;
     }
-    public Languages getLanguages() {
-        return this.languages;
-    }
-    
-    public void setLanguages(Languages languages) {
-        this.languages = languages;
-    }
     public Category getCategory() {
         return this.category;
     }
     
     public void setCategory(Category category) {
         this.category = category;
+    }
+    public Languages getLanguages() {
+        return this.languages;
+    }
+    
+    public void setLanguages(Languages languages) {
+        this.languages = languages;
     }
     public String getCategoryName() {
         return this.categoryName;

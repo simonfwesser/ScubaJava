@@ -40,16 +40,16 @@ made subject to such option by the copyright holder.
 Contributor(s):
 -->
 <hibernate-reverse-engineering>
-  <schema-selection match-schema="ETEAM7"/>
-  <table-filter match-name="LANGUAGES"/>
-  <table-filter match-name="PAYMENT"/>
-  <table-filter match-name="CATEGORY"/>
-  <table-filter match-name="BILL"/>
-  <table-filter match-name="ORDER_LINE"/>
-  <table-filter match-name="PRODUCT_DETAIL"/>
-  <table-filter match-name="PLACED_ORDER"/>
-  <table-filter match-name="ADMINISTRATOR"/>
-  <table-filter match-name="CATEGORY_DETAIL"/>
-  <table-filter match-name="PRODUCT"/>
-  <table-filter match-name="CUSTOMER"/>
+  <schema-selection/>
+  <table-filter match-name="product"/>
+  <table-filter match-name="order_line"/>
+  <table-filter match-name="payment"/>
+  <table-filter match-name="administrator"/>
+  <table-filter match-name="category_detail"/>
+  <table-filter match-name="languages"/>
+  <table-filter match-name="bill"/>
+  <table-filter match-name="category"/>
+  <table-filter match-name="customer"/>
+  <table-filter match-name="product_detail"/>
+  <table-filter match-name="placed_order"/>
 </hibernate-reverse-engineering>

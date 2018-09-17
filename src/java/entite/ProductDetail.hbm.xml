@@ -1,31 +1,31 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-17 14:03:05 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.ProductDetail" table="PRODUCT_DETAIL" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.ProductDetail" table="product_detail" optimistic-lock="version">
         <composite-id name="id" class="entite.ProductDetailId">
-            <key-property name="sku" type="big_decimal">
-                <column name="SKU" precision="22" scale="0" />
+            <key-property name="sku" type="java.lang.Integer">
+                <column name="sku" />
             </key-property>
             <key-property name="languageCode" type="string">
-                <column name="LANGUAGE_CODE" length="3" />
+                <column name="language_code" length="2000000000" />
             </key-property>
         </composite-id>
         <many-to-one name="languages" class="entite.Languages" update="false" insert="false" fetch="select">
-            <column name="LANGUAGE_CODE" length="3" not-null="true" />
+            <column name="language_code" length="2000000000" />
         </many-to-one>
         <many-to-one name="product" class="entite.Product" update="false" insert="false" fetch="select">
-            <column name="SKU" precision="22" scale="0" not-null="true" />
+            <column name="sku" />
         </many-to-one>
         <property name="keyFeatures" type="string">
-            <column name="KEY_FEATURES" length="1000" />
+            <column name="key_features" length="2000000000" />
         </property>
         <property name="about" type="string">
-            <column name="ABOUT" length="4000" />
+            <column name="about" length="2000000000" />
         </property>
         <property name="features" type="string">
-            <column name="FEATURES" length="4000" />
+            <column name="features" length="2000000000" />
         </property>
     </class>
 </hibernate-mapping>

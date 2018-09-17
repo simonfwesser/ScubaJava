@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-17 14:03:05 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Administrator" table="ADMINISTRATOR" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.Administrator" table="administrator" optimistic-lock="version">
         <id name="adminCode" type="string">
-            <column name="ADMIN_CODE" length="20" />
+            <column name="admin_code" length="2000000000" />
             <generator class="assigned" />
         </id>
         <property name="firstName" type="string">
-            <column name="FIRST_NAME" length="50" not-null="true" />
+            <column name="first_name" length="2000000000" not-null="true" />
         </property>
         <property name="lastName" type="string">
-            <column name="LAST_NAME" length="50" not-null="true" />
+            <column name="last_name" length="2000000000" not-null="true" />
         </property>
         <property name="password" type="string">
-            <column name="PASSWORD" length="20" not-null="true" />
+            <column name="password" length="2000000000" not-null="true" />
         </property>
     </class>
 </hibernate-mapping>

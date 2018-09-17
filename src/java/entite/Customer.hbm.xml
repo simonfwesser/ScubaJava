@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated 2018-09-14 20:08:42 by Hibernate Tools 4.3.1 -->
+<!-- Generated 2018-09-17 14:03:05 by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="entite.Customer" table="CUSTOMER" schema="ETEAM7" optimistic-lock="version">
+    <class name="entite.Customer" table="customer" optimistic-lock="version">
         <id name="email" type="string">
-            <column name="EMAIL" length="50" />
+            <column name="email" length="2000000000" />
             <generator class="assigned" />
         </id>
         <property name="firstName" type="string">
-            <column name="FIRST_NAME" length="50" not-null="true" />
+            <column name="first_name" length="2000000000" not-null="true" />
         </property>
         <property name="lastName" type="string">
-            <column name="LAST_NAME" length="50" not-null="true" />
+            <column name="last_name" length="2000000000" not-null="true" />
         </property>
         <property name="password" type="string">
-            <column name="PASSWORD" length="20" not-null="true" />
+            <column name="password" length="2000000000" not-null="true" />
         </property>
         <property name="address" type="string">
-            <column name="ADDRESS" length="200" not-null="true" />
+            <column name="address" length="2000000000" not-null="true" />
         </property>
-        <set name="placedOrders" table="PLACED_ORDER" inverse="true" lazy="true" fetch="select">
+        <set name="placedOrders" table="placed_order" inverse="true" lazy="true" fetch="select">
             <key>
-                <column name="EMAIL" length="50" not-null="true" />
+                <column name="email" length="2000000000" not-null="true" />
             </key>
             <one-to-many class="entite.PlacedOrder" />
         </set>
