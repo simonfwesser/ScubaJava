@@ -38,11 +38,16 @@
                         </c:if>
                     </c:forEach>
                 <br>
-                <form>
+                <form methode="GET" action="ShoppingCartServlet">
                     <h6 class="title-attr"><small>QUANTITE</small></h6>                      
-                    <input class="textfield" name="quatity" type="number" value="1" min="1" size="4" data-bind="value:replyNumber"/><br>
+                    <input class="textfield" name="quantity" type="number" value="1" min="1" size="4" data-bind="value:replyNumber"/><br>
+                    <input type="hidden" name="sku" value="${product.sku}" >
                     <input type="submit" value="Add to cart" class="btn btn-success">
                 </form>
+                
+                
+                
+                
                 <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span> </a></h6>
             </div>                                        
         </div>                              

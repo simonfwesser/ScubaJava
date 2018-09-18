@@ -36,6 +36,10 @@
         <servlet-name>ProductServlet</servlet-name>
         <servlet-class>controleur.ProductServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShoppingCartServlet</servlet-name>
+        <servlet-class>controleur.ShoppingCartServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MagasinServlet</servlet-name>
         <url-pattern>/MagasinServlet</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>ProductServlet</servlet-name>
         <url-pattern>/ProductServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShoppingCartServlet</servlet-name>
+        <url-pattern>/ShoppingCartServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

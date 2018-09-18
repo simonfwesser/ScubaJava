@@ -19,7 +19,7 @@
                         <form method="POST" action="CategoryServlet" class="text-center">
                             <input type="hidden" name="categoryCode" value="${categoryDetails['category'].categoryCode}">
                             <div class="card" 
-                                 style="box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.5); 
+                                 style="box-shadow: 5px 5px 5px #6394F8; 
                                  background-color: #fafbd9;
                                  padding : 5%; 
                                  margin : 5%;
