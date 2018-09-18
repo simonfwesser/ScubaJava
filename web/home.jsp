@@ -27,14 +27,17 @@
         <div class="container">
             <div class="row">
                 <c:forEach var="categoryDetails" items="${listCategoryDetails}" varStatus="loop" >
-                    <div class="col-sm-4">  
+                    <div class="col-sm-4"> 
+                        
+                        
                         <div class="card" 
                              style="box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2); 
                              padding : 5%; 
                              margin : 10%;
                              cursor: pointer;
-                             opacity: .9;"
-                             onclick="alert('hello, world')">
+                             transition : all 0.5s;"
+                             onmouseover="this.style.opacity = 0.4; this.filters.alpha.opacity = 40;"
+                             onmouseout="this.style.opacity = 1;this.filters.alpha.opacity = 100">
                             <img class="card-img-top" 
                                  src="${categoryDetails['category'].categoryImage}" 
                                  alt="${categoryDetails['category'].categoryImage}">
@@ -48,6 +51,7 @@
                                 </form>
                             </div>
                         </div>   
+                                
                     </div>   
                 </c:forEach>
             </div>
