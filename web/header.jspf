@@ -80,6 +80,7 @@
                     </div>
                     <div>
                         <p align="right">
+                            <a href="LogoutServlet">Logout</a>
                             <a href="LogoutServlet"><i class="fas fa-sign-out-alt" style="font-size:28px; color:#0099CC;"></i></a>
                         </p>
                     </div>

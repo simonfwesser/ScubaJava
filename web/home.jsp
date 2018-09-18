@@ -22,7 +22,7 @@
                                  style="box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.5); 
                                  background-color: #fafbd9;
                                  padding : 5%; 
-                                 margin : 10%;
+                                 margin : 5%;
                                  cursor: pointer;
                                  transition : all 0.5s;"
                                  onmouseover="this.style.opacity = 0.4; this.filters.alpha.opacity = 40;"
