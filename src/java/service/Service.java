@@ -69,6 +69,17 @@ public class Service {
         return categoryDetails;
     }
 
+    public static CategoryDetail getOneCategoryDetail(String categoryCode) {
+        CategoryDetail categoryDetail = null;
+        List<CategoryDetail> categoryDetails = getAllCategoryDetails();
+        for (CategoryDetail cd : categoryDetails) {
+            if (categoryCode.equals(cd.getCategory().getCategoryCode())) {
+                categoryDetail = cd;
+            }
+        }
+        return categoryDetail;
+    }
+
     public static List<Product> getAllCategoryProducts(String categoryCode) {
         List<Product> categoryProducts = null;
         categoryProducts = CategoryService.getAllProducts(categoryCode);

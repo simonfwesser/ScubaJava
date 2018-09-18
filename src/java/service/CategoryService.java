@@ -32,6 +32,7 @@ public class CategoryService {
 //        return categoryNames;
     }
 
+
     static List<Product> getAllProducts(String categoryCode) {
         CategoryDAO categoryDAO = new CategoryDAO();
         categoryDAO.openSession();

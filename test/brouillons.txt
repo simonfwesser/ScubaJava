@@ -2,27 +2,89 @@
 HOME.JSP
 Cards
 
-        <div class="container">
-            <div class="row" style=" border : solid black; background-color: pink;">
-                <c:forEach var="categoryDetails" items="${listCategoryDetails}" varStatus="loop" >
-                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+<div class="container">
+    <div class="row" style=" border : solid black; background-color: pink;">
+        <c:forEach var="categoryDetails" items="${listCategoryDetails}" varStatus="loop" >
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
 
-                        <div class="card" style="width:100%; background-color: lightblue; border: solid black; padding : 5%; margin:5%;" >
-                            <img class="card-img-top" 
-                                 src="${categoryDetails['category'].categoryImage}" 
-                                 alt="${categoryDetails['category'].categoryImage}"
-                                 style = "border :solid red;">
-                            <div class="card-body" style = "border :solid blue;">
-                                <h5 class="card-title" style = "border :solid green; min-height: 3em">${categoryDetails['categoryName']}</h5>
-                                <p class="card-text" style = "border :solid yellow;">${categoryDetails['about']}</p>
-                                
-                                <form method="POST" action="CategoryServlet">
-                                    <input type="submit" class="btn btn-link h-50" style="border: solid black;" value="Go somewhere" > 
-                                    <input type="hidden" name="categoryCode" value="${categoryDetails['category'].categoryCode}">
-                                </form>
-                            </div>
-                        </div>   
-                    </div>   
-                </c:forEach>
+                <div class="card" style="width:100%; background-color: lightblue; border: solid black; padding : 5%; margin:5%;" >
+                    <img class="card-img-top" 
+                         src="${categoryDetails['category'].categoryImage}" 
+                         alt="${categoryDetails['category'].categoryImage}"
+                         style = "border :solid red;">
+                    <div class="card-body" style = "border :solid blue;">
+                        <h5 class="card-title" style = "border :solid green; min-height: 3em">${categoryDetails['categoryName']}</h5>
+                        <p class="card-text" style = "border :solid yellow;">${categoryDetails['about']}</p>
+
+                        <form method="POST" action="CategoryServlet">
+                            <input type="submit" class="btn btn-link h-50" style="border: solid black;" value="Go somewhere" > 
+                            <input type="hidden" name="categoryCode" value="${categoryDetails['category'].categoryCode}">
+                        </form>
+                    </div>
+                </div>   
+            </div>   
+        </c:forEach>
+    </div>
+</div>
+
+
+
+HOME.JSP
+Banner image
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <div id='homepanel'>
+                <img class='img-fluid' src="images/aqua.jpg" alt="Scuba Java" style="width:100%;"/>
             </div>
         </div>
+    </div>
+</div>
+
+
+
+
+CATEGORY_ITEMS.JSP
+
+<div class="col-2">
+    <figure class=" border figure rounded">
+        <img class=" figure-img img-fluid" src="${product.image}" alt="${product.name}" height="160" width="240">
+        <figcaption class="figure-caption text-left">
+            <form id="form-id" action="ProductServlet" method="post">
+                <input type="submit" class="btn btn-link" value="${product.brand} ${product.name}
+                       <c:forEach var="category" items="${product.category.categoryDetails}">
+                           ${category.categoryName}
+                       </c:forEach>">
+                <input type="hidden" name="sku" value="${product.sku}">
+            </form>
+        </figcaption>
+        <figcaption class="figure-caption text-left">Price: $${product.price}</figcaption>  
+        <figcaption class="figure-caption text-left" style="<c:out value="${product.quantity gt 0 ? 'color:LimeGreen' : 'color:OrangeRed'}"/>">
+            <c:out value="${product.quantity gt 0 ? 'In stock' : 'Stockout'}"/>
+        </figcaption>
+    </figure>
+</div>
+
+
+
+LOGIN.JSP
+<form action="Traitement">
+    <table border="1">
+        <tbody>
+            <tr>
+                <td>courriel</td>
+                <td><input type="text" name="email" value="" /></td>
+            </tr>
+            <tr>
+                <td>mot de passe</td>
+                <td><input type="text" name="password" value="" /></td>
+            </tr>
+            <tr>
+                <td colspan = "2">
+                    <input type="submit" value="Login" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="text" name="action" value="login" hidden />
+</form>
