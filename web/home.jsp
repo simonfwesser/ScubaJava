@@ -27,20 +27,27 @@
         <div class="container">
             <div class="row">
                 <c:forEach var="categoryDetails" items="${listCategoryDetails}" varStatus="loop" >
-                    <div class="col-sm-4">
-                        <div class="card" style="width: 18rem; margin : 10px;">
+                    <div class="col-sm-4">  
+                        <div class="card" 
+                             style="box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.2); 
+                             padding : 5%; 
+                             margin : 10%;
+                             cursor: pointer;
+                             opacity: .9;"
+                             onclick="alert('hello, world')">
                             <img class="card-img-top" 
                                  src="${categoryDetails['category'].categoryImage}" 
                                  alt="${categoryDetails['category'].categoryImage}">
-                            <div class="card-body">
-                                <h5 class="card-title">${categoryDetails['categoryName']}</h5>
-                                <p class="card-text">${categoryDetails['about']}</p>
-                                <form method="POST" action="CategoryServlet">
-                                    <input type="submit" class="btn btn-link" value="Go somewhere" > 
+                            <div class="card-body" >
+                                <h5 class="card-title text-center" style = "min-height: 3em">${categoryDetails['categoryName']}</h5>
+                                <p class="card-text" >${categoryDetails['about']}</p>
+
+                                <form method="POST" action="CategoryServlet" class="text-center">
+                                    <input type="submit" class="btn btn-link"  value="Go somewhere" > 
                                     <input type="hidden" name="categoryCode" value="${categoryDetails['category'].categoryCode}">
                                 </form>
                             </div>
-                        </div>
+                        </div>   
                     </div>   
                 </c:forEach>
             </div>

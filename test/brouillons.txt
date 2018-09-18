@@ -1,0 +1,28 @@
+
+HOME.JSP
+Cards
+
+        <div class="container">
+            <div class="row" style=" border : solid black; background-color: pink;">
+                <c:forEach var="categoryDetails" items="${listCategoryDetails}" varStatus="loop" >
+                    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+
+                        <div class="card" style="width:100%; background-color: lightblue; border: solid black; padding : 5%; margin:5%;" >
+                            <img class="card-img-top" 
+                                 src="${categoryDetails['category'].categoryImage}" 
+                                 alt="${categoryDetails['category'].categoryImage}"
+                                 style = "border :solid red;">
+                            <div class="card-body" style = "border :solid blue;">
+                                <h5 class="card-title" style = "border :solid green; min-height: 3em">${categoryDetails['categoryName']}</h5>
+                                <p class="card-text" style = "border :solid yellow;">${categoryDetails['about']}</p>
+                                
+                                <form method="POST" action="CategoryServlet">
+                                    <input type="submit" class="btn btn-link h-50" style="border: solid black;" value="Go somewhere" > 
+                                    <input type="hidden" name="categoryCode" value="${categoryDetails['category'].categoryCode}">
+                                </form>
+                            </div>
+                        </div>   
+                    </div>   
+                </c:forEach>
+            </div>
+        </div>
