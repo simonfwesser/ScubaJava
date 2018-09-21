@@ -1,96 +1,72 @@
 package controleur;
 
+import entite.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import modele.ShoppingCart;
+import service.ProductService;
 
 public class ShoppingCartServlet extends HttpServlet {
 
+    private final String HOME_PAGE = "/home.jsp";
+
     HttpSession _session;
+    private String _action = "";
     private int _quantity;
-    private String _sku;
-    private HashMap<String, Integer> _shoppingCart;
-    private int _nbItems;
+    private Product _product;
+    //private HashMap<Product, Integer> _shoppingCart;
+    private ShoppingCart _shoppingCart;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String quantity = request.getParameter("quantity");
-        String sku = request.getParameter("sku");
-        _quantity = Integer.parseInt(quantity);
-        _sku = sku;
-
+        this._action = request.getParameter("action");
         _session = request.getSession();
 
-        _shoppingCart = (HashMap) _session.getAttribute("shoppingCart");
-        if (_shoppingCart == null) {
-            _shoppingCart = new HashMap();
-        }
+        _shoppingCart = (ShoppingCart) _session.getAttribute("shoppingCart");
 
-        if (_shoppingCart.isEmpty()) {
-            _shoppingCart.put(_sku, _quantity);
-        } else {
-            if (!_shoppingCart.containsKey(_sku)) {
-                _shoppingCart.put(_sku, _quantity);
+        if (!"delete".equals(_action)) {
+
+            String quantity = request.getParameter("quantity");
+            String sku = request.getParameter("sku");
+            _quantity = Integer.parseInt(quantity);
+            _product = ProductService.getOne(sku);
+
+            if (_shoppingCart == null) {
+                _shoppingCart = new ShoppingCart();
+            }
+            if (_shoppingCart.isEmpty()) {
+                _shoppingCart.put(_product, _quantity);
             } else {
-                _shoppingCart.put(_sku, _shoppingCart.get(_sku) + _quantity);
+                if (!_shoppingCart.contains(_product)) {
+                    _shoppingCart.put(_product, _quantity);
+                } else {
+                    _shoppingCart.put(_product, _shoppingCart.getQuantity(_product) + _quantity);
+                }
             }
         }
-        
-        _nbItems = this.getNbItems();
-
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet testServlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet testServlet at " + request.getContextPath() + "</h1>");
-
-            Iterator it = _shoppingCart.entrySet().iterator();
-            while (it.hasNext()) {
-                Map.Entry pair = (Map.Entry) it.next();
-                out.println("<h1>Product sku: " + (pair.getKey()) + "</h1>");
-                out.println("<h1>Total quantity: " + (pair.getValue()) + "</h1>");
-//                it.remove(); // avoids a ConcurrentModificationException
-            }
-
-            out.println("</body>");
-            out.println("</html>");
+        else if ("delete".equals(_action)){
+            String sku = request.getParameter("sku");
+            _product = ProductService.getOne(sku);
+            _shoppingCart.remove(_product);
+            
         }
 
         _session.setAttribute("shoppingCart", _shoppingCart);
-        _session.setAttribute("nbItems", _nbItems);
+        RequestDispatcher disp = request.getRequestDispatcher(HOME_PAGE);
+        disp.forward(request, response);
 
     }
-
-    
-   
-    private int getNbItems() {
-        int nbItems = 0;
-        Iterator it = _shoppingCart.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry) it.next();
-            nbItems += ((Integer)pair.getValue()).intValue();
-        }
-        return nbItems;
-
-    }
-
-    
-    
-    
-  
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
