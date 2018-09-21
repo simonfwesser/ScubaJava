@@ -30,8 +30,8 @@
                                  margin : 10%;
                                  cursor: pointer;
                                  transition : all 0.5s;"
-                                 onmouseover="this.style.opacity = 0.4; this.filters.alpha.opacity = 40;"
-                                 onmouseout="this.style.opacity = 1;this.filters.alpha.opacity = 100;"
+                                 onmouseover="this.style.opacity = 0.4;"
+                                 onmouseout="this.style.opacity = 1;"
                                  onclick="this.parentNode.submit();">
                                 <img class="card-img-top" 
                                      src="${product.image}" alt="${product.name}">
