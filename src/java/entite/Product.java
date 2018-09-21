@@ -3,10 +3,7 @@ package entite;
 
 
 import java.util.HashSet;
-<<<<<<< HEAD
-=======
 import java.util.Objects;
->>>>>>> origin/master
 import java.util.Set;
 
 /**
