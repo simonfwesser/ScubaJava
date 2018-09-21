@@ -3,6 +3,10 @@ package entite;
 
 
 import java.util.HashSet;
+<<<<<<< HEAD
+=======
+import java.util.Objects;
+>>>>>>> origin/master
 import java.util.Set;
 
 /**
@@ -22,6 +26,26 @@ public class Product  implements java.io.Serializable {
      private Set orderLines = new HashSet(0);
 
     public Product() {
+    }
+    
+     @Override
+    public boolean equals(Object o){
+        boolean isEqual = false;
+        if(o.getClass() != Product.class){
+            isEqual = false;
+        }
+        else if (this.sku.intValue() == ((Product)o).getSku().intValue()){
+            isEqual = true;
+        }
+        else{
+            isEqual = false;
+        }  
+        return isEqual;
+    }
+
+    @Override
+    public int hashCode() {
+        return this.sku.intValue();
     }
 
 	
