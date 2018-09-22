@@ -10,6 +10,7 @@
         <meta charset="UTF-8">
     </head>
     <body>
+        
         <%@include file="header.jspf" %>
 
         <div class="container">

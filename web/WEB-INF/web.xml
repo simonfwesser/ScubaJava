@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <filter>
-        <filter-name>LoginFilter</filter-name>
+        <filter-name>UsernameFilte</filter-name>
         <filter-class>controleur.UsernameFilter</filter-class>
     </filter>
     <filter>
         <filter-name>PasswordFilter</filter-name>
         <filter-class>controleur.PasswordFilter</filter-class>
     </filter>
+    
     <filter-mapping>
-        <filter-name>LoginFilter</filter-name>
+        <filter-name>UsernameFilte</filter-name>
         <servlet-name>Traitement</servlet-name>
     </filter-mapping>
     <filter-mapping>
         <filter-name>PasswordFilter</filter-name>
         <servlet-name>Traitement</servlet-name>
     </filter-mapping>
+    
+    <filter-mapping>
+        <filter-name>UsernameFilte</filter-name>
+        <servlet-name>CheckoutServlet</servlet-name>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>PasswordFilter</filter-name>
+        <servlet-name>CheckoutServlet</servlet-name>
+    </filter-mapping>
+    
+    
     <servlet>
         <servlet-name>MagasinServlet</servlet-name>
         <servlet-class>controleur.MagasinServlet</servlet-class>
@@ -44,6 +56,10 @@
         <servlet-name>SearchServlet</servlet-name>
         <servlet-class>controleur.SearchServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>controleur.CheckoutServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MagasinServlet</servlet-name>
         <url-pattern>/MagasinServlet</url-pattern>
@@ -71,6 +87,10 @@
     <servlet-mapping>
         <servlet-name>SearchServlet</servlet-name>
         <url-pattern>/SearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/CheckoutServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
