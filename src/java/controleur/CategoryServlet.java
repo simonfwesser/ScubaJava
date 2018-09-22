@@ -14,13 +14,14 @@ public class CategoryServlet extends HttpServlet {
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String categoryCode = request.getParameter("categoryCode");    
         request.setAttribute("listCategoryProducts", Service.getAllCategoryProducts(categoryCode));
         request.setAttribute("categoryName", Service.getOneCategoryDetail(categoryCode).getCategoryName());
         RequestDispatcher disp = request.getRequestDispatcher(CATEGORY_ITEMS_PAGE);
         disp.forward(request, response);
         
-        Service.closeCategorySession();
+
     }
 
     @Override

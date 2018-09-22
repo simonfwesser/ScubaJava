@@ -13,7 +13,7 @@ public class LanguageService {
         LanguageDAO languageDAO = new LanguageDAO();
         languageDAO.openSession();
         List<Languages> list = languageDAO.getAll();
-        //productDAO.closeSession();
+        languageDAO.closeSession();
         return list;
     }
 
@@ -22,18 +22,18 @@ public class LanguageService {
         languageDAO.openSession();
         Languages language = null;
         if (languageCode != null) {
-            language = languageDAO.getOne(languageCode);
+            language = languageDAO.getOne(languageCode.toUpperCase());
         }
         else {
-            language = languageDAO.getOne(DEFAULT_LANGUAGE_CODE);
+            language = languageDAO.getOne(DEFAULT_LANGUAGE_CODE.toUpperCase());
         }
-        //productDAO.closeSession();
+        languageDAO.closeSession();
         return language;
     }
 
-    public static void closeSession() {
-        LanguageDAO languageDAO = new LanguageDAO();
-        languageDAO.closeSession();
-    }
+//    public static void closeSession() {
+//        LanguageDAO languageDAO = new LanguageDAO();
+//        languageDAO.closeSession();
+//    }
 
 }

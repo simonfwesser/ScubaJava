@@ -15,7 +15,7 @@ public class ProductService {
         ProductDAO productDAO = new ProductDAO();
         productDAO.openSession();
         List<Product> list = productDAO.getAll();
-        //productDAO.closeSession();
+        productDAO.closeSession();
         return list;
     }
 
@@ -23,14 +23,14 @@ public class ProductService {
         ProductDAO productDAO = new ProductDAO();
         productDAO.openSession();
         Product product = productDAO.getOne(Integer.valueOf(id));
-        //productDAO.closeSession();
+        productDAO.closeSession();
         return product;
     }
 
 
-    public static void closeSession() {
-        ProductDAO productDAO = new ProductDAO();
-        productDAO.closeSession();
-    }
+//    public static void closeSession() {
+//        ProductDAO productDAO = new ProductDAO();
+//        productDAO.closeSession();
+//    }
 
 }

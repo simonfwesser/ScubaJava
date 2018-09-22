@@ -21,17 +21,16 @@ public class UsernameFilter implements Filter {
             FilterChain chain)
             throws IOException, ServletException {
 
-
-
         Service.openDbConnection();
 
         String action = request.getParameter("action");
         String email = request.getParameter("email");
         String destination = "";
-        
-        
 
         boolean isActionLogin = "login".equals(action);
+        boolean isActionCheckout = "checkout".equals(action);
+        boolean isActionNone = !isActionLogin && !isActionCheckout;
+
         if (!isActionLogin) {
             chain.doFilter(request, response);
         } else {
@@ -48,8 +47,26 @@ public class UsernameFilter implements Filter {
             }
 
         }
+//        if (!isActionNone) {
+//            chain.doFilter(request, response);
+//        }
+//        else if (isActionCheckout){
+//            Customer customer = Service.getOneCostumer(email);
+//            boolean isCustomer = (customer != null);
+//            if (isCustomer) {
+//                request.setAttribute("customer", customer); //Pas encore dans la session
+//                chain.doFilter(request, response);
+//            }
+//            else {
+//                request.setAttribute("errorMessage", "Vous n'êtes pas encore client!");
+//                destination = ERROR_PAGE;
+//                RequestDispatcher rd = request.getRequestDispatcher(destination);
+//                rd.forward(request, response);
+//            }
+//
+//        }
 
-        Service.closeCustomerSession();
+
     }
 
     public void destroy() {

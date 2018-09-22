@@ -48,7 +48,7 @@ public class PasswordFilter implements Filter {
             }
         }
 
-        //chain.doFilter(request, response);
+        chain.doFilter(request, response);
         //Service.closeCustomerSession(); 
     }
 

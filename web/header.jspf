@@ -86,11 +86,9 @@
                                 <form action="ShoppingCartServlet">
                                     <input type="hidden"  name="action" value="delete"/>
                                     <input type="hidden"  name="sku" value="${item.getKey().sku}"/>
-                                    <span class="btn btn-xs btn-danger pull-right">
-                                        <button type="submit">
-                                            X
-                                        </button>
-                                    </span>
+                                    <button class="btn btn-xs btn-danger pull-right" type="submit">
+                                        X
+                                    </button>
                                 </form>
 
                                 <!--<button class="btn btn-xs btn-danger pull-right">x</button>-->
@@ -100,14 +98,17 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-                        <c:choose>
-                            <c:when test="${empty shoppingCart.contents}">
-                                <button class="btn btn-primary btn-block" disabled>Checkout</button>
-                            </c:when>
-                            <c:when test="${not empty shoppingCart.contents}">
-                                <button class="btn btn-primary btn-block">Checkout</button>
-                            </c:when>
-                        </c:choose>
+                        <form action='CheckoutServlet'>
+                            <input type="hidden"  name="action" value="checkout"/>
+                            <c:choose>
+                                <c:when test="${empty shoppingCart.contents}">
+                                    <button  class="btn btn-primary btn-block" disabled>Checkout</button>
+                                </c:when>
+                                <c:when test="${not empty shoppingCart.contents}">
+                                    <button class="btn btn-primary btn-block" type="submit">Checkout</button>
+                                </c:when>
+                            </c:choose>
+                        </form>
                     </div>
                 </div>
 

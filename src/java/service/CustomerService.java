@@ -10,24 +10,24 @@ public class CustomerService {
     
     
     public static Customer getOne(String id){
-        CustomerDAO CustomerDAO = new CustomerDAO();
-        CustomerDAO.openSession();
-        Customer Customer = CustomerDAO.getOne(id);
-        //CustomerDAO.closeSession();
-        return Customer;
+        CustomerDAO customerDAO = new CustomerDAO();
+        customerDAO.openSession();
+        Customer customer = customerDAO.getOne(id);
+        customerDAO.closeSession();
+        return customer;
     }
 
     public static List<Customer> getAll(){
-        CustomerDAO CustomerDAO = new CustomerDAO();
-        CustomerDAO.openSession();
-        List<Customer> Customers = CustomerDAO.getAll();
-        //CustomerDAO.closeSession();
-        return Customers;
+        CustomerDAO customerDAO = new CustomerDAO();
+        customerDAO.openSession();
+        List<Customer> customers = customerDAO.getAll();
+        customerDAO.closeSession();
+        return customers;
     }
     
-    public static void closeSession(){
-        CustomerDAO CustomerDAO = new CustomerDAO();
-        CustomerDAO.closeSession();
-    }
+//    public static void closeSession(){
+//        CustomerDAO CustomerDAO = new CustomerDAO();
+//        CustomerDAO.closeSession();
+//    }
     
 }

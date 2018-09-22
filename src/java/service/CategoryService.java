@@ -15,7 +15,7 @@ public class CategoryService {
         CategoryDAO categoryDAO = new CategoryDAO();
         categoryDAO.openSession();
         List<Category> list = categoryDAO.getAll();
-        //productDAO.closeSession();
+        categoryDAO.closeSession();
         return list;
 
 //        List<Category> categories = categoryDAO.getAll();
@@ -37,12 +37,13 @@ public class CategoryService {
         CategoryDAO categoryDAO = new CategoryDAO();
         categoryDAO.openSession();
         Category category = categoryDAO.getOne(categoryCode);
+        categoryDAO.closeSession();
         return new ArrayList<Product>(category.getProducts());
     }
 
-    public static void closeSession() {
-        CategoryDAO categoryDAO = new CategoryDAO();
-        categoryDAO.closeSession();
-    }
+//    public static void closeSession() {
+//        CategoryDAO categoryDAO = new CategoryDAO();
+//        categoryDAO.closeSession();
+//    }
 
 }

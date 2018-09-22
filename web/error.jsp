@@ -23,7 +23,7 @@
         <form action="signup.jsp">
             <input type="submit" value="Devenez client" />
         </form>
-        <form action="Traitement">
+        <form action="HomeServlet">
             <input type="submit" value="Accès visiteur" />
         </form>
     </body>

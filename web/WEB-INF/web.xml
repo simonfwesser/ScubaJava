@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <filter>
-        <filter-name>UsernameFilte</filter-name>
+        <filter-name>UsernameFilter</filter-name>
         <filter-class>controleur.UsernameFilter</filter-class>
     </filter>
     <filter>
         <filter-name>PasswordFilter</filter-name>
         <filter-class>controleur.PasswordFilter</filter-class>
     </filter>
-    
+    <filter>
+        <filter-name>CustomerLoggedInFilter</filter-name>
+        <filter-class>controleur.CustomerLoggedInFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>HomeFilter</filter-name>
+        <filter-class>controleur.HomeFilter</filter-class>
+    </filter>
     <filter-mapping>
-        <filter-name>UsernameFilte</filter-name>
-        <servlet-name>Traitement</servlet-name>
+        <filter-name>HomeFilter</filter-name>
+        <servlet-name>HomeServlet</servlet-name>
     </filter-mapping>
     <filter-mapping>
-        <filter-name>PasswordFilter</filter-name>
-        <servlet-name>Traitement</servlet-name>
-    </filter-mapping>
-    
-    <filter-mapping>
-        <filter-name>UsernameFilte</filter-name>
+        <filter-name>CustomerLoggedInFilter</filter-name>
         <servlet-name>CheckoutServlet</servlet-name>
     </filter-mapping>
     <filter-mapping>
-        <filter-name>PasswordFilter</filter-name>
-        <servlet-name>CheckoutServlet</servlet-name>
+        <filter-name>UsernameFilter</filter-name>
+        <servlet-name>LoginServlet</servlet-name>
     </filter-mapping>
-    
-    
+    <filter-mapping>
+        <filter-name>PasswordFilter</filter-name>
+        <servlet-name>LoginServlet</servlet-name>
+    </filter-mapping>
     <servlet>
         <servlet-name>MagasinServlet</servlet-name>
         <servlet-class>controleur.MagasinServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>Traitement</servlet-name>
-        <servlet-class>controleur.Traitement</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LogoutServlet</servlet-name>
@@ -60,13 +60,17 @@
         <servlet-name>CheckoutServlet</servlet-name>
         <servlet-class>controleur.CheckoutServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>controleur.HomeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controleur.LoginServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MagasinServlet</servlet-name>
         <url-pattern>/MagasinServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Traitement</servlet-name>
-        <url-pattern>/Traitement</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
@@ -92,12 +96,20 @@
         <servlet-name>CheckoutServlet</servlet-name>
         <url-pattern>/CheckoutServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/HomeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>Traitement</welcome-file>
+        <welcome-file>/index.jsp</welcome-file>
     </welcome-file-list>
 </web-app>

@@ -18,7 +18,7 @@
 
         <!--https://getbootstrap.com/docs/4.1/examples/sign-in/-->
 
-        <form class="form-signin" action="Traitement">
+        <form class="form-signin" action="LoginServlet">
             <input type="text" name="action" value="login" hidden />
             <img class="mb-4" src="img/logo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>

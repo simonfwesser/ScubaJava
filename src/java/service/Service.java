@@ -12,7 +12,6 @@ public class Service {
 
     public static List<Product> getProductsByName(String entredString) {
         List<Product> productsByName = null;
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         return productsByName;
     }
 
@@ -20,17 +19,21 @@ public class Service {
     }
 
     ////////////////////////////////////////////////////////////
-    public static void setLanguage(String languageCode) {
+    public static void setServiceLanguage(String languageCode) {
         _language = LanguageService.getOne(languageCode);
     }
 
-    public static Languages getLanguage() {
+    public static Languages getServiceLanguage() {
         return _language;
     }
 
-    public static Object getAllLanguages() {
+    public static List<Languages> getAllLanguages() {
         return LanguageService.getAll();
     }
+    
+//    public static void closeLanguageSession(){
+//        LanguageService.closeSession();
+//    }
 
     ////////////////////////////////////////////////////////////
     public static List<Product> getAllProducts() {
@@ -42,18 +45,18 @@ public class Service {
         return product;
     }
 
-    public static void closeProductSession() {
-        ProductService.closeSession();
-    }
+//    public static void closeProductSession() {
+//        ProductService.closeSession();
+//    }
 
     ////////////////////////////////////////////////////////////
     public static Customer getOneCostumer(String id) {
         return CustomerService.getOne(id);
     }
 
-    public static void closeCustomerSession() {
-        CustomerService.closeSession();
-    }
+//    public static void closeCustomerSession() {
+//        CustomerService.closeSession();
+//    }
 
     ////////////////////////////////////////////////////////////
     public static List<Category> getAllCategories() {
@@ -93,9 +96,9 @@ public class Service {
     }
 
     /////////////////////////////////////////////////////////////
-    public static void closeCategorySession() {
-        CategoryService.closeSession();
-    }
+//    public static void closeCategorySession() {
+//        CategoryService.closeSession();
+//    }
 
     ////////////////////////////////////////////////////////////
     public static void openDbConnection() {
