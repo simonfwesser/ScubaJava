@@ -12,7 +12,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-public class CustomerLoggedInFilter implements Filter {
+public class CheckoutFilter implements Filter {
 
     private final String LOGIN_PAGE = "/login.jsp";
 

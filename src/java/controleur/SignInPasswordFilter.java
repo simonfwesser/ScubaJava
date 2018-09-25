@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import service.Service;
 
-public class PasswordFilter implements Filter {
+public class SignInPasswordFilter implements Filter {
 
     public final String ERROR_PAGE = "/error.jsp";
 
