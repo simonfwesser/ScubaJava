@@ -2,7 +2,6 @@
 package service;
 
 import dataAccess.CustomerDAO;
-import dataAccess.DAO;
 import entite.Customer;
 import java.util.List;
 
@@ -23,6 +22,15 @@ public class CustomerService {
         List<Customer> customers = customerDAO.getAll();
         customerDAO.closeSession();
         return customers;
+    }
+    
+    public static void add(Customer customer){
+        CustomerDAO customerDAO = new CustomerDAO();
+        customerDAO.openSession();
+        customerDAO.beginTransaction();
+        customerDAO.persist(customer);
+        customerDAO.commitTransaction();
+        customerDAO.closeSession();
     }
     
 //    public static void closeSession(){

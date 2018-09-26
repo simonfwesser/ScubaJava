@@ -72,7 +72,10 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>controleur.LoginServlet</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>controleur.SignUpServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MagasinServlet</servlet-name>
         <url-pattern>/MagasinServlet</url-pattern>
@@ -112,6 +115,10 @@
     <servlet-mapping>
         <servlet-name>SignInServlet</servlet-name>
         <url-pattern>/SignInServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/SignUpServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

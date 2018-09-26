@@ -15,6 +15,8 @@ public class Service {
         return productsByName;
     }
 
+
+
     public Service() {
     }
 
@@ -50,13 +52,14 @@ public class Service {
 //    }
 
     ////////////////////////////////////////////////////////////
-    public static Customer getOneCostumer(String id) {
+    public static Customer getOneCustomer(String id) {
         return CustomerService.getOne(id);
     }
+    
+    public static void addCustomer(Customer customer) {
+        CustomerService.add(customer);
+    }
 
-//    public static void closeCustomerSession() {
-//        CustomerService.closeSession();
-//    }
 
     ////////////////////////////////////////////////////////////
     public static List<Category> getAllCategories() {

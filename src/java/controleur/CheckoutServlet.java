@@ -22,19 +22,29 @@ public class CheckoutServlet extends HttpServlet {
 
         _session = request.getSession();
 
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet CheckoutServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet CheckoutServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        Customer customer = (Customer) _session.getAttribute("customer");
+        if (customer == null) {
+            RequestDispatcher rd = request.getRequestDispatcher(LOGIN_PAGE);
+            rd.forward(request, response);
         }
+        else {
+            RequestDispatcher rd = request.getRequestDispatcher(CHECKOUT_PAGE);
+            rd.forward(request, response);
+        }
+
+//        response.setContentType("text/html;charset=UTF-8");
+//        try (PrintWriter out = response.getWriter()) {
+//            /* TODO output your page here. You may use following sample code. */
+//            out.println("<!DOCTYPE html>");
+//            out.println("<html>");
+//            out.println("<head>");
+//            out.println("<title>Servlet CheckoutServlet</title>");            
+//            out.println("</head>");
+//            out.println("<body>");
+//            out.println("<h1>Servlet CheckoutServlet at " + request.getContextPath() + "</h1>");
+//            out.println("</body>");
+//            out.println("</html>");
+//        }
     }
 
     @Override

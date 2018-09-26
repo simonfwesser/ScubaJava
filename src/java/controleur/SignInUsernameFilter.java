@@ -25,7 +25,7 @@ public class SignInUsernameFilter implements Filter {
 
         String email = request.getParameter("email");
 
-        Customer customer = Service.getOneCostumer(email);
+        Customer customer = Service.getOneCustomer(email);
         boolean isCustomer = (customer != null);
         if (isCustomer) {
             request.setAttribute("customer", customer); //Pas encore dans la session

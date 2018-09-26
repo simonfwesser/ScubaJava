@@ -139,3 +139,10 @@ figure {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+.form-singup{
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}

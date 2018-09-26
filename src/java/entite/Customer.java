@@ -29,6 +29,9 @@ public class Customer  implements java.io.Serializable {
         this.password = password;
         this.address = address;
     }
+    
+    
+    
     public Customer(String email, String firstName, String lastName, String password, String address, Set placedOrders) {
        this.email = email;
        this.firstName = firstName;
