@@ -23,33 +23,23 @@ public class SignInPasswordFilter implements Filter {
 
         Service.openDbConnection();
 
-        String action = request.getParameter("action");
-        String destination = "";
-
         HttpSession session = ((HttpServletRequest) request).getSession();
 
-        boolean isActionLogin = "login".equals(action);
-        if (!isActionLogin) {
+        Customer customer = (Customer) request.getAttribute("customer"); //Vient de UsernameFilter
+        String password = request.getParameter("password");
+        boolean isLoginRight = password.equals(customer.getPassword());
+        if (isLoginRight) {
             chain.doFilter(request, response);
-        } else {
-            Customer customer = (Customer) request.getAttribute("customer"); //Vient de UsernameFilter
-            String password = request.getParameter("password");
-            boolean isLoginRight = password.equals(customer.getPassword());
-            if (isLoginRight) {
-                session.setAttribute("customer", customer); //On passe le client de requête à session
-                chain.doFilter(request, response);
-            } else {
-                request.setAttribute("errorMessage", "Mot de passe erronné !");
-                request.setAttribute("customer", null); //Par sécurité
-                //session.setAttribute("customer", null); //Par sécurité
-                destination = ERROR_PAGE;
-                RequestDispatcher rd = request.getRequestDispatcher(destination);
-                rd.forward(request, response);
-            }
+        }
+        else {
+            request.setAttribute("errorMessage", "Mot de passe erronné !");
+            request.setAttribute("customer", null); //Par sécurité
+            RequestDispatcher rd = request.getRequestDispatcher(ERROR_PAGE);
+            rd.forward(request, response);
         }
 
         chain.doFilter(request, response);
-        //Service.closeCustomerSession(); 
+
     }
 
     public void destroy() {

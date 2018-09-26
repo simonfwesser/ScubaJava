@@ -23,49 +23,19 @@ public class SignInUsernameFilter implements Filter {
 
         Service.openDbConnection();
 
-        String action = request.getParameter("action");
         String email = request.getParameter("email");
-        String destination = "";
 
-        boolean isActionLogin = "login".equals(action);
-        boolean isActionCheckout = "checkout".equals(action);
-        boolean isActionNone = !isActionLogin && !isActionCheckout;
-
-        if (!isActionLogin) {
+        Customer customer = Service.getOneCostumer(email);
+        boolean isCustomer = (customer != null);
+        if (isCustomer) {
+            request.setAttribute("customer", customer); //Pas encore dans la session
             chain.doFilter(request, response);
-        } else {
-            Customer customer = Service.getOneCostumer(email);
-            boolean isCustomer = (customer != null);
-            if (isCustomer) {
-                request.setAttribute("customer", customer); //Pas encore dans la session
-                chain.doFilter(request, response);
-            } else {
-                request.setAttribute("errorMessage", "Vous n'êtes pas encore client!");
-                destination = ERROR_PAGE;
-                RequestDispatcher rd = request.getRequestDispatcher(destination);
-                rd.forward(request, response);
-            }
-
         }
-//        if (!isActionNone) {
-//            chain.doFilter(request, response);
-//        }
-//        else if (isActionCheckout){
-//            Customer customer = Service.getOneCostumer(email);
-//            boolean isCustomer = (customer != null);
-//            if (isCustomer) {
-//                request.setAttribute("customer", customer); //Pas encore dans la session
-//                chain.doFilter(request, response);
-//            }
-//            else {
-//                request.setAttribute("errorMessage", "Vous n'êtes pas encore client!");
-//                destination = ERROR_PAGE;
-//                RequestDispatcher rd = request.getRequestDispatcher(destination);
-//                rd.forward(request, response);
-//            }
-//
-//        }
-
+        else {
+            request.setAttribute("errorMessage", "Vous n'êtes pas encore client!");
+            RequestDispatcher rd = request.getRequestDispatcher(ERROR_PAGE);
+            rd.forward(request, response);
+        }
 
     }
 
