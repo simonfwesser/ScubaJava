@@ -53,5 +53,10 @@ public abstract class DAO<T, K> implements IDAO {
     public abstract void deleteOne(T entity);
 
     public abstract void deleteAll();
+    
+    //Pour test
+    public boolean wasCommited(){
+        return this._transaction.wasCommitted();
+    }
 
 }

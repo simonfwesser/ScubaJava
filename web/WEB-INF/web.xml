@@ -11,19 +11,27 @@
     <filter>
         <filter-name>CheckoutFilter</filter-name>
         <filter-class>controleur.CheckoutFilter</filter-class>
-    </filter>
+    </filter>    
     <filter>
         <filter-name>HomeFilter</filter-name>
         <filter-class>controleur.HomeFilter</filter-class>
     </filter>
+    
+    
     <filter-mapping>
         <filter-name>HomeFilter</filter-name>
         <servlet-name>HomeServlet</servlet-name>
     </filter-mapping>
+    
+    
+    
     <filter-mapping>
         <filter-name>CheckoutFilter</filter-name>
         <servlet-name>CheckoutServlet</servlet-name>
     </filter-mapping>
+    
+    
+    
     <filter-mapping>
         <filter-name>SignInUsernameFilter</filter-name>
         <servlet-name>SignInServlet</servlet-name>
@@ -32,6 +40,8 @@
         <filter-name>SignInPasswordFilter</filter-name>
         <servlet-name>SignInServlet</servlet-name>
     </filter-mapping>
+    
+    
     <servlet>
         <servlet-name>MagasinServlet</servlet-name>
         <servlet-class>controleur.MagasinServlet</servlet-class>

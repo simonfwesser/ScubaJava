@@ -1,5 +1,6 @@
 package controleur;
 
+import dataAccess.DbConnection;
 import java.io.IOException;
 import java.util.Locale;
 import javax.servlet.Filter;
@@ -58,6 +59,7 @@ public class HomeFilter implements Filter {
     }
 
     private void openDatabaseForSession() {
+        DbConnection.setSetServletContext(_session);
         Service.openDbConnection();
     }
 

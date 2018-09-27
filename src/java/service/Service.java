@@ -104,6 +104,7 @@ public class Service {
 //    }
 
     ////////////////////////////////////////////////////////////
+
     public static void openDbConnection() {
         DbConnection.getInstance();
     }

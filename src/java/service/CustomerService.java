@@ -25,6 +25,7 @@ public class CustomerService {
     }
     
     public static void add(Customer customer){
+//        throw new java.lang.UnsupportedOperationException("Not supported yet.");
         CustomerDAO customerDAO = new CustomerDAO();
         customerDAO.openSession();
         customerDAO.beginTransaction();

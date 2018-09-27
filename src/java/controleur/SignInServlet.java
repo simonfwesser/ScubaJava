@@ -20,6 +20,8 @@ public class SignInServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Customer customer = (Customer) request.getAttribute("customer");
         session.setAttribute("customer", customer); //On passe le client de requête à session
+//        session.setAttribute("name", null);
+//        session.setAttribute("password", null);
         RequestDispatcher rd = request.getRequestDispatcher(HOME_PAGE);
         rd.forward(request, response);
 

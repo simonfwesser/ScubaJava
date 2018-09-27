@@ -12,7 +12,8 @@ public class CustomerDAO extends DAO<Customer, String> {
 
     @Override
     public void persist(Customer entity) {
-        _session.save(entity);
+        _session.persist(entity);
+        _session.flush();
     }
 
     @Override

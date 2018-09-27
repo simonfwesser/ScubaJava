@@ -30,10 +30,11 @@ public class SignUpServlet extends HttpServlet {
         email = (String) request.getParameter("email");
         firstname  = (String) request.getParameter("firstname");
         lastname  = (String) request.getParameter("lastname");
-        address  = (String) request.getParameter("address");
         password = (String) request.getParameter("password");
+        address  = (String) request.getParameter("address");
         
-        Customer customer = new Customer(email, firstname, lastname, address, password);
+        
+        Customer customer = new Customer(email, firstname, lastname, password, address);
         
         Service.addCustomer(customer);
         
