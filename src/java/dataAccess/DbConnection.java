@@ -31,9 +31,10 @@ public class DbConnection {
 //                .applySettings(configuration.getProperties());
 //        _sessionFactory = configuration.buildSessionFactory(builder.build()); 
 
-        String dbRealPath = _servletContext.getRealPath(SQLITE_DB);
+        String dbRealPath = _servletContext.getRealPath("../../web/" +SQLITE_DB);
         String dbUrl = "jdbc:sqlite:" + dbRealPath;
         System.out.println("*****/n*****/n*****/n*****/n");
+        System.out.println("dbUrl : " +dbRealPath);
         System.out.println("dbUrl : " +dbUrl);
         System.out.println("*****/n*****/n*****/n*****/n");
         try {
