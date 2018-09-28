@@ -56,7 +56,7 @@ public class Service {
         return CustomerService.getOne(id);
     }
     
-    public static void addCustomer(Customer customer) {
+    public static void addCustomer(Customer customer) throws Exception{
         CustomerService.add(customer);
     }
 
