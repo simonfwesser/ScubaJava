@@ -249,14 +249,21 @@ nav {
 }
 
 
+/* JQuery ui-autocomplete */
 .ui-menu {
-    background:red;
+    background: lightblue;
+    max-height : 10rem;
     width: 0%;
+    overflow-y : scroll; 
+    overflow-x: hidden;
     cursor: pointer;
 }
 
-.ui-menu .ui-menu-item:hover{
-    background-color: yellow;
+.ui-menu .ui-menu-item{
+    list-style: none;
 }
 
-
+.ui-menu .ui-menu-item:hover{
+    background-color: whitesmoke;
+    font-style: oblique;
+}

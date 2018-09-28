@@ -21,7 +21,7 @@
 
                 <c:forEach var="product" items="${listCategoryProducts}" varStatus="loop" >
                     <div class="col-sm-3"> 
-                        <form method="POST" action="ProductServlet" class="text-center">
+                        <form method="GET" action="ProductServlet" class="text-center">
                             <input type="hidden" name="sku" value="${product.sku}">
                             <div class="card" 
                                  style="box-shadow: 5px 5px 5px #6394F8; 
