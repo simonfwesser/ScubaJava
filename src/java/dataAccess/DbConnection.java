@@ -7,7 +7,7 @@ import org.hibernate.cfg.AnnotationConfiguration;
 
 public class DbConnection {
 
-    private final String SQLITE_DB = "/WEB-INF/web_database.db";
+    private final String SQLITE_DB = "../../web/WEB-INF/web_database.db";
 
     private static DbConnection _instance = null;
     private static SessionFactory _sessionFactory = null;
@@ -25,18 +25,8 @@ public class DbConnection {
     }
 
     private void open() {
-        // Problem with this code, doesn't allow to close sessionFactory
-//        Configuration configuration = new Configuration().configure();
-//        StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
-//                .applySettings(configuration.getProperties());
-//        _sessionFactory = configuration.buildSessionFactory(builder.build()); 
-
-        String dbRealPath = _servletContext.getRealPath("../../web/" +SQLITE_DB);
+        String dbRealPath = _servletContext.getRealPath(SQLITE_DB);
         String dbUrl = "jdbc:sqlite:" + dbRealPath;
-        System.out.println("*****/n*****/n*****/n*****/n");
-        System.out.println("dbUrl : " +dbRealPath);
-        System.out.println("dbUrl : " +dbUrl);
-        System.out.println("*****/n*****/n*****/n*****/n");
         try {
             AnnotationConfiguration conf = new AnnotationConfiguration().configure();
             conf.setProperty("hibernate.connection.url", dbUrl);

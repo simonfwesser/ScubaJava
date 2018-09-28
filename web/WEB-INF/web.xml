@@ -65,20 +65,20 @@
         <servlet-class>controleur.HomeServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SignInServlet</servlet-name>
-        <servlet-class>controleur.SignInServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>controleur.LoginServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>SignUpServlet</servlet-name>
         <servlet-class>controleur.SignUpServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>InvoiceServlet</servlet-name>
         <servlet-class>controleur.InvoiceServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controleur.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignInServlet</servlet-name>
+        <servlet-class>controleur.SignInServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MagasinServlet</servlet-name>
@@ -113,20 +113,20 @@
         <url-pattern>/HomeServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>LoginServlet</servlet-name>
-        <url-pattern>/LoginServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SignInServlet</servlet-name>
-        <url-pattern>/SignInServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/SignUpServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>InvoiceServlet</servlet-name>
         <url-pattern>/InvoiceServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignInServlet</servlet-name>
+        <url-pattern>/SignInServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -14,6 +14,7 @@ import entite.Languages;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import modele.ShoppingCart;
 
 public class HomeFilter implements Filter {
 
@@ -72,6 +73,7 @@ public class HomeFilter implements Filter {
         _session.setAttribute("language", language);
         List<Languages> languages = Service.getAllLanguages();
         _session.setAttribute("listLanguages", languages);
+        _session.setAttribute("shoppingCart", new ShoppingCart());
     }
 
     private void continueFilterChain()

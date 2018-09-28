@@ -45,10 +45,6 @@ public class ShoppingCartServlet extends HttpServlet {
             catch (Exception e) {
                 _quantity = 1;
             }
-
-            if (_shoppingCart == null) {
-                _shoppingCart = new ShoppingCart();
-            }
             
             if (_shoppingCart.isEmpty()) {
                 _shoppingCart.put(_product, _quantity);
