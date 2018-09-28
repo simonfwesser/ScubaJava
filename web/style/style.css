@@ -248,3 +248,15 @@ nav {
     border-bottom-color:#fff; 
 }
 
+
+.ui-menu {
+    background:red;
+    width: 0%;
+    cursor: pointer;
+}
+
+.ui-menu .ui-menu-item:hover{
+    background-color: yellow;
+}
+
+

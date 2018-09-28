@@ -1,8 +1,62 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
+$(document).ready(function () {
+    $("#search-input")
+            .attr("placeholder", 'Nom du produit')
+            .click(function () {
+                $(this).attr('placeholder', '');
+            })
+            .blur(function () {
+                $(this).attr('placeholder', 'Nom du produit');
+            })
+            .autocomplete({
+                source: getProductNames()
+            });
+
+});
+
+
+function getProductNames() {
+    var productNames = [];
+    var products = []; //Requête JQuery-Ajax va aller chercher la collection nomDuProduit:sku sous cette forme
+    products = {
+        "ActionScript": 1,
+        "AppleScript": 2,
+        "Asp": 3,
+        "BASIC": 4,
+        "C": 5,
+        "C++": 6,
+        "Clojure": 7,
+        "COBOL": 8,
+        "ColdFusion": 9,
+        "Erlang": 10,
+        "Fortran": 11,
+        "Groovy": 12,
+        "Haskell": 13,
+        "Java": 14,
+        "JavaScript": 15,
+        "Lisp": 16,
+        "Perl": 17,
+        "PHP": 18,
+        "Python": 19,
+        "Ruby": 20,
+        "Scala": 21,
+        "Scheme": 22
+    };
+
+    $.each(products, function (key, value) {
+        productNames.push(key);
+
+    });
+
+    return productNames;
+}
+
+
+
+
+
+
 (function () {
 
     $("#cart").on("click", function () {
