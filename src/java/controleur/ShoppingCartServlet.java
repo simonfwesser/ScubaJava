@@ -20,17 +20,16 @@ public class ShoppingCartServlet extends HttpServlet {
 
     private final String HOME_PAGE = "/home.jsp";
 
-    HttpSession _session;
+    HttpSession _session = null;
     private String _action = "";
-    private int _quantity;
-    private Product _product;
-    //private HashMap<Product, Integer> _shoppingCart;
-    private ShoppingCart _shoppingCart;
+    private int _quantity = 0;
+    private Product _product = null;
+    private ShoppingCart _shoppingCart = null;
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        this._action = request.getParameter("action");
+        _action = request.getParameter("action");
         _session = request.getSession();
 
         _shoppingCart = (ShoppingCart) _session.getAttribute("shoppingCart");

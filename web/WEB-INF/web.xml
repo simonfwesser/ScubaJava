@@ -11,27 +11,19 @@
     <filter>
         <filter-name>CheckoutFilter</filter-name>
         <filter-class>controleur.CheckoutFilter</filter-class>
-    </filter>    
+    </filter>
     <filter>
         <filter-name>HomeFilter</filter-name>
         <filter-class>controleur.HomeFilter</filter-class>
     </filter>
-    
-    
     <filter-mapping>
         <filter-name>HomeFilter</filter-name>
         <servlet-name>HomeServlet</servlet-name>
     </filter-mapping>
-    
-    
-    
     <filter-mapping>
         <filter-name>CheckoutFilter</filter-name>
         <servlet-name>CheckoutServlet</servlet-name>
     </filter-mapping>
-    
-    
-    
     <filter-mapping>
         <filter-name>SignInUsernameFilter</filter-name>
         <servlet-name>SignInServlet</servlet-name>
@@ -40,8 +32,6 @@
         <filter-name>SignInPasswordFilter</filter-name>
         <servlet-name>SignInServlet</servlet-name>
     </filter-mapping>
-    
-    
     <servlet>
         <servlet-name>MagasinServlet</servlet-name>
         <servlet-class>controleur.MagasinServlet</servlet-class>
@@ -86,6 +76,10 @@
         <servlet-name>SignUpServlet</servlet-name>
         <servlet-class>controleur.SignUpServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InvoiceServlet</servlet-name>
+        <servlet-class>controleur.InvoiceServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MagasinServlet</servlet-name>
         <url-pattern>/MagasinServlet</url-pattern>
@@ -129,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>SignUpServlet</servlet-name>
         <url-pattern>/SignUpServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InvoiceServlet</servlet-name>
+        <url-pattern>/InvoiceServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
