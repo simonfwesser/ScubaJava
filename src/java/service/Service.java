@@ -5,6 +5,7 @@ import entite.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import modele.ShoppingCart;
 
 public class Service {
 
@@ -14,8 +15,6 @@ public class Service {
         List<Product> productsByName = null;
         return productsByName;
     }
-
-
 
     public Service() {
     }
@@ -32,10 +31,6 @@ public class Service {
     public static List<Languages> getAllLanguages() {
         return LanguageService.getAll();
     }
-    
-//    public static void closeLanguageSession(){
-//        LanguageService.closeSession();
-//    }
 
     ////////////////////////////////////////////////////////////
     public static List<Product> getAllProducts() {
@@ -47,23 +42,17 @@ public class Service {
         return product;
     }
 
-//    public static void closeProductSession() {
-//        ProductService.closeSession();
-//    }
-
     ////////////////////////////////////////////////////////////
     public static Customer getOneCustomer(String id) {
         return CustomerService.getOne(id);
     }
-    
-    public static void addCustomer(Customer customer) throws Exception{
+
+    public static void addCustomer(Customer customer) throws Exception {
         CustomerService.add(customer);
     }
 
-
     ////////////////////////////////////////////////////////////
     public static List<Category> getAllCategories() {
-//        return CategoryService.getAllCategories(_language);
         return CategoryService.getAll();
     }
 
@@ -99,12 +88,12 @@ public class Service {
     }
 
     /////////////////////////////////////////////////////////////
-//    public static void closeCategorySession() {
-//        CategoryService.closeSession();
-//    }
+    public static void savePlacedOrder(ShoppingCart shoppingCart) {
+        PlacedOrderService.save(shoppingCart);
+
+    }
 
     ////////////////////////////////////////////////////////////
-
     public static void openDbConnection() {
         DbConnection.getInstance();
     }

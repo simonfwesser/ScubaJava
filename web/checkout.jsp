@@ -27,6 +27,7 @@
                             <span class="price text-info">  ${item.getKey().price}</span> <span class="count"> Quantity: ${item.getValue()}</span>
 
                         </div>
+                            
                         <div class="col-lg-2 col-sm-2 col-2 cart-detail-product">
                             <form action="CheckoutServlet">
                                 <input type="hidden"  name="action" value="delete"/>

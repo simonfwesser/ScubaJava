@@ -87,7 +87,8 @@
                             </div>
                             <div class="col-lg-7 col-sm-7 col-7 cart-detail-product">
                                 <p>${item.getKey().name} ( ${item.getKey().brand})</p>
-                                <span class="price text-info">  ${item.getKey().price}</span> <span class="count"> Quantity: ${item.getValue()}</span>
+                                <span class="price text-info">  ${item.getKey().price}</span> 
+                                <span class="count"> Quantity: ${item.getValue()}</span>
 
                             </div>
                             <div class="col-lg-2 col-sm-2 col-2 cart-detail-product">

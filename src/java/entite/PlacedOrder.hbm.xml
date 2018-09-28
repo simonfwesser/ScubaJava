@@ -26,7 +26,10 @@
             </key>
             <one-to-many class="entite.Bill" />
         </set>
-        <set name="orderLines" table="order_line" inverse="true" lazy="true" fetch="select">
+        
+        <set name="orderLines" table="order_line" inverse="true" 
+             cascade="all" 
+             lazy="true" fetch="select">
             <key>
                 <column name="order_number" length="2000000000" />
             </key>

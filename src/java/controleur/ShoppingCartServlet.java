@@ -38,27 +38,35 @@ public class ShoppingCartServlet extends HttpServlet {
 
             String quantity = request.getParameter("quantity");
             String sku = request.getParameter("sku");
-            _quantity = Integer.parseInt(quantity);
             _product = ProductService.getOne(sku);
+            try {
+                _quantity = Integer.parseInt(quantity);
+            }
+            catch (Exception e) {
+                _quantity = 1;
+            }
 
             if (_shoppingCart == null) {
                 _shoppingCart = new ShoppingCart();
             }
+            
             if (_shoppingCart.isEmpty()) {
                 _shoppingCart.put(_product, _quantity);
-            } else {
+            }
+            else {
                 if (!_shoppingCart.contains(_product)) {
                     _shoppingCart.put(_product, _quantity);
-                } else {
+                }
+                else {
                     _shoppingCart.put(_product, _shoppingCart.getQuantity(_product) + _quantity);
                 }
             }
         }
-        else if ("delete".equals(_action)){
+        else if ("delete".equals(_action)) {
             String sku = request.getParameter("sku");
             _product = ProductService.getOne(sku);
             _shoppingCart.remove(_product);
-            
+
         }
 
         _session.setAttribute("shoppingCart", _shoppingCart);

@@ -38,7 +38,6 @@ public class CustomerDAO extends DAO<Customer, String> {
 
     @Override
     public void deleteAll() {
-        //List<Costumer> entityList = getAll();
         for (Customer entity : getAll()) {
             deleteOne(entity);
         }

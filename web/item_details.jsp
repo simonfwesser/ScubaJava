@@ -30,7 +30,7 @@
                 <h6 class="title-price"><small>PRICE</small></h6>
                 <h5>$${product.price}</h5>
                 <br>
-                <h6 class="title-attr"><small>KEY FEATURS</small></h6>
+                <h6 class="title-attr"><small>KEY FEATURES</small></h6>
                 <c:forEach var="detail" items="${product.productDetails}" >
                     <c:if test="${detail.languages.languageCode.equals('EN')}" >
                         ${detail.keyFeatures}
@@ -38,8 +38,8 @@
                 </c:forEach>
                 <br>
                 <form method="GET" action="ShoppingCartServlet">
-                    <h6 class="title-attr"><small>QUANTITE</small></h6>                      
-                    <input class="textfield" name="quantity" type="number" value="1" min="1" size="4" data-bind="value:replyNumber"/><br>
+                    <h6 class="title-attr"><small>QUANTITY</small></h6>                      
+                    <input name="quantity" type="number" value="1" min="1" size="4" /><br>
                     <input type="hidden" name="sku" value="${product.sku}"/> >
                     <input type="submit" value="Add to cart" class="btn btn-success"/>
                 </form>
