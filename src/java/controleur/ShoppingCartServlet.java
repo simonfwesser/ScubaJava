@@ -51,7 +51,7 @@ public class ShoppingCartServlet extends HttpServlet {
                 destination = ERROR_PAGE;
             }
 
-            if ( _quantity >= ProductService.getOne(sku).getQuantity()) {
+            if ( _quantity > ProductService.getOne(sku).getQuantity()) {
                 request.setAttribute("errorMessage", "Pas assez d'items en stock pour votre commande !");
                 destination = ERROR_PAGE;
             }

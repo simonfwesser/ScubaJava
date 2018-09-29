@@ -65,14 +65,16 @@ public class HomeFilter implements Filter {
     }
 
     private void setLanguageForSession() {
-        Locale locale = _request.getLocale();
-        String languageCode = locale.getLanguage();
-        Service.setServiceLanguage(languageCode);
 
-        Languages language = Service.getServiceLanguage();
-        _session.setAttribute("language", language);
-        List<Languages> languages = Service.getAllLanguages();
-        _session.setAttribute("listLanguages", languages);
+        String languageCode = _request.getParameter("languageCode");
+
+        if (languageCode == null) {
+            Locale locale = _request.getLocale();
+            languageCode = locale.getLanguage();
+        }
+
+        Service.setServiceLanguage(languageCode);
+        _session.setAttribute("languageCode", languageCode);
 
         if (_session.getAttribute("shoppingCart") == null) {
             _session.setAttribute("shoppingCart", new ShoppingCart());

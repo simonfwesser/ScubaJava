@@ -2,13 +2,15 @@
 
 $(document).ready(function () {
     loadProducts();
+    // https://stackoverflow.com/questions/37269008
+    var placeholder = $('#search-input').attr('placeholder');
     $("#search-input")
-            .attr("placeholder", 'Nom du produit')
+            .attr("placeholder", placeholder)
             .click(function () {
                 $(this).attr('placeholder', '');
             })
             .blur(function () {
-                $(this).attr('placeholder', 'Nom du produit');
+                $(this).attr('placeholder', placeholder);
             })
             ;
 
