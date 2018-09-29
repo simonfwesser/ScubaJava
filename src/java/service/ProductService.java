@@ -26,6 +26,13 @@ public class ProductService {
         productDAO.closeSession();
         return product;
     }
+    
+    public static void updateOne(Product product) {
+        ProductDAO productDAO = new ProductDAO();
+        productDAO.openSession();
+        productDAO.update(product);
+        productDAO.closeSession();
+    }
 
 
 //    public static void closeSession() {

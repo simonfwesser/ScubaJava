@@ -17,14 +17,8 @@
         <h1>Une erreur est survenue !</h1>
         <h2>${errorMessage}</h2>
 
-        <form action="LoginServlet">
-            <input type="submit" value="Réessayez" />
-        </form>
-        <form action="signup.jsp">
-            <input type="submit" value="Devenez client" />
-        </form>
-        <form action="HomeServlet">
-            <input type="submit" value="Accès visiteur" />
+        <form action="home.jsp">
+            <input type="submit" value="Retour" />
         </form>
     </body>
 

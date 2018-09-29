@@ -20,6 +20,7 @@ import javax.servlet.http.HttpSession;
 import modele.ShoppingCart;
 import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.exception.LockAcquisitionException;
+import service.ProductService;
 import service.Service;
 
 public class InvoiceServlet extends HttpServlet {
@@ -57,8 +58,9 @@ public class InvoiceServlet extends HttpServlet {
         Set<OrderLine> orderLines = new HashSet(0);
 
         for (Product product : _shoppingCart.getContents().keySet()) {
-            // OrderLine(OrderLineId id, PlacedOrder placedOrder, Product product, int quantity, double prix)
-            // OrderLineId(Integer sku, String orderNumber)
+            product.setQuantity(ProductService.getOne(product.getSku().toString()).getQuantity() - _shoppingCart.getQuantity(product));
+            
+            ProductService.updateOne(product);
             orderLines.add(new OrderLine(
                     new OrderLineId(product.getSku(), orderNumber),
                     placedOrder,

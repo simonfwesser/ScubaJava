@@ -18,6 +18,7 @@ public class ProductDAO extends DAO<Product, Integer> {
     @Override
     public void update(Product entity) {
         _session.update(entity);
+        _session.flush();
     }
 
     @Override

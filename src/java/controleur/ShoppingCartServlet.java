@@ -19,6 +19,7 @@ import service.ProductService;
 public class ShoppingCartServlet extends HttpServlet {
 
     private final String HOME_PAGE = "/home.jsp";
+    public final String ERROR_PAGE = "/error.jsp";
 
     HttpSession _session = null;
     private String _action = "";
@@ -31,6 +32,7 @@ public class ShoppingCartServlet extends HttpServlet {
 
         _action = request.getParameter("action");
         _session = request.getSession();
+        String destination = "";
 
         _shoppingCart = (ShoppingCart) _session.getAttribute("shoppingCart");
 
@@ -39,34 +41,45 @@ public class ShoppingCartServlet extends HttpServlet {
             String quantity = request.getParameter("quantity");
             String sku = request.getParameter("sku");
             _product = ProductService.getOne(sku);
+
             try {
                 _quantity = Integer.parseInt(quantity);
             }
             catch (Exception e) {
-                _quantity = 1;
+                _quantity = 0;
+                request.setAttribute("errorMessage", "Votre entrée de quantité n'est pas valide !");
+                destination = ERROR_PAGE;
             }
-            
-            if (_shoppingCart.isEmpty()) {
-                _shoppingCart.put(_product, _quantity);
+
+            if ( _quantity >= ProductService.getOne(sku).getQuantity()) {
+                request.setAttribute("errorMessage", "Pas assez d'items en stock pour votre commande !");
+                destination = ERROR_PAGE;
             }
-            else {
-                if (!_shoppingCart.contains(_product)) {
+            else if (_quantity != 0)  {
+                if (_shoppingCart.isEmpty()) {
                     _shoppingCart.put(_product, _quantity);
                 }
                 else {
-                    _shoppingCart.put(_product, _shoppingCart.getQuantity(_product) + _quantity);
+                    if (_shoppingCart.contains(_product)) {
+                        _shoppingCart.put(_product, _shoppingCart.getQuantity(_product) + _quantity);
+                    }
+                    else {
+                        _shoppingCart.put(_product, _quantity);
+                    }
                 }
+                destination = HOME_PAGE;
             }
+
         }
-        else if ("delete".equals(_action)) {
+        else {
             String sku = request.getParameter("sku");
             _product = ProductService.getOne(sku);
             _shoppingCart.remove(_product);
-
+            destination = HOME_PAGE;
         }
 
         _session.setAttribute("shoppingCart", _shoppingCart);
-        RequestDispatcher disp = request.getRequestDispatcher(HOME_PAGE);
+        RequestDispatcher disp = request.getRequestDispatcher(destination);
         disp.forward(request, response);
 
     }

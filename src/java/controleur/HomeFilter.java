@@ -73,7 +73,11 @@ public class HomeFilter implements Filter {
         _session.setAttribute("language", language);
         List<Languages> languages = Service.getAllLanguages();
         _session.setAttribute("listLanguages", languages);
-        _session.setAttribute("shoppingCart", new ShoppingCart());
+
+        if (_session.getAttribute("shoppingCart") == null) {
+            _session.setAttribute("shoppingCart", new ShoppingCart());
+        }
+
     }
 
     private void continueFilterChain()
