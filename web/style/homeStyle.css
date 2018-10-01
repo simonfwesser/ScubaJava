@@ -1,6 +1,6 @@
 .card {
     box-shadow: 5px 5px 5px #6394F8; 
-    background-color: #fafbd9;
+    background-color: rgb(250, 251, 217) !important;
     padding : 5%; 
     margin : 5%;
     cursor: pointer;

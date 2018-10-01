@@ -19,15 +19,15 @@ public class Traitement extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {   
         
-        session = request.getSession();
-        
-        Service.openDbConnection();
-        
-        String languageCode = (String)session.getAttribute("languageCode");
-        Service.setServiceLanguage(languageCode);   
-        session.setAttribute("language", Service.getServiceLanguage());
-        session.setAttribute("listLanguages", Service.getAllLanguages());
-        session.setAttribute("listCategoryDetails", Service.getAllCategoryDetails());
+//        session = request.getSession();
+//        
+//        Service.openDbConnection();
+//        
+//        String languageCode = (String)session.getAttribute("languageCode");
+//        Service.setServiceLanguage(languageCode);   
+//        session.setAttribute("language", Service.getServiceLanguage());
+//        session.setAttribute("listLanguages", Service.getAllLanguages());
+//        session.setAttribute("listCategoryDetails", Service.getAllCategoryDetails());
 
 //        if(!session.isNew()){
 //            session.invalidate();
@@ -39,8 +39,8 @@ public class Traitement extends HttpServlet {
 //        //session.setAttribute("listLanguages", gestion.getListLanguages());
         
 
-        RequestDispatcher disp = request.getRequestDispatcher(HOME_PAGE);
-        disp.forward(request, response);
+//        RequestDispatcher disp = request.getRequestDispatcher(HOME_PAGE);
+//        disp.forward(request, response);
         
         // ??? Bon de faire ca ici?
         //Service.closeProductSession();

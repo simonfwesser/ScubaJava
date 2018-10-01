@@ -3,6 +3,7 @@ package service;
 import dataAccess.DbConnection;
 import entite.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import modele.ShoppingCart;
@@ -39,6 +40,13 @@ public class Service {
 
     public static Product getOneProduct(String id) {
         Product product = ProductService.getOne(id);
+        Set<ProductDetail> productDetails = new HashSet();
+        for(ProductDetail detail : (Set<ProductDetail>)product.getProductDetails()){
+            if ((_language.getLanguageCode()).equals((detail.getLanguages().getLanguageCode()))) {
+                    productDetails.add(detail);
+                }
+        }
+        product.setProductDetails(productDetails);
         return product;
     }
 

@@ -33,10 +33,6 @@
         <servlet-name>SignInServlet</servlet-name>
     </filter-mapping>
     <servlet>
-        <servlet-name>MagasinServlet</servlet-name>
-        <servlet-class>controleur.MagasinServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>LogoutServlet</servlet-name>
         <servlet-class>controleur.LogoutServlet</servlet-class>
     </servlet>
@@ -80,10 +76,6 @@
         <servlet-name>SignInServlet</servlet-name>
         <servlet-class>controleur.SignInServlet</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>MagasinServlet</servlet-name>
-        <url-pattern>/MagasinServlet</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
