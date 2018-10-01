@@ -1,0 +1,13 @@
+.card {
+    opacity : 0.8;
+    box-shadow: 5px 5px 5px #6394F8; 
+    background-color: #f8f9fa !important;
+    padding : 5%; 
+    margin : 10%;
+    cursor: pointer;
+    transition : all 0.5s;
+}
+
+.card-title{
+    min-height: 3em;
+}

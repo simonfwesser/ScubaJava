@@ -1,11 +1,8 @@
-<%-- 
-    Document   : itemDetail
-    Created on : 2018-09-16, 11:20:11
-    Author     : 1895101
---%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib  prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page errorPage="error.jsp" %>
+<%@ page pageEncoding="UTF-8" %>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,10 +24,18 @@
                     <h3>${product.name}</h3>    
                     <h5 style="color:#337ab7">${product.brand}</h5>
                     <br>
-                    <h6 class="title-price"><small>PRICE</small></h6>
+                    <h6 class="title-price">
+                        <small>
+                            <fmt:message key="itemDetails.price" />
+                        </small>
+                    </h6>
                     <h5>$${product.price}</h5>
                     <br>
-                    <h6 class="title-attr"><small>KEY FEATURES</small></h6>
+                    <h6 class="title-attr">
+                        <small>
+                            <fmt:message key="itemDetails.keyFeatures" />
+                        </small>
+                    </h6>
 
 
                     <c:forEach var="detail" items="${product.productDetails}" >
@@ -41,10 +46,16 @@
 
                     <br>
                     <form method="GET" action="ShoppingCartServlet">
-                        <h6 class="title-attr"><small>QUANTITY</small></h6>                      
+                        <h6 class="title-attr">
+                            <small>
+                                <fmt:message key="itemDetails.quantity" />
+                            </small>
+                        </h6>                      
                         <input name="quantity" type="number" value="1" min="1" size="4" /><br>
-                        <input type="hidden" name="sku" value="${product.sku}"/> >
-                        <input type="submit" value="Add to cart" class="btn btn-success"/>
+                        <input type="hidden" name="sku" value="${product.sku}"/>
+                        <input type="submit" 
+                               value='<fmt:message key="itemDetails.addToCart" />'
+                               class="btn btn-success"/>
                     </form>
 
 

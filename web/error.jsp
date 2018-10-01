@@ -1,5 +1,6 @@
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib  prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,8 +15,12 @@
 
 
     <body>
-        <h1>Une erreur est survenue !</h1>
-        <h2>${errorMessage}</h2>
+        <h1>
+            <fmt:bundle basename="WebsiteResource">
+                <fmt:message key="error.generalError" /><br/>
+            </fmt:bundle>
+        </h1>
+        <h2>${specificError}</h2>
 
         <form action="home.jsp">
             <input type="submit" value="Retour" />

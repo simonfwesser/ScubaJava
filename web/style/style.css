@@ -1,14 +1,15 @@
 /* general -------------------------------------------------------------------------- */
 body{
-/*    padding-top: 5em;*/
+    background-image : 
+        linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.6) 100%), 
+        url("../images/waves_2.gif");
 }
+
 
 
 
 body,  legend, label, input {
     font: normal 12pt verdana, helvetica, sans-serif;
-    
-/*    background-image : url("../images/waves.gif");*/
     background-attachment: fixed;
     background-size: cover;
     
@@ -146,7 +147,7 @@ figure {
     border-top-right-radius: 0;
 }
 
-.form-singup{
+.form-signup{
     width: 100%;
     max-width: 400px;
     padding: 15px;

@@ -2,6 +2,8 @@ package controleur;
 
 import entite.Customer;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -32,7 +34,16 @@ public class SignInUsernameFilter implements Filter {
             chain.doFilter(request, response);
         }
         else {
-            request.setAttribute("errorMessage", "Vous n'êtes pas encore client!");
+            HttpServletRequest httpRequest = (HttpServletRequest)request;
+            HttpSession session = httpRequest.getSession();
+            String languageCode = (String)session.getAttribute("languageCode");
+            ResourceBundle resourceBundle = null;
+            Locale currentLocale = new Locale(languageCode);
+            
+            resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+            String specificError = resourceBundle.getString("error.specificErrorUsername");
+
+            request.setAttribute("specificError", specificError);
             RequestDispatcher rd = request.getRequestDispatcher(ERROR_PAGE);
             rd.forward(request, response);
         }
@@ -44,4 +55,6 @@ public class SignInUsernameFilter implements Filter {
 
     public void init(FilterConfig filterConfig) {
     }
+    
+    
 }

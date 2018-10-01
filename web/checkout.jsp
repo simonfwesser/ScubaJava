@@ -1,6 +1,7 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib  prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page errorPage="error.jsp" %>
+<%@ page pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html>
@@ -24,7 +25,11 @@
                         </div>
                         <div class="col-lg-7 col-sm-7 col-7 cart-detail-product">
                             <p>${item.getKey().name} ( ${item.getKey().brand})</p>
-                            <span class="price text-info">  ${item.getKey().price}</span> <span class="count"> Quantity: ${item.getValue()}</span>
+                            <span class="price text-info">  ${item.getKey().price}</span> 
+                            <span class="count"> 
+                                Quantity: 
+                                ${item.getValue()}
+                            </span>
 
                         </div>
                             
@@ -37,7 +42,6 @@
                                 </button>
                             </form>
 
-                            <!--<button class="btn btn-xs btn-danger pull-right">x</button>-->
                         </div>
                     </div>
                 </c:forEach>
@@ -45,7 +49,9 @@
 
             <div class="row">
                 <form action="InvoiceServlet">
-                    <button type="submit">Confirm order</button>
+                    <button type="submit">
+                        Confirm order
+                    </button>
                 </form>
             </div>
         </div>
