@@ -44,7 +44,7 @@ public class SignUpServlet extends HttpServlet {
             destination = HOME_PAGE;
         }
         catch (Exception e) {
-            request.setAttribute("errorMessage", e.getMessage());
+            request.setAttribute("specificError", e.getMessage());
             request.setAttribute("customer", null); //Par sécurité
             destination = ERROR_PAGE;
         }

@@ -6,7 +6,9 @@ import java.io.PrintWriter;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
+import java.util.ResourceBundle;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -47,15 +49,25 @@ public class ShoppingCartServlet extends HttpServlet {
             }
             catch (Exception e) {
                 _quantity = 0;
-                request.setAttribute("errorMessage", "Votre entrée de quantité n'est pas valide !");
+                String languageCode = (String) _session.getAttribute("languageCode");
+                ResourceBundle resourceBundle = null;
+                Locale currentLocale = new Locale(languageCode);
+                resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+                String specificError = resourceBundle.getString("error.specificErrorQuantity");
+                request.setAttribute("specificError", specificError);
                 destination = ERROR_PAGE;
             }
 
-            if ( _quantity > ProductService.getOne(sku).getQuantity()) {
-                request.setAttribute("errorMessage", "Pas assez d'items en stock pour votre commande !");
+            if (_quantity > ProductService.getOne(sku).getQuantity()) {
+                String languageCode = (String) _session.getAttribute("languageCode");
+                ResourceBundle resourceBundle = null;
+                Locale currentLocale = new Locale(languageCode);
+                resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+                String specificError = resourceBundle.getString("error.specificErrorStock");
+                request.setAttribute("specificError", specificError);
                 destination = ERROR_PAGE;
             }
-            else if (_quantity != 0)  {
+            else if (_quantity != 0) {
                 if (_shoppingCart.isEmpty()) {
                     _shoppingCart.put(_product, _quantity);
                 }

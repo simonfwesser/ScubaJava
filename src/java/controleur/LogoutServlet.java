@@ -4,6 +4,8 @@ import dataAccess.DbConnection;
 import entite.Customer;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -21,7 +23,18 @@ public class LogoutServlet extends HttpServlet {
         HttpSession session = request.getSession();
 
         Customer costumer = (Customer) session.getAttribute("customer");
-        String goodbyeMessage = "Au revoir, " + costumer.getFirstName() + " " + costumer.getLastName() + " !";
+        
+        String languageCode = (String) session.getAttribute("languageCode");
+        ResourceBundle resourceBundle = null;
+        Locale currentLocale = new Locale(languageCode);
+
+        resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+        String goodbyeMessage = resourceBundle.getString("logout.goodbyeMessage") 
+                +", " 
+                +costumer.getFirstName() 
+                + " " 
+                + costumer.getLastName() 
+                + " !";
 
         request.setAttribute("goodbyeMessage", goodbyeMessage);
 

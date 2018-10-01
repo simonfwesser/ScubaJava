@@ -34,6 +34,10 @@ public class SignInPasswordFilter implements Filter {
             chain.doFilter(request, response);
         }
         else {
+            request.setAttribute("customer", null);
+            request.setAttribute("username", null);
+            request.setAttribute("password", null);
+            
             String languageCode = (String) session.getAttribute("languageCode");
             ResourceBundle resourceBundle = null;
             Locale currentLocale = new Locale(languageCode);
