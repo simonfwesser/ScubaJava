@@ -5,9 +5,12 @@
 <html>
     <head>
         <title>Home</title>
-        <link href="style/style.css" rel="stylesheet" type="text/css"/>
-        <link href="style/bootstrap.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8">
+        <link href="style/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+        <link href="style/homeStyle.css" rel="stylesheet" type="text/css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script/homeScript.js" type="text/javascript"></script>
     </head>
     <body>
         
@@ -19,16 +22,7 @@
                     <div class="col-sm-3"> 
                         <form method="POST" action="CategoryServlet" class="text-center">
                             <input type="hidden" name="categoryCode" value="${categoryDetails['category'].categoryCode}">
-                            <div class="card" 
-                                 style="box-shadow: 5px 5px 5px #6394F8; 
-                                 background-color: #fafbd9;
-                                 padding : 5%; 
-                                 margin : 5%;
-                                 cursor: pointer;
-                                 transition : all 0.5s;"
-                                 onmouseover="this.style.opacity = 0.4;"
-                                 onmouseout="this.style.opacity = 1;"
-                                 onclick="this.parentNode.submit();">
+                            <div class="card">
                                 <img class="card-img-top" 
                                      src="${categoryDetails['category'].categoryImage}" 
                                      alt="${categoryDetails['category'].categoryImage}">

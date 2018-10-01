@@ -1,0 +1,10 @@
+.card {
+    box-shadow: 5px 5px 5px #6394F8; 
+    background-color: #fafbd9;
+    padding : 5%; 
+    margin : 5%;
+    cursor: pointer;
+    transition : all 0.5s;
+}
+
+

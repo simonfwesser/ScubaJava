@@ -20,7 +20,7 @@
 
         <form class="form-signin" action="SignInServlet">
             <input type="text" name="action" value="login" hidden />
-            <img class="mb-4" src="img/logo.png" alt="" width="72" height="72">
+            <img class="mb-4" src="images/logo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input 
