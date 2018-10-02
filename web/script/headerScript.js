@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
     loadProducts();
     // https://stackoverflow.com/questions/37269008
@@ -11,8 +9,7 @@ $(document).ready(function () {
             })
             .blur(function () {
                 $(this).attr('placeholder', placeholder);
-            })
-            ;
+            });
 
 });
 
