@@ -6,11 +6,11 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import resource.Page;
 import service.Service;
 
 public class CategoryServlet extends HttpServlet {
 
-    private final String CATEGORY_ITEMS_PAGE = "/category_items.jsp";
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -18,7 +18,7 @@ public class CategoryServlet extends HttpServlet {
         String categoryCode = request.getParameter("categoryCode");    
         request.setAttribute("listCategoryProducts", Service.getAllCategoryProducts(categoryCode));
         request.setAttribute("categoryName", Service.getOneCategoryDetail(categoryCode).getCategoryName());
-        RequestDispatcher disp = request.getRequestDispatcher(CATEGORY_ITEMS_PAGE);
+        RequestDispatcher disp = request.getRequestDispatcher(Page.CATEGORY_ITEMS.getUrl());
         disp.forward(request, response);
         
 

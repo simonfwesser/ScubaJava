@@ -7,10 +7,9 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
+import resource.DbInfo;
 
 public class DbConnection {
-
-    private final String SQLITE_DB = "../../web/WEB-INF/web_database.db";
 
     private static DbConnection _instance = null;
     private static SessionFactory _sessionFactory = null;
@@ -27,40 +26,44 @@ public class DbConnection {
         return _instance;
     }
 
-    private void open() throws ExceptionInInitializerError{
-        String dbRealPath = _servletContext.getRealPath(SQLITE_DB);
-        String dbUrl = "jdbc:sqlite:" + dbRealPath;
-        try {
-            // https://www.codejava.net/frameworks/hibernate/building-hibernate-sessionfactory-from-service-registry
-            // https://www.tutorialspoint.com/hibernate/hibernate_configuration.htm
-            Configuration configuration = new Configuration().configure();
-            configuration.setProperty("hibernate.connection.driver_class", "org.sqlite.JDBC");
-            configuration.setProperty("hibernate.dialect", "dialect.SQLiteDialect");
-            configuration.setProperty("hibernate.connection.url", dbUrl);
-            configuration.setProperty("hibernate.connection.username", "");
-            configuration.setProperty("hibernate.connection.password", "");
-            StandardServiceRegistryBuilder registry = new StandardServiceRegistryBuilder();
-            registry.applySettings(configuration.getProperties());
-            ServiceRegistry serviceRegistry = registry.build();
-            _sessionFactory = configuration.buildSessionFactory(serviceRegistry);
+    private void open() throws ExceptionInInitializerError {
 
+        try {
+            configureSessionFactory();
         }
         catch (Throwable ex) {
-            System.err.println("Initial SessionFactory creation failed." + ex);
+            System.err.println("Initial SessionFactory creation failed." + ex.getMessage());
             throw new ExceptionInInitializerError(ex);
         }
     }
 
-    public void close() {
+    public static void close() {
         _sessionFactory.close();
     }
 
-    public SessionFactory getSessionFactory() {
+    public static SessionFactory getSessionFactory() {
         return _sessionFactory;
     }
 
     public static void setSetServletContext(HttpSession session) {
         _servletContext = session.getServletContext();
+    }
+
+    private static void configureSessionFactory() {
+        // https://www.codejava.net/frameworks/hibernate/building-hibernate-sessionfactory-from-service-registry
+        // https://www.tutorialspoint.com/hibernate/hibernate_configuration.htm
+        String dbRealPath = _servletContext.getRealPath(DbInfo.FILEPATH.toString());
+        String dbUrl = DbInfo.URL.toString() + dbRealPath;
+        Configuration configuration = new Configuration().configure();
+        configuration.setProperty("hibernate.connection.driver_class", DbInfo.DRIVER_CLASS.toString());
+        configuration.setProperty("hibernate.dialect", DbInfo.DIALECT.toString());
+        configuration.setProperty("hibernate.connection.url", dbUrl);
+        configuration.setProperty("hibernate.connection.username", DbInfo.USERNAME.toString());
+        configuration.setProperty("hibernate.connection.password", DbInfo.PASSWORD.toString());
+        StandardServiceRegistryBuilder registry = new StandardServiceRegistryBuilder();
+        registry.applySettings(configuration.getProperties());
+        ServiceRegistry serviceRegistry = registry.build();
+        _sessionFactory = configuration.buildSessionFactory(serviceRegistry);
     }
 
 }

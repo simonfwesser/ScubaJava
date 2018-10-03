@@ -12,10 +12,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import resource.Page;
 
 public class LogoutServlet extends HttpServlet {
-
-    private final String LOGOUT_PAGE = "/logout.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -24,11 +23,8 @@ public class LogoutServlet extends HttpServlet {
 
         Customer costumer = (Customer) session.getAttribute("customer");
         
-        String languageCode = (String) session.getAttribute("languageCode");
-        ResourceBundle resourceBundle = null;
-        Locale currentLocale = new Locale(languageCode);
-
-        resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+        ResourceBundle resourceBundle = (ResourceBundle)session.getAttribute("resourceBundle");
+        
         String goodbyeMessage = resourceBundle.getString("logout.goodbyeMessage") 
                 +", " 
                 +costumer.getFirstName() 
@@ -37,10 +33,11 @@ public class LogoutServlet extends HttpServlet {
                 + " !";
 
         request.setAttribute("goodbyeMessage", goodbyeMessage);
+        request.setAttribute("backHome", resourceBundle.getString("logout.backHome"));
 
         session.invalidate();
 
-        RequestDispatcher disp = request.getRequestDispatcher(LOGOUT_PAGE);
+        RequestDispatcher disp = request.getRequestDispatcher(Page.LOGOUT.getUrl());
         disp.forward(request, response);
 
     }

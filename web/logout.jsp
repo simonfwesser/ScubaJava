@@ -19,7 +19,10 @@
     <body>
         <h1>${goodbyeMessage}</h1>
         <br>
-        <h4><a href="HomeServlet">Retour au magasin</a></h4>
+        <h4><a href="HomeServlet">
+                ${backHome}
+            </a>
+        </h4>
 
     </body>
 

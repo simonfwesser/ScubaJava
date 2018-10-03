@@ -1,20 +1,16 @@
 
 package controleur;
 
-import entite.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import resource.Page;
 import service.Service;
 
 public class ProductServlet extends HttpServlet {
-    
-    private final String ITEM_DETAILS_PAGE = "/item_details.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -23,7 +19,7 @@ public class ProductServlet extends HttpServlet {
 
         request.setAttribute("product", Service.getOneProduct(sku));
 
-        RequestDispatcher disp = request.getRequestDispatcher(ITEM_DETAILS_PAGE);
+        RequestDispatcher disp = request.getRequestDispatcher(Page.ITEM_DETAILS.getUrl());
         disp.forward(request, response);
 
     }

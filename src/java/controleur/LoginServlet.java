@@ -7,15 +7,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import resource.Page;
 
 public class LoginServlet extends HttpServlet {
-
-    public final String LOGIN_PAGE = "/login.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        RequestDispatcher rd = request.getRequestDispatcher(LOGIN_PAGE);
+        RequestDispatcher rd = request.getRequestDispatcher(Page.LOGIN.getUrl());
         rd.forward(request, response);
 
     }

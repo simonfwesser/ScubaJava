@@ -24,24 +24,10 @@ public class SearchServlet extends HttpServlet {
 
         List<Product> products = (ArrayList) Service.getAllProducts();
 
-        String jsonString = "";
-        int nProductsByName = products.size();
-        jsonString += "[";
-        for (int i = 0; i < nProductsByName; i++) {
-            jsonString += "{";
-            jsonString += "\"name\"" + " : " + "\"" + products.get(i).getName() + "\"";
-            jsonString += " , ";
-            jsonString += "\"sku\"" + " : " + "\"" + products.get(i).getSku() + "\"";
-            jsonString += "}";
-            jsonString += (i != nProductsByName - 1 ? "," : "");
-        }
-        jsonString += "]";
-
-        String resultJson = jsonString;
-
+        String jsonString = Product.toJSON(products);
+        
         response.setContentType("text/html");
-
-        response.getWriter().print(resultJson);
+        response.getWriter().print(jsonString);
     }
 
     @Override

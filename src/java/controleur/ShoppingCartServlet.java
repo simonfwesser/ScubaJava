@@ -16,12 +16,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import modele.ShoppingCart;
+import resource.Page;
 import service.ProductService;
 
 public class ShoppingCartServlet extends HttpServlet {
-
-    private final String HOME_PAGE = "/home.jsp";
-    public final String ERROR_PAGE = "/error.jsp";
 
     HttpSession _session = null;
     private String _action = "";
@@ -49,13 +47,10 @@ public class ShoppingCartServlet extends HttpServlet {
             }
             catch (Exception e) {
                 _quantity = 0;
-                String languageCode = (String) _session.getAttribute("languageCode");
-                ResourceBundle resourceBundle = null;
-                Locale currentLocale = new Locale(languageCode);
-                resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+                ResourceBundle resourceBundle = (ResourceBundle)_session.getAttribute("resourceBundle");
                 String specificError = resourceBundle.getString("error.specificErrorQuantity");
                 request.setAttribute("specificError", specificError);
-                destination = ERROR_PAGE;
+                destination = Page.ERROR.getUrl();
             }
 
             if (_quantity > ProductService.getOne(sku).getQuantity()) {
@@ -65,7 +60,7 @@ public class ShoppingCartServlet extends HttpServlet {
                 resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
                 String specificError = resourceBundle.getString("error.specificErrorStock");
                 request.setAttribute("specificError", specificError);
-                destination = ERROR_PAGE;
+                destination = Page.ERROR.getUrl();
             }
             else if (_quantity != 0) {
                 if (_shoppingCart.isEmpty()) {
@@ -79,7 +74,7 @@ public class ShoppingCartServlet extends HttpServlet {
                         _shoppingCart.put(_product, _quantity);
                     }
                 }
-                destination = HOME_PAGE;
+                destination = Page.HOME.getUrl();
             }
 
         }
@@ -87,7 +82,7 @@ public class ShoppingCartServlet extends HttpServlet {
             String sku = request.getParameter("sku");
             _product = ProductService.getOne(sku);
             _shoppingCart.remove(_product);
-            destination = HOME_PAGE;
+            destination = Page.HOME.getUrl();
         }
 
         _session.setAttribute("shoppingCart", _shoppingCart);

@@ -2,20 +2,17 @@ package controleur;
 
 import entite.CategoryDetail;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import resource.Page;
 import service.Service;
 
 public class HomeServlet extends HttpServlet {
-
-    private final String HOME_PAGE = "/home.jsp";
 
     private HttpServletRequest _request = null;
     private HttpServletResponse _response = null;
@@ -23,14 +20,13 @@ public class HomeServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         setRequest(request);
         setResponse(response);
         setSession();
 
         setProductCategoriesForSession();
 
-        forwardTo(HOME_PAGE);
+        forwardTo(Page.HOME);
 
     }
 
@@ -52,10 +48,9 @@ public class HomeServlet extends HttpServlet {
         _session.setAttribute("listCategoryDetails", categoryDetails);
     }
 
-    private void forwardTo(String pageUrl)
+    private void forwardTo(Page page)
             throws ServletException, IOException {
-        ServletContext sc = getServletContext();
-        RequestDispatcher rd = sc.getRequestDispatcher(pageUrl);
+        RequestDispatcher rd = _request.getRequestDispatcher(page.getUrl());
         rd.forward(_request, _response);
     }
 

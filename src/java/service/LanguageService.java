@@ -6,8 +6,8 @@ import java.util.List;
 
 public class LanguageService {
 
-    private static final String DEFAULT_LANGUAGE_CODE = "EN";
-//    private static final String DEFAULT_LANGUAGE_CODE = "FR";
+    private static final String DEFAULT_LANGUAGE_CODE = "en";
+//    private static final String DEFAULT_LANGUAGE_CODE = "fr";
 
     public static List<Languages> getAll() {
         LanguageDAO languageDAO = new LanguageDAO();
@@ -22,10 +22,10 @@ public class LanguageService {
         languageDAO.openSession();
         Languages language = null;
         if (languageCode != null) {
-            language = languageDAO.getOne(languageCode.toUpperCase());
+            language = languageDAO.getOne(languageCode);
         }
         else {
-            language = languageDAO.getOne(DEFAULT_LANGUAGE_CODE.toUpperCase());
+            language = languageDAO.getOne(DEFAULT_LANGUAGE_CODE);
         }
         languageDAO.closeSession();
         return language;

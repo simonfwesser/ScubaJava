@@ -11,12 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import modele.ShoppingCart;
+import resource.Page;
 import service.ProductService;
 
 public class CheckoutServlet extends HttpServlet {
-
-    private final String LOGIN_PAGE = "/login.jsp";
-    private final String CHECKOUT_PAGE = "/checkout.jsp";
 
     HttpSession _session = null;
     private String _action = "";
@@ -33,7 +31,7 @@ public class CheckoutServlet extends HttpServlet {
 
         Customer customer = (Customer) _session.getAttribute("customer");
         if (customer == null) {
-            RequestDispatcher rd = request.getRequestDispatcher(LOGIN_PAGE);
+            RequestDispatcher rd = request.getRequestDispatcher(Page.LOGIN.getUrl());
             rd.forward(request, response);
         }
         else {
@@ -45,7 +43,7 @@ public class CheckoutServlet extends HttpServlet {
             }
 
             _session.setAttribute("shoppingCart", _shoppingCart);
-            RequestDispatcher disp = request.getRequestDispatcher(CHECKOUT_PAGE);
+            RequestDispatcher disp = request.getRequestDispatcher(Page.CHECKOUT.getUrl());
             disp.forward(request, response);
 
         }

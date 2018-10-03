@@ -13,11 +13,10 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import resource.Page;
 import service.Service;
 
 public class SignInUsernameFilter implements Filter {
-
-    public final String ERROR_PAGE = "/error.jsp";
 
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
@@ -36,15 +35,10 @@ public class SignInUsernameFilter implements Filter {
         else {
             HttpServletRequest httpRequest = (HttpServletRequest)request;
             HttpSession session = httpRequest.getSession();
-            String languageCode = (String)session.getAttribute("languageCode");
-            ResourceBundle resourceBundle = null;
-            Locale currentLocale = new Locale(languageCode);
-            
-            resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+            ResourceBundle resourceBundle = (ResourceBundle)session.getAttribute("resourceBundle");
             String specificError = resourceBundle.getString("error.specificErrorUsername");
-
             request.setAttribute("specificError", specificError);
-            RequestDispatcher rd = request.getRequestDispatcher(ERROR_PAGE);
+            RequestDispatcher rd = request.getRequestDispatcher(Page.ERROR.getUrl());
             rd.forward(request, response);
         }
 

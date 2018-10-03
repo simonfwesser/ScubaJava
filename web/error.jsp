@@ -21,7 +21,7 @@
                      sessionScope.languageCode : 
                      pageContext.request.locale}" />
         <h1>
-            <fmt:bundle basename="WebsiteResource">
+            <fmt:bundle basename="resource.WebsiteProperties">
                 <fmt:message key="error.generalError" /><br/>
             </fmt:bundle>
         </h1>

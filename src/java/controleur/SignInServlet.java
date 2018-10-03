@@ -9,10 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import resource.Page;
 
 public class SignInServlet extends HttpServlet {
-
-    public final String HOME_PAGE = "/home.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -20,9 +19,7 @@ public class SignInServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Customer customer = (Customer) request.getAttribute("customer");
         session.setAttribute("customer", customer); //On passe le client de requête à session
-//        session.setAttribute("name", null);
-//        session.setAttribute("password", null);
-        RequestDispatcher rd = request.getRequestDispatcher(HOME_PAGE);
+        RequestDispatcher rd = request.getRequestDispatcher(Page.HOME.getUrl());
         rd.forward(request, response);
 
     }

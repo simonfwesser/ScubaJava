@@ -11,12 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import resource.Page;
 import service.Service;
 
 public class SignUpServlet extends HttpServlet {
-
-    public final String HOME_PAGE = "/home.jsp";
-    public final String ERROR_PAGE = "/error.jsp";
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -41,12 +39,12 @@ public class SignUpServlet extends HttpServlet {
         try {
             Service.addCustomer(customer);
             session.setAttribute("customer", customer); //On passe le client de requête à session
-            destination = HOME_PAGE;
+            destination = Page.HOME.getUrl();
         }
         catch (Exception e) {
             request.setAttribute("specificError", e.getMessage());
             request.setAttribute("customer", null); //Par sécurité
-            destination = ERROR_PAGE;
+            destination = Page.ERROR.getUrl();
         }
 
         RequestDispatcher rd = request.getRequestDispatcher(destination);

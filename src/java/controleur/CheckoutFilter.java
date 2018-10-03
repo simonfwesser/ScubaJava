@@ -11,10 +11,10 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import resource.Page;
 
 public class CheckoutFilter implements Filter {
 
-    private final String LOGIN_PAGE = "/login.jsp";
 
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
@@ -26,7 +26,7 @@ public class CheckoutFilter implements Filter {
         Customer customer = (Customer) session.getAttribute("customer");
 
         if (customer == null) {
-            destination = LOGIN_PAGE;
+            destination = Page.LOGIN.getUrl();
             RequestDispatcher rd = request.getRequestDispatcher(destination);
             rd.forward(request, response);
         }
