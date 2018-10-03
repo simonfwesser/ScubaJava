@@ -94,6 +94,7 @@ public class InvoiceServlet extends HttpServlet {
         finally {
             placedOrderDAO.closeSession();
         }
+        
         _session.setAttribute("shoppingCart", new ShoppingCart());
         RequestDispatcher rd = request.getRequestDispatcher(destination);
         rd.forward(request, response);

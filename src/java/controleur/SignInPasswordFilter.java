@@ -13,11 +13,10 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import resource.Page;
 import service.Service;
 
 public class SignInPasswordFilter implements Filter {
-
-    public final String ERROR_PAGE = "/error.jsp";
 
     public void doFilter(ServletRequest request, ServletResponse response,
             FilterChain chain)
@@ -41,11 +40,9 @@ public class SignInPasswordFilter implements Filter {
             String specificError = resourceBundle.getString("error.specificErrorPassword");
 
             request.setAttribute("specificError", specificError);
-            RequestDispatcher rd = request.getRequestDispatcher(ERROR_PAGE);
+            RequestDispatcher rd = request.getRequestDispatcher(Page.ERROR.getUrl());
             rd.forward(request, response);
         }
-
-        chain.doFilter(request, response);
 
     }
 

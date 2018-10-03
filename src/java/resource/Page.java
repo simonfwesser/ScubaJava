@@ -4,7 +4,7 @@ public enum Page {
 
     INDEX("/index.jsp"),
     HOME("/home.jsp"),
-    ERROR("/error.jsp"),
+    ERROR("/WEB-INF/error.jsp"),
     CATEGORY_ITEMS("/category_items.jsp"),
     ITEM_DETAILS("/item_details.jsp"),
     CHECKOUT("/checkout.jsp"),

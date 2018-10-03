@@ -1,6 +1,6 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib  prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page errorPage="error.jsp" %>
+<%@ page errorPage="WEB-INF/error.jsp" %>
 <%@ page pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
 
         <!--https://getbootstrap.com/docs/4.1/examples/sign-in/-->
 
-        <form class="form-signin" action="SignInServlet">
+        <form class="form-signin" action="SignInServlet" method="post">
             <input type="text" name="action" value="login" hidden />
             <img class="mb-4" src="images/logo.png" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal">
