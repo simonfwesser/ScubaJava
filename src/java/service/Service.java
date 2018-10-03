@@ -102,7 +102,7 @@ public class Service {
     }
 
     ////////////////////////////////////////////////////////////
-    public static void openDbConnection() {
+    public static void openDbConnection() throws ExceptionInInitializerError {
         DbConnection.getInstance();
     }
 

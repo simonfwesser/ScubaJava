@@ -12,11 +12,15 @@ import javax.servlet.ServletResponse;
 import service.Service;
 import entite.Languages;
 import java.util.List;
+import java.util.ResourceBundle;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import modele.ShoppingCart;
 
 public class HomeFilter implements Filter {
+
+    public final String ERROR_PAGE = "/error.jsp";
 
     private ServletRequest _request = null;
     private ServletResponse _response = null;
@@ -33,7 +37,22 @@ public class HomeFilter implements Filter {
         setFilterChain(chain);
         initializeSession();
 
-        openDatabaseForSession();
+        try {
+            openDatabaseForSession();
+        }
+        catch (Throwable t) {
+            Locale locale = _request.getLocale();
+            String languageCode = locale.getLanguage();
+            ResourceBundle resourceBundle = null;
+            Locale currentLocale = new Locale(languageCode);
+
+            resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+            String specificError = resourceBundle.getString("error.specificServerError");
+
+            request.setAttribute("specificError", specificError);
+            RequestDispatcher rd = request.getRequestDispatcher(ERROR_PAGE);
+            rd.forward(request, response);
+        }
 
         setLanguageForSession();
 
