@@ -19,7 +19,8 @@
     <body>
         <h1>${goodbyeMessage}</h1>
         <br>
-        <h4><a href="HomeServlet">
+        <h4>
+            <a href="HomeServlet">
                 ${backHome}
             </a>
         </h4>

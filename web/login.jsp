@@ -29,7 +29,7 @@
             </h1>
             <label for="inputEmail" class="sr-only">Email address</label>
             <input 
-                type="text" 
+                type="email" 
                 name="email"
                 id="inputEmail" 
                 class="form-control" 
@@ -46,16 +46,16 @@
                 placeholder='<fmt:message key="login.password" />'
                 value=""
                 required />
-<!--            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-            </div>-->
+            <!--            <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>-->
 
             <button class="btn btn-lg btn-primary btn-block" type="submit">
                 <fmt:message key="login.signIn" />
             </button> 
-            
+
             <p>
                 <fmt:message key="login.notClient" /> 
                 <a href="signup.jsp">
@@ -63,11 +63,17 @@
                 </a>
             </p>
             <p class="mt-5 mb-3 text-muted">ScubaJava&copy; 2018</p>
+            <br>
+            <h4>Suggestions
+                <h5>amine@me.com : 123</h5>
+                <h5>alex@me.com : 789</h5>
+            </h4>
+
         </form>
-        
-        
-        
-        
+
+
+
+
 
 
 </html>

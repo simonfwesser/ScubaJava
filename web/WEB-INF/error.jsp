@@ -13,22 +13,24 @@
         <title>error.jsp</title>
     </head>
 
+    <fmt:setLocale 
+        value="${not empty sessionScope.languageCode ?
+                 sessionScope.languageCode : 
+                 pageContext.request.locale}" />
+    <fmt:setBundle basename="resource.WebsiteProperties" />
 
 
     <body>
-        <fmt:setLocale 
-            value="${not empty sessionScope.languageCode ?
-                     sessionScope.languageCode : 
-                     pageContext.request.locale}" />
+
         <h1>
-            <fmt:bundle basename="resource.WebsiteProperties">
-                <fmt:message key="error.generalError" /><br/>
-            </fmt:bundle>
+
+            <fmt:message key="error.generalError" /><br/>
+
         </h1>
         <h2>${specificError}</h2>
 
         <form action="HomeServlet">
-            <input type="submit" value="Retour" />
+            <input type="submit" value="<fmt:message key='error.backHome' />" />
         </form>
     </body>
 

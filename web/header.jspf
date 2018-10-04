@@ -33,6 +33,9 @@
             <a class="navbar-brand" href="HomeServlet">
                 ScubaJava
             </a>
+            <h6 class="font-italic">
+                <fmt:message key="header.poweredBy" /> SQLite
+            </h6>
         </div>
 
         <div class="col-sm-4">
