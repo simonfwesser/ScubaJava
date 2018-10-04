@@ -2,12 +2,7 @@ package controleur;
 
 import entite.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Locale;
-import java.util.Map;
 import java.util.ResourceBundle;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -57,7 +52,7 @@ public class ShoppingCartServlet extends HttpServlet {
                 String languageCode = (String) _session.getAttribute("languageCode");
                 ResourceBundle resourceBundle = null;
                 Locale currentLocale = new Locale(languageCode);
-                resourceBundle = ResourceBundle.getBundle("WebsiteResource", currentLocale);
+                resourceBundle = ResourceBundle.getBundle("resource.WebsiteProperties", currentLocale);
                 String specificError = resourceBundle.getString("error.specificErrorStock");
                 request.setAttribute("specificError", specificError);
                 destination = Page.ERROR.getUrl();

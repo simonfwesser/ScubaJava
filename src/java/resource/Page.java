@@ -8,6 +8,7 @@ public enum Page {
     CATEGORY_ITEMS("/category_items.jsp"),
     ITEM_DETAILS("/item_details.jsp"),
     CHECKOUT("/checkout.jsp"),
+    INVOICE("/invoice.jsp"),
     LOGIN("/login.jsp"),
     LOGOUT("/logout.jsp");
     

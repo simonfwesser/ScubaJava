@@ -44,3 +44,7 @@ nav .btn-info {
     height: 1.5rem;
     margin: 0.5rem;
 }
+
+.count {
+    color : darkgreen !important;
+}

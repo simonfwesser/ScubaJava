@@ -21,7 +21,8 @@ public class ShoppingCart {
         boolean isEmpty = true;
         if (_contents != null) {
             isEmpty = _contents.isEmpty();
-        } else {
+        }
+        else {
             isEmpty = true;
         }
         return isEmpty;
@@ -30,7 +31,6 @@ public class ShoppingCart {
     public boolean contains(Product product) {
         boolean contains = false;
         contains = _contents.containsKey(product);
-
         return contains;
     }
 
@@ -66,17 +66,14 @@ public class ShoppingCart {
         return sum;
     }
 
-    public void put(Product product, int quantity) {
-        _contents.put(product, quantity);
-
-    }
-    
-    public void remove(Product product){
-        _contents.remove(product);
+    public String getGstTaxes() {
+        double sum = getSum();
+        return formatAmountToCent(sum * TAUX_TPS);
     }
 
-    public HashMap<Product, Integer> getContents() {
-        return _contents;
+    public String getQstTaxes() {
+        double sum = getSum();
+        return formatAmountToCent(sum * TAUX_TVQ);
     }
 
     public double getTotalSum() {
@@ -86,8 +83,8 @@ public class ShoppingCart {
         totalSum += totalSum * TAUX_TVQ;
         return totalSum;
     }
-    
-    public String getTotalWrittenSum(){
+
+    public String getTotalWrittenSum() {
         return formatAmountToCent(getTotalSum());
     }
 
@@ -102,6 +99,20 @@ public class ShoppingCart {
         int decimalPosition = writtenAmount.indexOf('.');
         writtenAmount = writtenAmount.substring(0, decimalPosition + 3);
         return writtenAmount;
+    }
+
+    ///////////////////////////////////////////////////////////
+    public void put(Product product, int quantity) {
+        _contents.put(product, quantity);
+
+    }
+
+    public void remove(Product product) {
+        _contents.remove(product);
+    }
+
+    public HashMap<Product, Integer> getContents() {
+        return _contents;
     }
 
 }

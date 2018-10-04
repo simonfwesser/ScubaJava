@@ -1,32 +1,21 @@
 package controleur;
 
-import dataAccess.PlacedOrderDAO;
 import entite.Customer;
-import entite.OrderLine;
-import entite.OrderLineId;
-import entite.PlacedOrder;
-import entite.Product;
+import resource.Page;
+import modele.Invoice;
+import modele.ShoppingCart;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Set;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import modele.ShoppingCart;
+
 import org.hibernate.exception.ConstraintViolationException;
 import org.hibernate.exception.LockAcquisitionException;
-import service.ProductService;
-import service.Service;
 
 public class InvoiceServlet extends HttpServlet {
-
-    public final String HOME_PAGE = "/home.jsp";
-    public final String ERROR_PAGE = "/error.jsp";
 
     private HttpSession _session = null;
     private Customer _customer = null;
@@ -39,65 +28,25 @@ public class InvoiceServlet extends HttpServlet {
         _customer = (Customer) _session.getAttribute("customer");
         _shoppingCart = (ShoppingCart) _session.getAttribute("shoppingCart");
 
-        LocalDateTime now = LocalDateTime.now();
-        int year = now.getYear();
-        int month = now.getMonthValue();
-        int day = now.getDayOfMonth();
-        int hour = now.getHour();
-        int minute = now.getMinute();
-        int second = now.getSecond();
-
-        String orderNumber = "";
-        orderNumber += day;
-        orderNumber += hour;
-        orderNumber += minute;
-        orderNumber += second;
-
-        PlacedOrder placedOrder = new PlacedOrder(orderNumber, _customer);
-
-        Set<OrderLine> orderLines = new HashSet(0);
-
-        for (Product product : _shoppingCart.getContents().keySet()) {
-            product.setQuantity(ProductService.getOne(product.getSku().toString()).getQuantity() - _shoppingCart.getQuantity(product));
-            
-            ProductService.updateOne(product);
-            orderLines.add(new OrderLine(
-                    new OrderLineId(product.getSku(), orderNumber),
-                    placedOrder,
-                    product,
-                    _shoppingCart.getQuantity(product),
-                    _shoppingCart.getSum(product)
-            ));
-        }
-        placedOrder.setOrderLines(orderLines);
-
-        PlacedOrderDAO placedOrderDAO = new PlacedOrderDAO();
-        placedOrderDAO.openSession();
         String destination = "";
+
         try {
-            // https://www.codejava.net/frameworks/hibernate/hibernate-one-to-many-xml-mapping-example
-            placedOrderDAO.beginTransaction();
-            placedOrderDAO.persist(placedOrder);
-            placedOrderDAO.commitTransaction();
-            destination = HOME_PAGE;
+            Invoice.saveOrderInDatabse(_customer, _shoppingCart);
+            destination = Page.INVOICE.getUrl();
         }
         catch (LockAcquisitionException lae) {
-            Exception e = new Exception("Error! LockAcquisitionException in InvoiceServlet.");
-            request.setAttribute("errorMessage", e.getMessage());
-            destination = ERROR_PAGE;
+            request.setAttribute("errorMessage", "Error! LockAcquisitionException in InvoiceServlet.");
+            destination = Page.ERROR.getUrl();
         }
         catch (ConstraintViolationException cve) {
-            Exception e = new Exception("Error! ConstraintViolationException.");
-            request.setAttribute("errorMessage", e.getMessage());
-            destination = ERROR_PAGE;
+            request.setAttribute("errorMessage", "Error! ConstraintViolationException in InvoiceServlet.");
+            destination = Page.ERROR.getUrl();
         }
-        finally {
-            placedOrderDAO.closeSession();
-        }
-        
-        _session.setAttribute("shoppingCart", new ShoppingCart());
+
         RequestDispatcher rd = request.getRequestDispatcher(destination);
         rd.forward(request, response);
+        
+        _session.setAttribute("shoppingCart", new ShoppingCart());
 
     }
 

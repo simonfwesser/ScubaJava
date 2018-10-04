@@ -69,7 +69,9 @@
                 </c:when> 
                 <c:otherwise>
                     <div>
-                        <p align="right">Bienvenue, ${customer.firstName}</p>
+                        <p align="right">
+                            <fmt:message key="header.hello" />, 
+                            ${customer.firstName}</p>
                         <div align="right">
                             <a href="LogoutServlet">
                                 <fmt:message key="header.signOut" />
@@ -121,21 +123,21 @@
                         <c:forEach var="item" items="${shoppingCart.contents}" varStatus="">
                             <div class="row cart-detail-line">
                                 <div class="col-lg-3 col-sm-3 col-3 cart-detail-img">
-                                    <img src="${item.getKey().image}">
+                                    <img src="${item.key.image}">
                                 </div>
                                 <div class="col-lg-7 col-sm-7 col-7 cart-detail-product">
-                                    <p>${item.getKey().name} ( ${item.getKey().brand})</p>
-                                    <span class="price text-info">  ${item.getKey().price}</span> 
+                                    <p>${item.key.name} ( ${item.key.brand})</p>
+                                    <span class="price text-info">  $${item.key.price}</span> 
                                     <span class="count"> 
                                         <fmt:message key="header.quantity" /> : 
-                                        ${item.getValue()}
+                                        ${item.value}
                                     </span>
 
                                 </div>
                                 <div class="col-lg-2 col-sm-2 col-2 cart-detail-product">
                                     <form action="ShoppingCartServlet">
                                         <input type="hidden"  name="action" value="delete"/>
-                                        <input type="hidden"  name="sku" value="${item.getKey().sku}"/>
+                                        <input type="hidden"  name="sku" value="${item.key.sku}"/>
                                         <button class="btn btn-xs btn-danger pull-right" type="submit">
                                             X
                                         </button>
@@ -155,7 +157,7 @@
                                              <c:when test="${empty shoppingCart.contents}">
                                                  disabled
                                              </c:when>
-                                             <c:when test="${empty shoppingCart.contents}">
+                                             <c:when test="${not empty shoppingCart.contents}">
                                                  type="submit"
                                              </c:when>
                                          </c:choose>
