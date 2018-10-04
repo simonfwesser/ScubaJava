@@ -19,7 +19,7 @@
 
         <%@include file="header.jspf" %>
 
-        <div class="container-fluid">
+        <div class="container-fluid" >
             <br>
             <div class='row justify-content-center'><h2>${categoryName}</h2></div>
             <br>
