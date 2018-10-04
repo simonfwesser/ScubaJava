@@ -7,6 +7,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
+
 public abstract class DAO<T, K> implements IDAO {
 
     protected SessionFactory _sessionFactory;

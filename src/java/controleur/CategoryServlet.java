@@ -9,6 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 import resource.Page;
 import service.Service;
 
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
+
 public class CategoryServlet extends HttpServlet {
 
     

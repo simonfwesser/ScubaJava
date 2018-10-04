@@ -3,7 +3,6 @@ package controleur;
 import entite.Customer;
 import entite.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +12,14 @@ import javax.servlet.http.HttpSession;
 import modele.ShoppingCart;
 import resource.Page;
 import service.ProductService;
+
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
 
 public class CheckoutServlet extends HttpServlet {
 

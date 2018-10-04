@@ -4,10 +4,17 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.HttpSession;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 import resource.DbInfo;
+
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
 
 public class DbConnection {
 

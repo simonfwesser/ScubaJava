@@ -1,10 +1,7 @@
 package controleur;
 
-import dataAccess.DbConnection;
 import entite.Customer;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,6 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import resource.Page;
+
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
 
 public class LogoutServlet extends HttpServlet {
 

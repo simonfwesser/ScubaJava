@@ -3,6 +3,14 @@ package dataAccess;
 import entite.Languages;
 import java.util.List;
 
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
+
 public class LanguageDAO extends DAO<Languages, String> {
 
     public LanguageDAO() {

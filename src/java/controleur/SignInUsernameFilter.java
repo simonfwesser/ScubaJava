@@ -2,7 +2,6 @@ package controleur;
 
 import entite.Customer;
 import java.io.IOException;
-import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -15,6 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import resource.Page;
 import service.Service;
+
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
 
 public class SignInUsernameFilter implements Filter {
 

@@ -3,6 +3,14 @@
 <%@ page errorPage="WEB-INF/error.jsp" %>
 <%@ page pageEncoding="UTF-8" %>
 
+<!--
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+-->
+
 <link rel="shortcut icon" href="images/favicon.png" type="image/png"  />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css" />
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" type="text/css" />

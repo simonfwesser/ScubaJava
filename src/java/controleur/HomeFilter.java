@@ -17,6 +17,14 @@ import javax.servlet.http.HttpSession;
 import modele.ShoppingCart;
 import resource.Page;
 
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
+
 public class HomeFilter implements Filter {
 
     private ServletRequest _request = null;

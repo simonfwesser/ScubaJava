@@ -4,6 +4,14 @@ package dataAccess;
 import entite.Category;
 import java.util.List;
 
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
+
 public class CategoryDAO extends DAO<Category, String>  {
     
     public CategoryDAO(){

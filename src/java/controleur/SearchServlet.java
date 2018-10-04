@@ -1,10 +1,7 @@
 package controleur;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import entite.Product;
 import java.io.IOException;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -13,6 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import service.Service;
+
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
 
 public class SearchServlet extends HttpServlet {
 

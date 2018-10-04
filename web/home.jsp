@@ -3,6 +3,14 @@
 <%@ page errorPage="WEB-INF/error.jsp" %>
 <%@ page pageEncoding="UTF-8" %>
 
+<!--
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+-->
+
 <!DOCTYPE html>
 <html>
     <head>

@@ -1,8 +1,15 @@
 package dataAccess;
 
 import entite.Product;
-import java.math.BigDecimal;
 import java.util.List;
+
+/*
+A11 - Programmation d'applications WEB
+Projet de session.
+Etudiants: 
+- GHODBANE, Mohammed El Amine (1895101)
+- TOULIATOS, Alexander (9736109)
+*/
 
 public class ProductDAO extends DAO<Product, Integer> {
 
